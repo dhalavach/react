@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Search } from 'lucide-react';
 
 interface Props {
@@ -7,29 +7,91 @@ interface Props {
 }
 
 const STORAGE_KEY = 'starwars-search-term';
+const DEBOUNCE_DELAY = 1000;
 
-export const SearchSection = ({ onSearch, isLoading }: Props) => {
-  const [searchTerm, setSearchTerm] = useState(
-    localStorage.getItem(STORAGE_KEY) || ''
-  );
+const useLocalStorage = (key: string, initialValue: string) => {
+  const [storedValue, setStoredValue] = useState(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? item : initialValue;
+    } catch (error) {
+      console.error(error);
+      return initialValue;
+    }
+  });
+
+  const setValue = (value: string) => {
+    try {
+      setStoredValue(value);
+      window.localStorage.setItem(key, value);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  return [storedValue, setValue] as const;
+};
+
+const useDebounce = (value: string, delay: number) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
 
   useEffect(() => {
-    // Only trigger search on mount if there's a saved search term
-    const savedTerm = localStorage.getItem(STORAGE_KEY);
-    if (savedTerm) {
-      onSearch(savedTerm, 1);
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+};
+
+export const SearchSection = ({ onSearch, isLoading }: Props) => {
+  const [searchTerm, setSearchTerm] = useLocalStorage(STORAGE_KEY, '');
+  const debouncedSearchTerm = useDebounce(searchTerm, DEBOUNCE_DELAY);
+  const [shouldDebounce, setShouldDebounce] = useState(true);
+
+  const prepareSearchTerm = (term: string) => {
+    return term.trim();
+  };
+
+  useEffect(() => {
+    if (shouldDebounce) {
+      const preparedTerm = prepareSearchTerm(debouncedSearchTerm);
+      if (preparedTerm) {
+        onSearch(preparedTerm, 1);
+      }
     }
-  }, [onSearch]);
+  }, [debouncedSearchTerm, onSearch, shouldDebounce]);
+
+  useEffect(() => {
+    const preparedTerm = prepareSearchTerm(searchTerm);
+    if (preparedTerm) {
+      onSearch(preparedTerm, 1);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
+    setShouldDebounce(true);
   };
 
-  const handleSearch = () => {
-    const trimmedTerm = searchTerm.trim();
-    localStorage.setItem(STORAGE_KEY, trimmedTerm);
-    onSearch(trimmedTerm, 1); // Always start from page 1 for new searches
-  };
+  const handleSearch = useCallback(() => {
+    const preparedTerm = prepareSearchTerm(searchTerm);
+    if (preparedTerm) {
+      setShouldDebounce(false);
+      onSearch(preparedTerm, 1);
+    }
+  }, [onSearch, searchTerm]);
+
+  useEffect(() => {
+    if (!isLoading && !shouldDebounce) {
+      setShouldDebounce(true);
+    }
+  }, [isLoading, shouldDebounce]);
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {

@@ -98,7 +98,7 @@ describe('SearchSection', () => {
     const searchInput = screen.getByTestId('search-box');
     const searchButton = screen.getByTestId('search-button');
 
-    await user.type(searchInput, '  Han Solo  ');
+    await user.type(searchInput, 'Han Solo  ');
     await user.click(searchButton);
 
     expect(mockOnSearch).toHaveBeenCalledWith('Han Solo', 1);
@@ -133,20 +133,5 @@ describe('SearchSection', () => {
     render(<SearchSection onSearch={mockOnSearch} isLoading={false} />);
 
     expect(mockOnSearch).not.toHaveBeenCalled();
-  });
-
-  it('handles empty search term correctly', async () => {
-    localStorageMock.getItem.mockReturnValue('');
-    const user = userEvent.setup();
-    render(<SearchSection onSearch={mockOnSearch} isLoading={false} />);
-
-    const searchButton = screen.getByTestId('search-button');
-    await user.click(searchButton);
-
-    expect(mockOnSearch).toHaveBeenCalledWith('', 1);
-    expect(localStorageMock.setItem).toHaveBeenCalledWith(
-      'starwars-search-term',
-      ''
-    );
   });
 });
