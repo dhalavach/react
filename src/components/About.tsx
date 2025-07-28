@@ -1,4 +1,3 @@
-import React from 'react';
 import { ExternalLink, Heart } from 'lucide-react';
 
 export const About = () => {

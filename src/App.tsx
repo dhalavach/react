@@ -96,25 +96,6 @@ const App = () => {
         />
 
         <Route path="*" element={<NotFound />} />
-        {/* <div className="min-h-screen bg-gray-50 flex flex-col relative">
-          <SearchSection onSearch={handleSearch} isLoading={isLoading} />
-          <ResultsSection
-            characters={characters}
-            pagination={pagination}
-            isLoading={isLoading}
-            error={error}
-            onRetry={handleRetry}
-            onPageChange={handlePageChange}
-            onCharacterClick={handleCharacterClick}
-          />
-          <About />
-
-          <CharacterDetailsPanel
-            character={selectedCharacter}
-            isOpen={isDetailsPanelOpen}
-            onClose={handleCloseDetailsPanel}
-          />
-        </div> */}
       </Routes>
     </Router>
   );
