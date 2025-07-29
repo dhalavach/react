@@ -7,6 +7,7 @@ import type { Character, PaginationInfo } from './types/Character';
 import { About } from './components/About';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { NotFound } from './components/NotFound';
+import { SelectedItemsFlyout } from './components/selectedItemsFlyout';
 const App = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
   const [pagination, setPagination] = useState<PaginationInfo | null>(null);
@@ -91,6 +92,7 @@ const App = () => {
                 isOpen={isDetailsPanelOpen}
                 onClose={handleCloseDetailsPanel}
               />
+              <SelectedItemsFlyout />
             </div>
           }
         />

@@ -1,5 +1,6 @@
 import { User, Calendar, Ruler, Weight } from 'lucide-react';
 import type { Character } from '../types/Character';
+import { useSelectedItemsStore } from '../stores/selectedItemsStore';
 
 interface Props {
   character: Character;
@@ -30,6 +31,17 @@ const formatDescription = (character: Character): string => {
 
 export const CharacterCard = ({ character, onClick }: Props) => {
   const description = formatDescription(character);
+  const { isSelected, addItem, removeItem } = useSelectedItemsStore();
+  const selected = isSelected(character.url);
+
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.stopPropagation();
+    if (e.target.checked) {
+      addItem(character);
+    } else {
+      removeItem(character.url);
+    }
+  };
 
   const handleClick = () => {
     if (onClick) {
@@ -39,9 +51,21 @@ export const CharacterCard = ({ character, onClick }: Props) => {
 
   return (
     <div
-      className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 p-6 border border-gray-200 cursor-pointer hover:border-blue-300 hover:scale-[1.02]"
+      className={`bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 p-6 border cursor-pointer hover:border-blue-300 hover:scale-[1.02] ${
+        selected ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
+      }`}
       onClick={handleClick}
     >
+      <div className="flex items-start justify-between mb-4">
+        <input
+          type="checkbox"
+          checked={selected}
+          onChange={handleCheckboxChange}
+          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+          onClick={(e) => e.stopPropagation()}
+        />
+      </div>
+
       <div className="flex items-start space-x-4">
         <div className="flex-shrink-0">
           <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
