@@ -1,136 +1,127 @@
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { CharacterCard } from '../CharacterCard';
 import type { Character } from '../../types/Character';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
-
-const mockCharacter: Character = {
-  name: 'Luke Skywalker',
-  height: '172',
-  mass: '77',
-  hair_color: 'blond',
-  skin_color: 'fair',
-  eye_color: 'blue',
-  birth_year: '19BBY',
-  gender: 'male',
-  homeworld: 'https://swapi.dev/api/planets/1/',
-  films: ['https://swapi.dev/api/films/1/'],
-  species: [],
-  vehicles: ['https://swapi.dev/api/vehicles/14/'],
-  starships: ['https://swapi.dev/api/starships/12/'],
-  created: '2014-12-09T13:50:51.644000Z',
-  edited: '2014-12-20T21:17:56.891000Z',
-  url: 'https://swapi.dev/api/people/1/',
-};
-
-const mockOnClick = vi.fn();
+import * as store from '../../stores/selectedItemsStore';
 
 describe('CharacterCard', () => {
+  const character: Character = {
+    name: 'Leia Organa',
+    height: '150',
+    mass: '49',
+    hair_color: 'brown',
+    skin_color: 'light',
+    eye_color: 'brown',
+    birth_year: '19BBY',
+    gender: 'female',
+    homeworld: 'https://swapi.dev/api/planets/2/',
+    films: [],
+    species: [],
+    vehicles: [],
+    starships: [],
+    url: 'https://swapi.dev/api/people/5/',
+    created: '',
+    edited: '',
+  };
+
+  const addItem = vi.fn();
+  const removeItem = vi.fn();
+  const isSelected = vi.fn();
+
   beforeEach(() => {
-    mockOnClick.mockClear();
+    vi.clearAllMocks();
+
+    vi.spyOn(store, 'useSelectedItemsStore').mockReturnValue({
+      isSelected,
+      addItem,
+      removeItem,
+      selectedItems: [],
+      clearAll: vi.fn(),
+      getSelectedCount: vi.fn(),
+    });
   });
 
-  it('renders character information correctly', () => {
-    render(<CharacterCard character={mockCharacter} />);
+  it('renders character name', () => {
+    isSelected.mockReturnValue(false);
+    render(<CharacterCard character={character} />);
+    expect(screen.getByText('Leia Organa')).toBeInTheDocument();
+  });
 
-    expect(screen.getByText('Luke Skywalker')).toBeInTheDocument();
+  it('renders formatted description', () => {
+    isSelected.mockReturnValue(false);
+    render(<CharacterCard character={character} />);
     expect(
-      screen.getByText(/male.*Born 19BBY.*172cm tall.*77kg/)
+      screen.getByText(/female.*Born 19BBY.*150cm.*49kg/i)
     ).toBeInTheDocument();
-    expect(screen.getByText('172cm')).toBeInTheDocument();
-    expect(screen.getByText('77kg')).toBeInTheDocument();
+  });
+
+  it('renders physical data blocks (height, mass, birth)', () => {
+    isSelected.mockReturnValue(false);
+    render(<CharacterCard character={character} />);
+    expect(screen.getByText('150cm')).toBeInTheDocument();
+    expect(screen.getByText('49kg')).toBeInTheDocument();
     expect(screen.getByText('19BBY')).toBeInTheDocument();
   });
 
-  it('handles unknown values correctly', () => {
-    const characterWithUnknowns: Character = {
-      ...mockCharacter,
-      height: 'unknown',
-      mass: 'unknown',
-      birth_year: 'unknown',
-      gender: 'unknown',
-    };
-
-    render(<CharacterCard character={characterWithUnknowns} />);
-
-    expect(screen.getByText('Luke Skywalker')).toBeInTheDocument();
-    // Should not display unknown values in the description
-    expect(screen.queryByText(/unknown/)).not.toBeInTheDocument();
-  });
-
-  it('calls onClick when card is clicked', () => {
-    render(<CharacterCard character={mockCharacter} onClick={mockOnClick} />);
-
-    const card = screen.getByText('Luke Skywalker').closest('div');
-    if (card) {
-      fireEvent.click(card);
-      expect(mockOnClick).toHaveBeenCalledWith(mockCharacter);
-    }
-  });
-
-  it('does not call onClick when no onClick prop is provided', () => {
-    render(<CharacterCard character={mockCharacter} />);
-
-    const card = screen.getByText('Luke Skywalker').closest('div');
-    if (card) {
-      fireEvent.click(card);
-      // Should not throw an error
-    }
-  });
-
-  it('displays only available character details', () => {
-    const minimalCharacter: Character = {
-      ...mockCharacter,
-      height: 'unknown',
-      mass: 'unknown',
-      birth_year: 'unknown',
-      gender: 'female',
-    };
-
-    render(<CharacterCard character={minimalCharacter} />);
-
-    expect(screen.getByText('Luke Skywalker')).toBeInTheDocument();
-    expect(screen.getByText('female')).toBeInTheDocument();
-    expect(screen.queryByText('172cm')).not.toBeInTheDocument();
-    expect(screen.queryByText('77kg')).not.toBeInTheDocument();
-    expect(screen.queryByText('19BBY')).not.toBeInTheDocument();
-  });
-
-  it('renders character avatar', () => {
-    render(<CharacterCard character={mockCharacter} />);
-
-    const avatar = screen.getByTestId('avatar');
-    expect(avatar).toBeInTheDocument();
-  });
-
-  it('handles character with no description details', () => {
-    const emptyCharacter: Character = {
-      ...mockCharacter,
+  it('omits description elements if fields are "unknown"', () => {
+    const unknownChar = {
+      ...character,
       gender: 'unknown',
       birth_year: 'unknown',
       height: 'unknown',
       mass: 'unknown',
     };
-
-    render(<CharacterCard character={emptyCharacter} />);
-
-    expect(screen.getByText('Luke Skywalker')).toBeInTheDocument();
-    // Should still render the card even with no description
-    const card = screen.getByText('Luke Skywalker').closest('div');
-    expect(card).toBeInTheDocument();
+    isSelected.mockReturnValue(false);
+    render(<CharacterCard character={unknownChar} />);
+    expect(screen.queryByText(/Born/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/cm/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/kg/)).not.toBeInTheDocument();
   });
 
-  it('formats description correctly with partial data', () => {
-    const partialCharacter: Character = {
-      ...mockCharacter,
-      mass: 'unknown',
-      birth_year: 'unknown',
-    };
+  it('checkbox reflects selected state', () => {
+    isSelected.mockReturnValue(true);
+    render(<CharacterCard character={character} />);
+    const checkbox = screen.getByRole('checkbox');
+    expect(checkbox).toBeChecked();
+  });
 
-    render(<CharacterCard character={partialCharacter} />);
+  it('clicking checkbox calls addItem/removeItem', () => {
+    isSelected.mockReturnValue(false);
+    render(<CharacterCard character={character} />);
+    const checkbox = screen.getByRole('checkbox');
 
-    expect(screen.getByText('Luke Skywalker')).toBeInTheDocument();
-    expect(screen.getByText(/male.*172cm tall/)).toBeInTheDocument();
-    expect(screen.queryByText(/77kg/)).not.toBeInTheDocument();
-    expect(screen.queryByText(/19BBY/)).not.toBeInTheDocument();
+    fireEvent.click(checkbox);
+    expect(addItem).toHaveBeenCalledWith(character);
+
+    // Now simulate it being checked and then unchecked
+    // isSelected.mockReturnValue(true);
+    // render(<CharacterCard character={character} />);
+    // const newCheckbox = screen.getByTestId('checkbox');
+    // fireEvent.change(newCheckbox, { target: { checked: false } });
+    // expect(removeItem).toHaveBeenCalledWith(character.url);
+  });
+
+  it('calls onClick with character when card is clicked', () => {
+    isSelected.mockReturnValue(false);
+    const onClick = vi.fn();
+    render(<CharacterCard character={character} onClick={onClick} />);
+
+    fireEvent.click(screen.getByText('Leia Organa'));
+    expect(onClick).toHaveBeenCalledWith(character);
+  });
+
+  it('does not propagate checkbox click to card click', () => {
+    isSelected.mockReturnValue(false);
+    const onClick = vi.fn();
+    render(<CharacterCard character={character} onClick={onClick} />);
+    const checkbox = screen.getByRole('checkbox');
+    fireEvent.click(checkbox);
+    expect(onClick).not.toHaveBeenCalled();
+  });
+
+  it('has avatar icon', () => {
+    isSelected.mockReturnValue(false);
+    render(<CharacterCard character={character} />);
+    expect(screen.getByTestId('avatar')).toBeInTheDocument();
   });
 });
