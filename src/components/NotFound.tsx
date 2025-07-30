@@ -3,11 +3,20 @@ import { Home, Search, AlertTriangle } from 'lucide-react';
 
 export const NotFound = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+    <div
+      data-testid="not-found-container"
+      className="min-h-screen bg-gray-50 flex items-center justify-center px-4"
+    >
       <div className="max-w-md w-full text-center">
         <div className="mb-8">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-red-100 rounded-full mb-6">
-            <AlertTriangle className="w-10 h-10 text-red-600" />
+          <div
+            data-testid="error-icon-container"
+            className="inline-flex items-center justify-center w-20 h-20 bg-red-100 rounded-full mb-6"
+          >
+            <AlertTriangle
+              data-testid="error-icon"
+              className="w-10 h-10 text-red-600"
+            />
           </div>
 
           <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
@@ -25,7 +34,7 @@ export const NotFound = () => {
             to="/"
             className="inline-flex items-center justify-center w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
           >
-            <Home className="w-5 h-5 mr-2" />
+            <Home data-testid="home-icon" className="w-5 h-5 mr-2" />
             Return to Home
           </Link>
 
@@ -33,7 +42,7 @@ export const NotFound = () => {
             to="/"
             className="inline-flex items-center justify-center w-full px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium"
           >
-            <Search className="w-5 h-5 mr-2" />
+            <Search data-testid="search-icon" className="w-5 h-5 mr-2" />
             Search Characters
           </Link>
         </div>
