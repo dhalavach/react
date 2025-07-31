@@ -429,8 +429,8 @@ M.useTransition = function () {
 };
 M.version = '18.3.1';
 Oa.exports = M;
-var g = Oa.exports;
-const wi = wd(g);
+var y = Oa.exports;
+const wi = wd(y);
 /**
  * @license React
  * react-jsx-runtime.production.min.js
@@ -439,7 +439,7 @@ const wi = wd(g);
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */ var Dd = g,
+ */ var Dd = y,
   Bd = Symbol.for('react.element'),
   Od = Symbol.for('react.fragment'),
   Fd = Object.prototype.hasOwnProperty,
@@ -540,7 +540,7 @@ var p = Ba.exports,
     v = 3,
     w = !1,
     x = !1,
-    y = !1,
+    g = !1,
     C = typeof setTimeout == 'function' ? setTimeout : null,
     d = typeof clearTimeout == 'function' ? clearTimeout : null,
     c = typeof setImmediate < 'u' ? setImmediate : null;
@@ -558,7 +558,7 @@ var p = Ba.exports,
     }
   }
   function k(N) {
-    if (((y = !1), h(N), !x))
+    if (((g = !1), h(N), !x))
       if (n(s) !== null) ((x = !0), Ul(_));
       else {
         var L = n(u);
@@ -566,7 +566,7 @@ var p = Ba.exports,
       }
   }
   function _(N, L) {
-    ((x = !1), y && ((y = !1), d(j), (j = -1)), (w = !0));
+    ((x = !1), g && ((g = !1), d(j), (j = -1)), (w = !0));
     var z = v;
     try {
       for (
@@ -740,7 +740,7 @@ var p = Ba.exports,
             t(u, N),
             n(s) === null &&
               N === n(u) &&
-              (y ? (d(j), (j = -1)) : (y = !0), Zl(k, z - Q)))
+              (g ? (d(j), (j = -1)) : (g = !0), Zl(k, z - Q)))
           : ((N.sortIndex = b), t(s, N), x || w || ((x = !0), Ul(_))),
         N
       );
@@ -769,7 +769,7 @@ var Ud = Ka.exports;
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */ var Zd = g,
+ */ var Zd = y,
   ke = Ud;
 function S(e) {
   for (
@@ -3173,10 +3173,10 @@ function ii(e, t, n, r, l) {
           case 'pointerup':
             w = Bs;
         }
-        var y = (t & 4) !== 0,
-          C = !y && e === 'scroll',
-          d = y ? (v !== null ? v + 'Capture' : null) : v;
-        y = [];
+        var g = (t & 4) !== 0,
+          C = !g && e === 'scroll',
+          d = g ? (v !== null ? v + 'Capture' : null) : v;
+        g = [];
         for (var c = u, h; c !== null; ) {
           h = c;
           var k = h.stateNode;
@@ -3184,14 +3184,14 @@ function ii(e, t, n, r, l) {
             (h.tag === 5 &&
               k !== null &&
               ((h = k),
-              d !== null && ((k = Wn(c, d)), k != null && y.push(Jn(c, k, h)))),
+              d !== null && ((k = Wn(c, d)), k != null && g.push(Jn(c, k, h)))),
             C)
           )
             break;
           c = c.return;
         }
-        0 < y.length &&
-          ((v = new w(v, x, null, n, f)), m.push({ event: v, listeners: y }));
+        0 < g.length &&
+          ((v = new w(v, x, null, n, f)), m.push({ event: v, listeners: g }));
       }
     }
     if (!(t & 7)) {
@@ -3224,43 +3224,43 @@ function ii(e, t, n, r, l) {
           w !== x)
         ) {
           if (
-            ((y = Is),
+            ((g = Is),
             (k = 'onMouseLeave'),
             (d = 'onMouseEnter'),
             (c = 'mouse'),
             (e === 'pointerout' || e === 'pointerover') &&
-              ((y = Bs),
+              ((g = Bs),
               (k = 'onPointerLeave'),
               (d = 'onPointerEnter'),
               (c = 'pointer')),
             (C = w == null ? v : Yt(w)),
             (h = x == null ? v : Yt(x)),
-            (v = new y(k, c + 'leave', w, n, f)),
+            (v = new g(k, c + 'leave', w, n, f)),
             (v.target = C),
             (v.relatedTarget = h),
             (k = null),
             Tt(f) === u &&
-              ((y = new y(d, c + 'enter', x, n, f)),
-              (y.target = h),
-              (y.relatedTarget = C),
-              (k = y)),
+              ((g = new g(d, c + 'enter', x, n, f)),
+              (g.target = h),
+              (g.relatedTarget = C),
+              (k = g)),
             (C = k),
             w && x)
           )
             t: {
-              for (y = w, d = x, c = 0, h = y; h; h = At(h)) c++;
+              for (g = w, d = x, c = 0, h = g; h; h = At(h)) c++;
               for (h = 0, k = d; k; k = At(k)) h++;
-              for (; 0 < c - h; ) ((y = At(y)), c--);
+              for (; 0 < c - h; ) ((g = At(g)), c--);
               for (; 0 < h - c; ) ((d = At(d)), h--);
               for (; c--; ) {
-                if (y === d || (d !== null && y === d.alternate)) break t;
-                ((y = At(y)), (d = At(d)));
+                if (g === d || (d !== null && g === d.alternate)) break t;
+                ((g = At(g)), (d = At(d)));
               }
-              y = null;
+              g = null;
             }
-          else y = null;
-          (w !== null && Qs(m, v, w, y, !1),
-            x !== null && C !== null && Qs(m, C, x, y, !0));
+          else g = null;
+          (w !== null && Qs(m, v, w, g, !1),
+            x !== null && C !== null && Qs(m, C, x, g, !0));
         }
       }
       e: {
@@ -4016,7 +4016,7 @@ function Gu(e) {
       _
     );
   }
-  function y(d, c, h, k) {
+  function g(d, c, h, k) {
     var _ = xn(h);
     if (typeof _ != 'function') throw Error(S(150));
     if (((h = _.call(h)), h == null)) throw Error(S(151));
@@ -4142,7 +4142,7 @@ function Gu(e) {
           return ((P = h._init), C(d, c, P(h._payload), k));
       }
       if (Rn(h)) return x(d, c, h, k);
-      if (xn(h)) return y(d, c, h, k);
+      if (xn(h)) return g(d, c, h, k);
       Pr(d, h);
     }
     return (typeof h == 'string' && h !== '') || typeof h == 'number'
@@ -4350,10 +4350,10 @@ function pl(e, t, n, r) {
             });
         e: {
           var x = e,
-            y = a;
-          switch (((v = t), (w = n), y.tag)) {
+            g = a;
+          switch (((v = t), (w = n), g.tag)) {
             case 1:
-              if (((x = y.payload), typeof x == 'function')) {
+              if (((x = g.payload), typeof x == 'function')) {
                 m = x.call(w, m, v);
                 break e;
               }
@@ -4363,7 +4363,7 @@ function pl(e, t, n, r) {
               x.flags = (x.flags & -65537) | 128;
             case 0:
               if (
-                ((x = y.payload),
+                ((x = g.payload),
                 (v = typeof x == 'function' ? x.call(w, m, v) : x),
                 v == null)
               )
@@ -6609,11 +6609,11 @@ function Pf(e, t) {
                 break;
               case 1:
                 if (x !== null) {
-                  var y = x.memoizedProps,
+                  var g = x.memoizedProps,
                     C = x.memoizedState,
                     d = t.stateNode,
                     c = d.getSnapshotBeforeUpdate(
-                      t.elementType === t.type ? y : Le(t.type, y),
+                      t.elementType === t.type ? g : Le(t.type, g),
                       C
                     );
                   d.__reactInternalSnapshotBeforeUpdate = c;
@@ -6902,13 +6902,13 @@ function Ic(e, t) {
       if ((Re(t, e), Oe(e), r & 4)) {
         try {
           ($n(3, e, e.return), zl(3, e));
-        } catch (y) {
-          Y(e, e.return, y);
+        } catch (g) {
+          Y(e, e.return, g);
         }
         try {
           $n(5, e, e.return);
-        } catch (y) {
-          Y(e, e.return, y);
+        } catch (g) {
+          Y(e, e.return, g);
         }
       }
       break;
@@ -6925,8 +6925,8 @@ function Ic(e, t) {
         var l = e.stateNode;
         try {
           Hn(l, '');
-        } catch (y) {
-          Y(e, e.return, y);
+        } catch (g) {
+          Y(e, e.return, g);
         }
       }
       if (r & 4 && ((l = e.stateNode), l != null)) {
@@ -6969,8 +6969,8 @@ function Ic(e, t) {
                       : qt(l, !!i.multiple, i.multiple ? [] : '', !1));
             }
             l[bn] = i;
-          } catch (y) {
-            Y(e, e.return, y);
+          } catch (g) {
+            Y(e, e.return, g);
           }
       }
       break;
@@ -6980,8 +6980,8 @@ function Ic(e, t) {
         ((l = e.stateNode), (i = e.memoizedProps));
         try {
           l.nodeValue = i;
-        } catch (y) {
-          Y(e, e.return, y);
+        } catch (g) {
+          Y(e, e.return, g);
         }
       }
       break;
@@ -6991,8 +6991,8 @@ function Ic(e, t) {
       )
         try {
           Qn(t.containerInfo);
-        } catch (y) {
-          Y(e, e.return, y);
+        } catch (g) {
+          Y(e, e.return, g);
         }
       break;
     case 4:
@@ -7040,8 +7040,8 @@ function Ic(e, t) {
                         (x.props = t.memoizedProps),
                         (x.state = t.memoizedState),
                         x.componentWillUnmount());
-                    } catch (y) {
-                      Y(r, n, y);
+                    } catch (g) {
+                      Y(r, n, g);
                     }
                   }
                   break;
@@ -7076,16 +7076,16 @@ function Ic(e, t) {
                           ? s.display
                           : null),
                       (a.style.display = ou('display', o))));
-              } catch (y) {
-                Y(e, e.return, y);
+              } catch (g) {
+                Y(e, e.return, g);
               }
             }
           } else if (m.tag === 6) {
             if (f === null)
               try {
                 m.stateNode.nodeValue = u ? '' : m.memoizedProps;
-              } catch (y) {
-                Y(e, e.return, y);
+              } catch (g) {
+                Y(e, e.return, g);
               }
           } else if (
             ((m.tag !== 22 && m.tag !== 23) ||
@@ -7761,8 +7761,8 @@ function Oc(e, t) {
               (s = u));
             var x = t.updateQueue;
             if (x === null) {
-              var y = new Set();
-              (y.add(s), (t.updateQueue = y));
+              var g = new Set();
+              (g.add(s), (t.updateQueue = g));
             } else x.add(s);
             break e;
           } else {
@@ -8001,13 +8001,13 @@ function ln() {
               }
               var x = i.alternate;
               if (x !== null) {
-                var y = x.child;
-                if (y !== null) {
+                var g = x.child;
+                if (g !== null) {
                   x.child = null;
                   do {
-                    var C = y.sibling;
-                    ((y.sibling = null), (y = C));
-                  } while (y !== null);
+                    var C = g.sibling;
+                    ((g.sibling = null), (g = C));
+                  } while (g !== null);
                 }
               }
               E = i;
@@ -9068,7 +9068,7 @@ var Yf = Qa.exports,
       .toLowerCase()
       .trim(),
   U = (e, t) => {
-    const n = g.forwardRef(
+    const n = y.forwardRef(
       (
         {
           color: r = 'currentColor',
@@ -9081,7 +9081,7 @@ var Yf = Qa.exports,
         },
         f
       ) =>
-        g.createElement(
+        y.createElement(
           'svg',
           {
             ref: f,
@@ -9094,7 +9094,7 @@ var Yf = Qa.exports,
             ...u,
           },
           [
-            ...t.map(([m, v]) => g.createElement(m, v)),
+            ...t.map(([m, v]) => y.createElement(m, v)),
             ...(Array.isArray(s) ? s : [s]),
           ]
         )
@@ -9406,9 +9406,9 @@ var Yf = Qa.exports,
     ['path', { d: 'M18 6 6 18', key: '1bl5f8' }],
     ['path', { d: 'm6 6 12 12', key: 'd8bk6v' }],
   ]),
-  ed = g.createContext(void 0),
+  ed = y.createContext(void 0),
   fh = ({ children: e }) => {
-    const [t, n] = g.useState(() => {
+    const [t, n] = y.useState(() => {
       const l = localStorage.getItem('theme');
       return (
         l ||
@@ -9418,7 +9418,7 @@ var Yf = Qa.exports,
           : 'light')
       );
     });
-    g.useEffect(() => {
+    y.useEffect(() => {
       (localStorage.setItem('theme', t),
         t === 'dark'
           ? document.documentElement.classList.add('dark')
@@ -9433,7 +9433,7 @@ var Yf = Qa.exports,
     });
   },
   hh = () => {
-    const e = g.useContext(ed);
+    const e = y.useContext(ed);
     if (e === void 0)
       throw new Error('useTheme must be used within a ThemeProvider');
     return e;
@@ -9453,33 +9453,46 @@ var Yf = Qa.exports,
               className: 'w-5 h-5 text-gray-700 dark:text-gray-300',
             }),
     });
-  },
-  vh = 'starwars-search-term',
-  yh = 1e3,
-  gh = (e, t) => {
-    const [n, r] = g.useState(() => {
+  };
+function vh(e, t) {
+  const [n, r] = y.useState(() => {
       try {
-        const i = window.localStorage.getItem(e);
-        return i || t;
+        return localStorage.getItem(e) ?? t;
       } catch (i) {
-        return (console.error(i), t);
+        return (
+          console.error(`Error accessing localStorage key "${e}":`, i),
+          t
+        );
       }
-    });
-    return [
-      n,
-      (i) => {
-        try {
-          (r(i), window.localStorage.setItem(e, i));
-        } catch (o) {
-          console.error(o);
-        }
-      },
-    ];
-  },
+    }),
+    l = (i) => {
+      try {
+        (localStorage.setItem(e, i), r(i));
+      } catch (o) {
+        console.error(`Error writing to localStorage key "${e}":`, o);
+      }
+    };
+  return (
+    y.useEffect(() => {
+      try {
+        const i = (o) => {
+          o.key === e && o.newValue !== null && r(o.newValue);
+        };
+        return (
+          window.addEventListener('storage', i),
+          () => window.removeEventListener('storage', i)
+        );
+      } catch {}
+    }, [e]),
+    [n, l]
+  );
+}
+const yh = 'starwars-search-term',
+  gh = 1e3,
   wh = (e, t) => {
-    const [n, r] = g.useState(e);
+    const [n, r] = y.useState(e);
     return (
-      g.useEffect(() => {
+      y.useEffect(() => {
         const l = setTimeout(() => {
           r(e);
         }, t);
@@ -9491,28 +9504,28 @@ var Yf = Qa.exports,
     );
   },
   xh = ({ onSearch: e, isLoading: t }) => {
-    const [n, r] = gh(vh, ''),
-      l = wh(n, yh),
-      [i, o] = g.useState(!0),
+    const [n, r] = vh(yh, ''),
+      l = wh(n, gh),
+      [i, o] = y.useState(!0),
       a = (m) => m.trim();
-    (g.useEffect(() => {
+    (y.useEffect(() => {
       if (i) {
         const m = a(l);
         m && e(m, 1);
       }
     }, [l, e, i]),
-      g.useEffect(() => {
+      y.useEffect(() => {
         const m = a(n);
         m && e(m, 1);
       }, []));
     const s = (m) => {
         (r(m.target.value), o(!0));
       },
-      u = g.useCallback(() => {
+      u = y.useCallback(() => {
         const m = a(n);
         m && (o(!1), e(m, 1));
       }, [e, n]);
-    g.useEffect(() => {
+    y.useEffect(() => {
       !t && !i && o(!0);
     }, [t, i]);
     const f = (m) => {
@@ -9653,9 +9666,9 @@ const fo = (e) => (t) => {
   Th = (e, t) => (n, r, l) => {
     let i = {
         storage: Nh(() => localStorage),
-        partialize: (y) => y,
+        partialize: (g) => g,
         version: 0,
-        merge: (y, C) => ({ ...C, ...y }),
+        merge: (g, C) => ({ ...C, ...g }),
         ...t,
       },
       o = !1;
@@ -9664,26 +9677,26 @@ const fo = (e) => (t) => {
     let u = i.storage;
     if (!u)
       return e(
-        (...y) => {
+        (...g) => {
           (console.warn(
             `[zustand persist middleware] Unable to update item '${i.name}', the given storage is currently unavailable.`
           ),
-            n(...y));
+            n(...g));
         },
         r,
         l
       );
     const f = () => {
-        const y = i.partialize({ ...r() });
-        return u.setItem(i.name, { state: y, version: i.version });
+        const g = i.partialize({ ...r() });
+        return u.setItem(i.name, { state: g, version: i.version });
       },
       m = l.setState;
-    l.setState = (y, C) => {
-      (m(y, C), f());
+    l.setState = (g, C) => {
+      (m(g, C), f());
     };
     const v = e(
-      (...y) => {
-        (n(...y), f());
+      (...g) => {
+        (n(...g), f());
       },
       r,
       l
@@ -9691,7 +9704,7 @@ const fo = (e) => (t) => {
     l.getInitialState = () => v;
     let w;
     const x = () => {
-      var y, C;
+      var g, C;
       if (!u) return;
       ((o = !1),
         a.forEach((c) => {
@@ -9701,7 +9714,7 @@ const fo = (e) => (t) => {
       const d =
         ((C = i.onRehydrateStorage) == null
           ? void 0
-          : C.call(i, (y = r()) != null ? y : v)) || void 0;
+          : C.call(i, (g = r()) != null ? g : v)) || void 0;
       return fo(u.getItem.bind(u))(i.name)
         .then((c) => {
           if (c)
@@ -9734,8 +9747,8 @@ const fo = (e) => (t) => {
     };
     return (
       (l.persist = {
-        setOptions: (y) => {
-          ((i = { ...i, ...y }), y.storage && (u = y.storage));
+        setOptions: (g) => {
+          ((i = { ...i, ...g }), g.storage && (u = g.storage));
         },
         clearStorage: () => {
           u == null || u.removeItem(i.name);
@@ -9743,16 +9756,16 @@ const fo = (e) => (t) => {
         getOptions: () => i,
         rehydrate: () => x(),
         hasHydrated: () => o,
-        onHydrate: (y) => (
-          a.add(y),
+        onHydrate: (g) => (
+          a.add(g),
           () => {
-            a.delete(y);
+            a.delete(g);
           }
         ),
-        onFinishHydration: (y) => (
-          s.add(y),
+        onFinishHydration: (g) => (
+          s.add(g),
           () => {
-            s.delete(y);
+            s.delete(g);
           }
         ),
       }),
@@ -11807,35 +11820,35 @@ function Uh(e, t, n, r = {}) {
     a = 'POP';
     let C = f(),
       d = C == null ? null : C - u;
-    ((u = C), s && s({ action: a, location: y.location, delta: d }));
+    ((u = C), s && s({ action: a, location: g.location, delta: d }));
   }
   function v(C, d) {
     a = 'PUSH';
-    let c = mo(y.location, C, d);
+    let c = mo(g.location, C, d);
     u = f() + 1;
     let h = za(c, u),
-      k = y.createHref(c);
+      k = g.createHref(c);
     try {
       o.pushState(h, '', k);
     } catch (_) {
       if (_ instanceof DOMException && _.name === 'DataCloneError') throw _;
       l.location.assign(k);
     }
-    i && s && s({ action: a, location: y.location, delta: 1 });
+    i && s && s({ action: a, location: g.location, delta: 1 });
   }
   function w(C, d) {
     a = 'REPLACE';
-    let c = mo(y.location, C, d);
+    let c = mo(g.location, C, d);
     u = f();
     let h = za(c, u),
-      k = y.createHref(c);
+      k = g.createHref(c);
     (o.replaceState(h, '', k),
-      i && s && s({ action: a, location: y.location, delta: 0 }));
+      i && s && s({ action: a, location: g.location, delta: 0 }));
   }
   function x(C) {
     return Zh(C);
   }
-  let y = {
+  let g = {
     get action() {
       return a;
     },
@@ -11866,7 +11879,7 @@ function Uh(e, t, n, r = {}) {
       return o.go(C);
     },
   };
-  return y;
+  return g;
 }
 function Zh(e, t = !1) {
   let n = 'http://localhost';
@@ -12178,28 +12191,28 @@ var sd = ['POST', 'PUT', 'PATCH', 'DELETE'];
 new Set(sd);
 var u0 = ['GET', ...sd];
 new Set(u0);
-var yn = g.createContext(null);
+var yn = y.createContext(null);
 yn.displayName = 'DataRouter';
-var $l = g.createContext(null);
+var $l = y.createContext(null);
 $l.displayName = 'DataRouterState';
-g.createContext(!1);
-var ad = g.createContext({ isTransitioning: !1 });
+y.createContext(!1);
+var ad = y.createContext({ isTransitioning: !1 });
 ad.displayName = 'ViewTransition';
-var c0 = g.createContext(new Map());
+var c0 = y.createContext(new Map());
 c0.displayName = 'Fetchers';
-var d0 = g.createContext(null);
+var d0 = y.createContext(null);
 d0.displayName = 'Await';
-var He = g.createContext(null);
+var He = y.createContext(null);
 He.displayName = 'Navigation';
-var dr = g.createContext(null);
+var dr = y.createContext(null);
 dr.displayName = 'Location';
-var nt = g.createContext({ outlet: null, matches: [], isDataRoute: !1 });
+var nt = y.createContext({ outlet: null, matches: [], isDataRoute: !1 });
 nt.displayName = 'Route';
-var ps = g.createContext(null);
+var ps = y.createContext(null);
 ps.displayName = 'RouteError';
 function p0(e, { relative: t } = {}) {
   W(pr(), 'useHref() may be used only in the context of a <Router> component.');
-  let { basename: n, navigator: r } = g.useContext(He),
+  let { basename: n, navigator: r } = y.useContext(He),
     { hash: l, pathname: i, search: o } = fr(e, { relative: t }),
     a = i;
   return (
@@ -12208,7 +12221,7 @@ function p0(e, { relative: t } = {}) {
   );
 }
 function pr() {
-  return g.useContext(dr) != null;
+  return y.useContext(dr) != null;
 }
 function $t() {
   return (
@@ -12216,16 +12229,16 @@ function $t() {
       pr(),
       'useLocation() may be used only in the context of a <Router> component.'
     ),
-    g.useContext(dr).location
+    y.useContext(dr).location
   );
 }
 var ud =
   'You should call navigate() in a React.useEffect(), not when your component is first rendered.';
 function cd(e) {
-  g.useContext(He).static || g.useLayoutEffect(e);
+  y.useContext(He).static || y.useLayoutEffect(e);
 }
 function f0() {
-  let { isDataRoute: e } = g.useContext(nt);
+  let { isDataRoute: e } = y.useContext(nt);
   return e ? N0() : h0();
 }
 function h0() {
@@ -12233,17 +12246,17 @@ function h0() {
     pr(),
     'useNavigate() may be used only in the context of a <Router> component.'
   );
-  let e = g.useContext(yn),
-    { basename: t, navigator: n } = g.useContext(He),
-    { matches: r } = g.useContext(nt),
+  let e = y.useContext(yn),
+    { basename: t, navigator: n } = y.useContext(He),
+    { matches: r } = y.useContext(nt),
     { pathname: l } = $t(),
     i = JSON.stringify(id(r)),
-    o = g.useRef(!1);
+    o = y.useRef(!1);
   return (
     cd(() => {
       o.current = !0;
     }),
-    g.useCallback(
+    y.useCallback(
       (s, u = {}) => {
         if ((Ze(o.current, ud), !o.current)) return;
         if (typeof s == 'number') {
@@ -12260,12 +12273,12 @@ function h0() {
     )
   );
 }
-g.createContext(null);
+y.createContext(null);
 function fr(e, { relative: t } = {}) {
-  let { matches: n } = g.useContext(nt),
+  let { matches: n } = y.useContext(nt),
     { pathname: r } = $t(),
     l = JSON.stringify(id(n));
-  return g.useMemo(() => od(e, JSON.parse(l), r, t === 'path'), [e, l, r, t]);
+  return y.useMemo(() => od(e, JSON.parse(l), r, t === 'path'), [e, l, r, t]);
 }
 function m0(e, t) {
   return dd(e, t);
@@ -12276,8 +12289,8 @@ function dd(e, t, n, r) {
     pr(),
     'useRoutes() may be used only in the context of a <Router> component.'
   );
-  let { navigator: l } = g.useContext(He),
-    { matches: i } = g.useContext(nt),
+  let { navigator: l } = y.useContext(He),
+    { matches: i } = y.useContext(nt),
     o = i[i.length - 1],
     a = o ? o.params : {},
     s = o ? o.pathname : '/',
@@ -12309,21 +12322,21 @@ Please change the parent <Route path="${c}"> to <Route path="${c === '/' ? '*' :
     let c = u.replace(/^\//, '').split('/');
     x = '/' + w.replace(/^\//, '').split('/').slice(c.length).join('/');
   }
-  let y = nd(e, { pathname: x });
+  let g = nd(e, { pathname: x });
   (Ze(
-    f || y != null,
+    f || g != null,
     `No routes matched location "${v.pathname}${v.search}${v.hash}" `
   ),
     Ze(
-      y == null ||
-        y[y.length - 1].route.element !== void 0 ||
-        y[y.length - 1].route.Component !== void 0 ||
-        y[y.length - 1].route.lazy !== void 0,
+      g == null ||
+        g[g.length - 1].route.element !== void 0 ||
+        g[g.length - 1].route.Component !== void 0 ||
+        g[g.length - 1].route.lazy !== void 0,
       `Matched leaf route at location "${v.pathname}${v.search}${v.hash}" does not have an element or Component. This means it will render an <Outlet /> with a null value by default resulting in an "empty" page.`
     ));
   let C = x0(
-    y &&
-      y.map((c) =>
+    g &&
+      g.map((c) =>
         Object.assign({}, c, {
           params: Object.assign({}, a, c.params),
           pathname: Ge([
@@ -12348,7 +12361,7 @@ Please change the parent <Route path="${c}"> to <Route path="${c === '/' ? '*' :
     r
   );
   return t && C
-    ? g.createElement(
+    ? y.createElement(
         dr.Provider,
         {
           value: {
@@ -12381,33 +12394,33 @@ function v0() {
     o = null;
   return (
     console.error('Error handled by React Router default ErrorBoundary:', e),
-    (o = g.createElement(
-      g.Fragment,
+    (o = y.createElement(
+      y.Fragment,
       null,
-      g.createElement('p', null, '💿 Hey developer 👋'),
-      g.createElement(
+      y.createElement('p', null, '💿 Hey developer 👋'),
+      y.createElement(
         'p',
         null,
         'You can provide a way better UX than this when your app throws errors by providing your own ',
-        g.createElement('code', { style: i }, 'ErrorBoundary'),
+        y.createElement('code', { style: i }, 'ErrorBoundary'),
         ' or',
         ' ',
-        g.createElement('code', { style: i }, 'errorElement'),
+        y.createElement('code', { style: i }, 'errorElement'),
         ' prop on your route.'
       )
     )),
-    g.createElement(
-      g.Fragment,
+    y.createElement(
+      y.Fragment,
       null,
-      g.createElement('h2', null, 'Unexpected Application Error!'),
-      g.createElement('h3', { style: { fontStyle: 'italic' } }, t),
-      n ? g.createElement('pre', { style: l }, n) : null,
+      y.createElement('h2', null, 'Unexpected Application Error!'),
+      y.createElement('h3', { style: { fontStyle: 'italic' } }, t),
+      n ? y.createElement('pre', { style: l }, n) : null,
       o
     )
   );
 }
-var y0 = g.createElement(v0, null),
-  g0 = class extends g.Component {
+var y0 = y.createElement(v0, null),
+  g0 = class extends y.Component {
     constructor(e) {
       (super(e),
         (this.state = {
@@ -12438,10 +12451,10 @@ var y0 = g.createElement(v0, null),
     }
     render() {
       return this.state.error !== void 0
-        ? g.createElement(
+        ? y.createElement(
             nt.Provider,
             { value: this.props.routeContext },
-            g.createElement(ps.Provider, {
+            y.createElement(ps.Provider, {
               value: this.state.error,
               children: this.props.component,
             })
@@ -12450,14 +12463,14 @@ var y0 = g.createElement(v0, null),
     }
   };
 function w0({ routeContext: e, match: t, children: n }) {
-  let r = g.useContext(yn);
+  let r = y.useContext(yn);
   return (
     r &&
       r.static &&
       r.staticContext &&
       (t.route.errorElement || t.route.ErrorBoundary) &&
       (r.staticContext._deepestRenderedBoundaryId = t.route.id),
-    g.createElement(nt.Provider, { value: e }, n)
+    y.createElement(nt.Provider, { value: e }, n)
   );
 }
 function x0(e, t = [], n = null, r = null) {
@@ -12519,7 +12532,7 @@ function x0(e, t = [], n = null, r = null) {
             (x = null))
           : a === f &&
             ((v = !0), (x = u.route.hydrateFallbackElement || null))));
-    let y = t.concat(l.slice(0, f + 1)),
+    let g = t.concat(l.slice(0, f + 1)),
       C = () => {
         let d;
         return (
@@ -12528,25 +12541,25 @@ function x0(e, t = [], n = null, r = null) {
             : v
               ? (d = x)
               : u.route.Component
-                ? (d = g.createElement(u.route.Component, null))
+                ? (d = y.createElement(u.route.Component, null))
                 : u.route.element
                   ? (d = u.route.element)
                   : (d = s),
-          g.createElement(w0, {
+          y.createElement(w0, {
             match: u,
-            routeContext: { outlet: s, matches: y, isDataRoute: n != null },
+            routeContext: { outlet: s, matches: g, isDataRoute: n != null },
             children: d,
           })
         );
       };
     return n && (u.route.ErrorBoundary || u.route.errorElement || f === 0)
-      ? g.createElement(g0, {
+      ? y.createElement(g0, {
           location: n.location,
           revalidation: n.revalidation,
           component: w,
           error: m,
           children: C(),
-          routeContext: { outlet: null, matches: y, isDataRoute: !0 },
+          routeContext: { outlet: null, matches: g, isDataRoute: !0 },
         })
       : C();
   }, null);
@@ -12555,15 +12568,15 @@ function fs(e) {
   return `${e} must be used within a data router.  See https://reactrouter.com/en/main/routers/picking-a-router.`;
 }
 function k0(e) {
-  let t = g.useContext(yn);
+  let t = y.useContext(yn);
   return (W(t, fs(e)), t);
 }
 function S0(e) {
-  let t = g.useContext($l);
+  let t = y.useContext($l);
   return (W(t, fs(e)), t);
 }
 function _0(e) {
-  let t = g.useContext(nt);
+  let t = y.useContext(nt);
   return (W(t, fs(e)), t);
 }
 function hs(e) {
@@ -12579,7 +12592,7 @@ function C0() {
 }
 function E0() {
   var r;
-  let e = g.useContext(ps),
+  let e = y.useContext(ps),
     t = S0('useRouteError'),
     n = hs('useRouteError');
   return e !== void 0 ? e : (r = t.errors) == null ? void 0 : r[n];
@@ -12587,12 +12600,12 @@ function E0() {
 function N0() {
   let { router: e } = k0('useNavigate'),
     t = hs('useNavigate'),
-    n = g.useRef(!1);
+    n = y.useRef(!1);
   return (
     cd(() => {
       n.current = !0;
     }),
-    g.useCallback(
+    y.useCallback(
       async (l, i = {}) => {
         (Ze(n.current, ud),
           n.current &&
@@ -12608,7 +12621,7 @@ var Ia = {};
 function pd(e, t, n) {
   !t && !Ia[e] && ((Ia[e] = !0), Ze(!1, n));
 }
-g.memo(T0);
+y.memo(T0);
 function T0({ routes: e, future: t, state: n }) {
   return dd(e, void 0, n, t);
 }
@@ -12631,7 +12644,7 @@ function P0({
     'You cannot render a <Router> inside another <Router>. You should never have more than one in your app.'
   );
   let o = e.replace(/^\/*/, '/'),
-    a = g.useMemo(
+    a = y.useMemo(
       () => ({ basename: o, navigator: l, static: i, future: {} }),
       [o, l, i]
     );
@@ -12643,7 +12656,7 @@ function P0({
       state: m = null,
       key: v = 'default',
     } = n,
-    w = g.useMemo(() => {
+    w = y.useMemo(() => {
       let x = et(s, o);
       return x == null
         ? null
@@ -12659,10 +12672,10 @@ function P0({
     ),
     w == null
       ? null
-      : g.createElement(
+      : y.createElement(
           He.Provider,
           { value: a },
-          g.createElement(dr.Provider, { children: t, value: w })
+          y.createElement(dr.Provider, { children: t, value: w })
         )
   );
 }
@@ -12672,10 +12685,10 @@ function j0({ children: e, location: t }) {
 function yo(e, t = []) {
   let n = [];
   return (
-    g.Children.forEach(e, (r, l) => {
-      if (!g.isValidElement(r)) return;
+    y.Children.forEach(e, (r, l) => {
+      if (!y.isValidElement(r)) return;
       let i = [...t, l];
-      if (r.type === g.Fragment) {
+      if (r.type === y.Fragment) {
         n.push.apply(n, yo(r.props.children, i));
         return;
       }
@@ -12945,7 +12958,7 @@ function V0(e, t) {
   );
 }
 function fd() {
-  let e = g.useContext(yn);
+  let e = y.useContext(yn);
   return (
     ms(
       e,
@@ -12955,7 +12968,7 @@ function fd() {
   );
 }
 function Y0() {
-  let e = g.useContext($l);
+  let e = y.useContext($l);
   return (
     ms(
       e,
@@ -12964,19 +12977,19 @@ function Y0() {
     e
   );
 }
-var vs = g.createContext(void 0);
+var vs = y.createContext(void 0);
 vs.displayName = 'FrameworkContext';
 function hd() {
-  let e = g.useContext(vs);
+  let e = y.useContext(vs);
   return (
     ms(e, 'You must render this element inside a <HydratedRouter> element'),
     e
   );
 }
 function Q0(e, t) {
-  let n = g.useContext(vs),
-    [r, l] = g.useState(!1),
-    [i, o] = g.useState(!1),
+  let n = y.useContext(vs),
+    [r, l] = y.useState(!1),
+    [i, o] = y.useState(!1),
     {
       onFocus: a,
       onBlur: s,
@@ -12984,15 +12997,15 @@ function Q0(e, t) {
       onMouseLeave: f,
       onTouchStart: m,
     } = t,
-    v = g.useRef(null);
-  (g.useEffect(() => {
+    v = y.useRef(null);
+  (y.useEffect(() => {
     if ((e === 'render' && o(!0), e === 'viewport')) {
-      let y = (d) => {
+      let g = (d) => {
           d.forEach((c) => {
             o(c.isIntersecting);
           });
         },
-        C = new IntersectionObserver(y, { threshold: 0.5 });
+        C = new IntersectionObserver(g, { threshold: 0.5 });
       return (
         v.current && C.observe(v.current),
         () => {
@@ -13001,13 +13014,13 @@ function Q0(e, t) {
       );
     }
   }, [e]),
-    g.useEffect(() => {
+    y.useEffect(() => {
       if (r) {
-        let y = setTimeout(() => {
+        let g = setTimeout(() => {
           o(!0);
         }, 100);
         return () => {
-          clearTimeout(y);
+          clearTimeout(g);
         };
       }
     }, [r]));
@@ -13040,14 +13053,14 @@ function Pn(e, t) {
 }
 function K0({ page: e, ...t }) {
   let { router: n } = fd(),
-    r = g.useMemo(() => nd(n.routes, e, n.basename), [n.routes, e, n.basename]);
-  return r ? g.createElement(X0, { page: e, matches: r, ...t }) : null;
+    r = y.useMemo(() => nd(n.routes, e, n.basename), [n.routes, e, n.basename]);
+  return r ? y.createElement(X0, { page: e, matches: r, ...t }) : null;
 }
 function G0(e) {
   let { manifest: t, routeModules: n } = hd(),
-    [r, l] = g.useState([]);
+    [r, l] = y.useState([]);
   return (
-    g.useEffect(() => {
+    y.useEffect(() => {
       let i = !1;
       return (
         U0(e, t, n).then((o) => {
@@ -13066,12 +13079,12 @@ function X0({ page: e, matches: t, ...n }) {
     { manifest: l, routeModules: i } = hd(),
     { basename: o } = fd(),
     { loaderData: a, matches: s } = Y0(),
-    u = g.useMemo(() => Da(e, t, s, l, r, 'data'), [e, t, s, l, r]),
-    f = g.useMemo(() => Da(e, t, s, l, r, 'assets'), [e, t, s, l, r]),
-    m = g.useMemo(() => {
+    u = y.useMemo(() => Da(e, t, s, l, r, 'data'), [e, t, s, l, r]),
+    f = y.useMemo(() => Da(e, t, s, l, r, 'assets'), [e, t, s, l, r]),
+    m = y.useMemo(() => {
       if (e === r.pathname + r.search + r.hash) return [];
       let x = new Set(),
-        y = !1;
+        g = !1;
       if (
         (t.forEach((d) => {
           var h;
@@ -13083,7 +13096,7 @@ function X0({ page: e, matches: t, ...n }) {
               (h = i[d.route.id]) != null &&
               h.shouldRevalidate) ||
             c.hasClientLoader
-              ? (y = !0)
+              ? (g = !0)
               : x.add(d.route.id));
         }),
         x.size === 0)
@@ -13091,7 +13104,7 @@ function X0({ page: e, matches: t, ...n }) {
         return [];
       let C = F0(e, o, 'data');
       return (
-        y &&
+        g &&
           x.size > 0 &&
           C.searchParams.set(
             '_routes',
@@ -13103,13 +13116,13 @@ function X0({ page: e, matches: t, ...n }) {
         [C.pathname + C.search]
       );
     }, [o, a, r, l, u, t, e, i]),
-    v = g.useMemo(() => Z0(f, l), [f, l]),
+    v = y.useMemo(() => Z0(f, l), [f, l]),
     w = G0(f);
-  return g.createElement(
-    g.Fragment,
+  return y.createElement(
+    y.Fragment,
     null,
     m.map((x) =>
-      g.createElement('link', {
+      y.createElement('link', {
         key: x,
         rel: 'prefetch',
         as: 'fetch',
@@ -13118,9 +13131,9 @@ function X0({ page: e, matches: t, ...n }) {
       })
     ),
     v.map((x) =>
-      g.createElement('link', { key: x, rel: 'modulepreload', href: x, ...n })
+      y.createElement('link', { key: x, rel: 'modulepreload', href: x, ...n })
     ),
-    w.map(({ key: x, link: y }) => g.createElement('link', { key: x, ...y }))
+    w.map(({ key: x, link: g }) => y.createElement('link', { key: x, ...g }))
   );
 }
 function J0(...e) {
@@ -13138,19 +13151,19 @@ try {
   md && (window.__reactRouterVersion = '7.7.1');
 } catch {}
 function b0({ basename: e, children: t, window: n }) {
-  let r = g.useRef();
+  let r = y.useRef();
   r.current == null && (r.current = $h({ window: n, v5Compat: !0 }));
   let l = r.current,
-    [i, o] = g.useState({ action: l.action, location: l.location }),
-    a = g.useCallback(
+    [i, o] = y.useState({ action: l.action, location: l.location }),
+    a = y.useCallback(
       (s) => {
-        g.startTransition(() => o(s));
+        y.startTransition(() => o(s));
       },
       [o]
     );
   return (
-    g.useLayoutEffect(() => l.listen(a), [l, a]),
-    g.createElement(P0, {
+    y.useLayoutEffect(() => l.listen(a), [l, a]),
+    y.createElement(P0, {
       basename: e,
       children: t,
       location: i.location,
@@ -13160,7 +13173,7 @@ function b0({ basename: e, children: t, window: n }) {
   );
 }
 var vd = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i,
-  Sl = g.forwardRef(function (
+  Sl = y.forwardRef(function (
     {
       onClick: t,
       discover: n = 'render',
@@ -13177,11 +13190,11 @@ var vd = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i,
     },
     w
   ) {
-    let { basename: x } = g.useContext(He),
-      y = typeof u == 'string' && vd.test(u),
+    let { basename: x } = y.useContext(He),
+      g = typeof u == 'string' && vd.test(u),
       C,
       d = !1;
-    if (typeof u == 'string' && y && ((C = u), md))
+    if (typeof u == 'string' && g && ((C = u), md))
       try {
         let I = new URL(window.location.href),
           R = u.startsWith('//') ? new URL(I.protocol + u) : new URL(u),
@@ -13208,21 +13221,21 @@ var vd = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i,
     function T(I) {
       (t && t(I), I.defaultPrevented || P(I));
     }
-    let j = g.createElement('a', {
+    let j = y.createElement('a', {
       ...v,
       ..._,
       href: C || c,
       onClick: d || i ? t : T,
       ref: J0(w, k),
       target: s,
-      'data-discover': !y && n === 'render' ? 'true' : void 0,
+      'data-discover': !g && n === 'render' ? 'true' : void 0,
     });
-    return h && !y
-      ? g.createElement(g.Fragment, null, j, g.createElement(K0, { page: c }))
+    return h && !g
+      ? y.createElement(y.Fragment, null, j, y.createElement(K0, { page: c }))
       : j;
   });
 Sl.displayName = 'Link';
-var q0 = g.forwardRef(function (
+var q0 = y.forwardRef(function (
   {
     'aria-current': t = 'page',
     caseSensitive: n = !1,
@@ -13238,8 +13251,8 @@ var q0 = g.forwardRef(function (
 ) {
   let m = fr(o, { relative: u.relative }),
     v = $t(),
-    w = g.useContext($l),
-    { navigator: x, basename: y } = g.useContext(He),
+    w = y.useContext($l),
+    { navigator: x, basename: g } = y.useContext(He),
     C = w != null && sm(m) && a === !0,
     d = x.encodeLocation ? x.encodeLocation(m).pathname : m.pathname,
     c = v.pathname,
@@ -13251,7 +13264,7 @@ var q0 = g.forwardRef(function (
     ((c = c.toLowerCase()),
     (h = h ? h.toLowerCase() : null),
     (d = d.toLowerCase())),
-    h && y && (h = et(h, y) || h));
+    h && g && (h = et(h, g) || h));
   const k = d !== '/' && d.endsWith('/') ? d.length - 1 : d.length;
   let _ = c === d || (!l && c.startsWith(d) && c.charAt(k) === '/'),
     P =
@@ -13271,7 +13284,7 @@ var q0 = g.forwardRef(function (
         .filter(Boolean)
         .join(' '));
   let R = typeof i == 'function' ? i(T) : i;
-  return g.createElement(
+  return y.createElement(
     Sl,
     {
       ...u,
@@ -13286,7 +13299,7 @@ var q0 = g.forwardRef(function (
   );
 });
 q0.displayName = 'NavLink';
-var em = g.forwardRef(
+var em = y.forwardRef(
   (
     {
       discover: e = 'render',
@@ -13306,7 +13319,7 @@ var em = g.forwardRef(
     w
   ) => {
     let x = im(),
-      y = om(a, { relative: u }),
+      g = om(a, { relative: u }),
       C = o.toLowerCase() === 'get' ? 'get' : 'post',
       d = typeof a == 'string' && vd.test(a),
       c = (h) => {
@@ -13325,10 +13338,10 @@ var em = g.forwardRef(
           viewTransition: m,
         });
       };
-    return g.createElement('form', {
+    return y.createElement('form', {
       ref: w,
       method: C,
-      action: y,
+      action: g,
       onSubmit: r ? s : c,
       ...v,
       'data-discover': !d && e === 'render' ? 'true' : void 0,
@@ -13340,7 +13353,7 @@ function tm(e) {
   return `${e} must be used within a data router.  See https://reactrouter.com/en/main/routers/picking-a-router.`;
 }
 function yd(e) {
-  let t = g.useContext(yn);
+  let t = y.useContext(yn);
   return (W(t, tm(e)), t);
 }
 function nm(
@@ -13357,7 +13370,7 @@ function nm(
   let a = f0(),
     s = $t(),
     u = fr(e, { relative: i });
-  return g.useCallback(
+  return y.useCallback(
     (f) => {
       if (I0(f, t)) {
         f.preventDefault();
@@ -13378,9 +13391,9 @@ var rm = 0,
   lm = () => `__${String(++rm)}__`;
 function im() {
   let { router: e } = yd('useSubmit'),
-    { basename: t } = g.useContext(He),
+    { basename: t } = y.useContext(He),
     n = C0();
-  return g.useCallback(
+  return y.useCallback(
     async (r, l = {}) => {
       let { action: i, method: o, encType: a, formData: s, body: u } = O0(r, t);
       if (l.navigate === !1) {
@@ -13411,8 +13424,8 @@ function im() {
   );
 }
 function om(e, { relative: t } = {}) {
-  let { basename: n } = g.useContext(He),
-    r = g.useContext(nt);
+  let { basename: n } = y.useContext(He),
+    r = y.useContext(nt);
   W(r, 'useFormAction must be used inside a RouteContext');
   let [l] = r.matches.slice(-1),
     i = { ...fr(e || '.', { relative: t }) },
@@ -13437,7 +13450,7 @@ function om(e, { relative: t } = {}) {
   );
 }
 function sm(e, { relative: t } = {}) {
-  let n = g.useContext(ad);
+  let n = y.useContext(ad);
   W(
     n != null,
     "`useViewTransitionState` must be used within `react-router-dom`'s `RouterProvider`.  Did you accidentally import `RouterProvider` from `react-router`?"
@@ -13461,9 +13474,13 @@ const am = () =>
             className: 'mb-8',
             children: [
               p.jsx('div', {
+                'data-testid': 'error-icon-container',
                 className:
                   'inline-flex items-center justify-center w-20 h-20 bg-red-100 rounded-full mb-6',
-                children: p.jsx(Xf, { className: 'w-10 h-10 text-red-600' }),
+                children: p.jsx(Xf, {
+                  'data-testid': 'error-icon',
+                  className: 'w-10 h-10 text-red-600',
+                }),
               }),
               p.jsx('h1', {
                 className: 'text-6xl font-bold text-gray-900 mb-4',
@@ -13488,7 +13505,10 @@ const am = () =>
                 className:
                   'inline-flex items-center justify-center w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium',
                 children: [
-                  p.jsx(oh, { className: 'w-5 h-5 mr-2' }),
+                  p.jsx(oh, {
+                    'data-testid': 'home-icon',
+                    className: 'w-5 h-5 mr-2',
+                  }),
                   'Return to Home',
                 ],
               }),
@@ -13497,7 +13517,10 @@ const am = () =>
                 className:
                   'inline-flex items-center justify-center w-full px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium',
                 children: [
-                  p.jsx(Jc, { className: 'w-5 h-5 mr-2' }),
+                  p.jsx(Jc, {
+                    'data-testid': 'search-icon',
+                    className: 'w-5 h-5 mr-2',
+                  }),
                   'Search Characters',
                 ],
               }),
@@ -13608,14 +13631,14 @@ const am = () =>
     });
   },
   cm = () => {
-    const [e, t] = g.useState([]),
-      [n, r] = g.useState(null),
-      [l, i] = g.useState(!1),
-      [o, a] = g.useState(null),
-      [s, u] = g.useState(''),
-      [f, m] = g.useState(null),
-      [v, w] = g.useState(!1),
-      x = g.useCallback(async (h, k = 1) => {
+    const [e, t] = y.useState([]),
+      [n, r] = y.useState(null),
+      [l, i] = y.useState(!1),
+      [o, a] = y.useState(null),
+      [s, u] = y.useState(''),
+      [f, m] = y.useState(null),
+      [v, w] = y.useState(!1),
+      x = y.useCallback(async (h, k = 1) => {
         (i(!0), a(null), u(h));
         try {
           const _ = await Oh.searchCharacters(h, k);
@@ -13629,7 +13652,7 @@ const am = () =>
           i(!1);
         }
       }, []),
-      y = g.useCallback(
+      g = y.useCallback(
         (h) => {
           x(s, h);
         },
@@ -13662,7 +13685,7 @@ const am = () =>
                     isLoading: l,
                     error: o,
                     onRetry: C,
-                    onPageChange: y,
+                    onPageChange: g,
                     onCharacterClick: d,
                   }),
                   p.jsx(Fh, {}),
@@ -13678,5 +13701,5 @@ const am = () =>
     });
   };
 Kc(document.getElementById('root')).render(
-  p.jsx(g.StrictMode, { children: p.jsx(cm, {}) })
+  p.jsx(y.StrictMode, { children: p.jsx(cm, {}) })
 );

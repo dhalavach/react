@@ -41,10 +41,14 @@ describe('About', () => {
 
     const aboutContainer = container.firstChild;
     expect(aboutContainer).toHaveClass(
+      'min-h-screen',
       'bg-white',
-      'border-t',
-      'border-gray-200',
-      'py-8'
+      'dark:bg-gray-800',
+      'text-center',
+      'px-6',
+      'py-16',
+      'dark:text-gray-200',
+      'transition-colors'
     );
   });
 

@@ -5,7 +5,7 @@ import { CharacterDetailsPanel } from './components/CharacterDetailsPanel';
 import { APIService, createPaginationInfo } from './services/api';
 import type { Character, PaginationInfo } from './types/Character';
 import { About } from './components/About';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { NotFound } from './components/NotFound';
 import { SelectedItemsFlyout } from './components/SelectedItemsFlyout';
 import { ThemeProvider } from './contexts/ThemeContext';
@@ -88,7 +88,14 @@ const App = () => {
                   onPageChange={handlePageChange}
                   onCharacterClick={handleCharacterClick}
                 />
-                <About />
+                <div className="mt-8 text-center">
+                  <Link
+                    to="/about"
+                    className="inline-block text-base font-medium text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-200 transition-colors border border-blue-600 dark:border-blue-400 px-4 py-2 rounded-lg"
+                  >
+                    About This Project
+                  </Link>
+                </div>
 
                 <CharacterDetailsPanel
                   character={selectedCharacter}
@@ -99,7 +106,7 @@ const App = () => {
               </div>
             }
           />
-
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
