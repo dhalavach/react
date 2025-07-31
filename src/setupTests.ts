@@ -1,6 +1,14 @@
 import '@testing-library/jest-dom';
 import { beforeEach, vi } from 'vitest';
+//import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 
+//Mock theme
+
+// beforeAll(() => {
+//   vi.mock('ThemeProvider', () => {
+//     useTheme: () => ({ theme: 'dark' });
+//   });
+// });
 // Mock localStorage
 const localStorageMock = {
   getItem: vi.fn(),

@@ -1,6 +1,6 @@
 {
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\App.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\App.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\App.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\App.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -41,119 +41,115 @@
       },
       "10": {
         "start": { "line": 11, "column": 0 },
-        "end": { "line": 11, "column": 19 }
-      },
-      "11": {
-        "start": { "line": 12, "column": 0 },
-        "end": { "line": 12, "column": 64 }
+        "end": { "line": 11, "column": 56 }
       },
       "12": {
         "start": { "line": 13, "column": 0 },
-        "end": { "line": 13, "column": 76 }
+        "end": { "line": 13, "column": 19 }
       },
       "13": {
         "start": { "line": 14, "column": 0 },
-        "end": { "line": 14, "column": 52 }
+        "end": { "line": 14, "column": 64 }
       },
       "14": {
         "start": { "line": 15, "column": 0 },
-        "end": { "line": 15, "column": 58 }
+        "end": { "line": 15, "column": 76 }
       },
       "15": {
         "start": { "line": 16, "column": 0 },
-        "end": { "line": 16, "column": 65 }
+        "end": { "line": 16, "column": 52 }
       },
       "16": {
         "start": { "line": 17, "column": 0 },
-        "end": { "line": 17, "column": 79 }
+        "end": { "line": 17, "column": 58 }
       },
       "17": {
         "start": { "line": 18, "column": 0 },
-        "end": { "line": 18, "column": 8 }
+        "end": { "line": 18, "column": 65 }
       },
       "18": {
         "start": { "line": 19, "column": 0 },
-        "end": { "line": 19, "column": 4 }
+        "end": { "line": 19, "column": 79 }
       },
       "19": {
         "start": { "line": 20, "column": 0 },
-        "end": { "line": 20, "column": 70 }
+        "end": { "line": 20, "column": 8 }
+      },
+      "20": {
+        "start": { "line": 21, "column": 0 },
+        "end": { "line": 21, "column": 4 }
       },
       "21": {
         "start": { "line": 22, "column": 0 },
-        "end": { "line": 22, "column": 35 }
-      },
-      "22": {
-        "start": { "line": 23, "column": 0 },
-        "end": { "line": 23, "column": 53 }
+        "end": { "line": 22, "column": 70 }
       },
       "23": {
         "start": { "line": 24, "column": 0 },
-        "end": { "line": 24, "column": 25 }
+        "end": { "line": 24, "column": 35 }
       },
       "24": {
         "start": { "line": 25, "column": 0 },
-        "end": { "line": 25, "column": 21 }
+        "end": { "line": 25, "column": 53 }
       },
       "25": {
         "start": { "line": 26, "column": 0 },
-        "end": { "line": 26, "column": 39 }
+        "end": { "line": 26, "column": 25 }
+      },
+      "26": {
+        "start": { "line": 27, "column": 0 },
+        "end": { "line": 27, "column": 21 }
       },
       "27": {
         "start": { "line": 28, "column": 0 },
-        "end": { "line": 28, "column": 11 }
+        "end": { "line": 28, "column": 39 }
       },
-      "28": {
-        "start": { "line": 29, "column": 0 },
-        "end": { "line": 29, "column": 77 }
+      "29": {
+        "start": { "line": 30, "column": 0 },
+        "end": { "line": 30, "column": 11 }
       },
       "30": {
         "start": { "line": 31, "column": 0 },
-        "end": { "line": 31, "column": 40 }
-      },
-      "31": {
-        "start": { "line": 32, "column": 0 },
-        "end": { "line": 32, "column": 60 }
+        "end": { "line": 31, "column": 77 }
       },
       "32": {
         "start": { "line": 33, "column": 0 },
-        "end": { "line": 33, "column": 23 }
+        "end": { "line": 33, "column": 40 }
       },
       "33": {
         "start": { "line": 34, "column": 0 },
-        "end": { "line": 34, "column": 46 }
+        "end": { "line": 34, "column": 60 }
       },
       "34": {
         "start": { "line": 35, "column": 0 },
-        "end": { "line": 35, "column": 17 }
+        "end": { "line": 35, "column": 23 }
       },
       "35": {
         "start": { "line": 36, "column": 0 },
-        "end": { "line": 36, "column": 32 }
+        "end": { "line": 36, "column": 46 }
       },
       "36": {
         "start": { "line": 37, "column": 0 },
-        "end": { "line": 37, "column": 27 }
+        "end": { "line": 37, "column": 17 }
       },
       "37": {
         "start": { "line": 38, "column": 0 },
-        "end": { "line": 38, "column": 44 }
+        "end": { "line": 38, "column": 32 }
       },
       "38": {
         "start": { "line": 39, "column": 0 },
-        "end": { "line": 39, "column": 10 }
+        "end": { "line": 39, "column": 27 }
       },
       "39": {
         "start": { "line": 40, "column": 0 },
-        "end": { "line": 40, "column": 26 }
+        "end": { "line": 40, "column": 44 }
       },
       "40": {
         "start": { "line": 41, "column": 0 },
-        "end": { "line": 41, "column": 28 }
+        "end": { "line": 41, "column": 10 }
       },
       "41": {
         "start": { "line": 42, "column": 0 },
-        "end": { "line": 42, "column": 17 }
+        "end": { "line": 42, "column": 26 }
       },
       "42": {
         "start": { "line": 43, "column": 0 },
@@ -161,215 +157,231 @@
       },
       "43": {
         "start": { "line": 44, "column": 0 },
-        "end": { "line": 44, "column": 7 }
+        "end": { "line": 44, "column": 17 }
       },
       "44": {
         "start": { "line": 45, "column": 0 },
-        "end": { "line": 45, "column": 6 }
+        "end": { "line": 45, "column": 28 }
       },
       "45": {
         "start": { "line": 46, "column": 0 },
-        "end": { "line": 46, "column": 6 }
+        "end": { "line": 46, "column": 7 }
       },
       "46": {
         "start": { "line": 47, "column": 0 },
-        "end": { "line": 47, "column": 4 }
+        "end": { "line": 47, "column": 6 }
+      },
+      "47": {
+        "start": { "line": 48, "column": 0 },
+        "end": { "line": 48, "column": 6 }
       },
       "48": {
         "start": { "line": 49, "column": 0 },
-        "end": { "line": 49, "column": 39 }
-      },
-      "49": {
-        "start": { "line": 50, "column": 0 },
-        "end": { "line": 50, "column": 23 }
+        "end": { "line": 49, "column": 4 }
       },
       "50": {
         "start": { "line": 51, "column": 0 },
-        "end": { "line": 51, "column": 44 }
+        "end": { "line": 51, "column": 39 }
       },
       "51": {
         "start": { "line": 52, "column": 0 },
-        "end": { "line": 52, "column": 6 }
+        "end": { "line": 52, "column": 23 }
       },
       "52": {
         "start": { "line": 53, "column": 0 },
-        "end": { "line": 53, "column": 37 }
+        "end": { "line": 53, "column": 44 }
       },
       "53": {
         "start": { "line": 54, "column": 0 },
-        "end": { "line": 54, "column": 4 }
+        "end": { "line": 54, "column": 6 }
+      },
+      "54": {
+        "start": { "line": 55, "column": 0 },
+        "end": { "line": 55, "column": 37 }
       },
       "55": {
         "start": { "line": 56, "column": 0 },
-        "end": { "line": 56, "column": 29 }
-      },
-      "56": {
-        "start": { "line": 57, "column": 0 },
-        "end": { "line": 57, "column": 53 }
+        "end": { "line": 56, "column": 4 }
       },
       "57": {
         "start": { "line": 58, "column": 0 },
-        "end": { "line": 58, "column": 49 }
+        "end": { "line": 58, "column": 29 }
       },
       "58": {
         "start": { "line": 59, "column": 0 },
-        "end": { "line": 59, "column": 4 }
+        "end": { "line": 59, "column": 53 }
+      },
+      "59": {
+        "start": { "line": 60, "column": 0 },
+        "end": { "line": 60, "column": 49 }
       },
       "60": {
         "start": { "line": 61, "column": 0 },
-        "end": { "line": 61, "column": 58 }
-      },
-      "61": {
-        "start": { "line": 62, "column": 0 },
-        "end": { "line": 62, "column": 36 }
+        "end": { "line": 61, "column": 4 }
       },
       "62": {
         "start": { "line": 63, "column": 0 },
-        "end": { "line": 63, "column": 32 }
+        "end": { "line": 63, "column": 58 }
       },
       "63": {
         "start": { "line": 64, "column": 0 },
-        "end": { "line": 64, "column": 4 }
+        "end": { "line": 64, "column": 36 }
+      },
+      "64": {
+        "start": { "line": 65, "column": 0 },
+        "end": { "line": 65, "column": 32 }
       },
       "65": {
         "start": { "line": 66, "column": 0 },
-        "end": { "line": 66, "column": 41 }
-      },
-      "66": {
-        "start": { "line": 67, "column": 0 },
-        "end": { "line": 67, "column": 33 }
+        "end": { "line": 66, "column": 4 }
       },
       "67": {
         "start": { "line": 68, "column": 0 },
-        "end": { "line": 68, "column": 31 }
+        "end": { "line": 68, "column": 41 }
       },
       "68": {
         "start": { "line": 69, "column": 0 },
-        "end": { "line": 69, "column": 4 }
+        "end": { "line": 69, "column": 33 }
+      },
+      "69": {
+        "start": { "line": 70, "column": 0 },
+        "end": { "line": 70, "column": 31 }
       },
       "70": {
         "start": { "line": 71, "column": 0 },
-        "end": { "line": 71, "column": 10 }
-      },
-      "71": {
-        "start": { "line": 72, "column": 0 },
-        "end": { "line": 72, "column": 12 }
+        "end": { "line": 71, "column": 4 }
       },
       "72": {
         "start": { "line": 73, "column": 0 },
-        "end": { "line": 73, "column": 14 }
+        "end": { "line": 73, "column": 10 }
       },
       "73": {
         "start": { "line": 74, "column": 0 },
-        "end": { "line": 74, "column": 14 }
+        "end": { "line": 74, "column": 19 }
       },
       "74": {
         "start": { "line": 75, "column": 0 },
-        "end": { "line": 75, "column": 18 }
+        "end": { "line": 75, "column": 14 }
       },
       "75": {
         "start": { "line": 76, "column": 0 },
-        "end": { "line": 76, "column": 19 }
+        "end": { "line": 76, "column": 16 }
       },
       "76": {
         "start": { "line": 77, "column": 0 },
-        "end": { "line": 77, "column": 76 }
+        "end": { "line": 77, "column": 16 }
       },
       "77": {
         "start": { "line": 78, "column": 0 },
-        "end": { "line": 78, "column": 77 }
+        "end": { "line": 78, "column": 20 }
       },
       "78": {
         "start": { "line": 79, "column": 0 },
-        "end": { "line": 79, "column": 29 }
+        "end": { "line": 79, "column": 21 }
       },
       "79": {
         "start": { "line": 80, "column": 0 },
-        "end": { "line": 80, "column": 39 }
+        "end": { "line": 80, "column": 113 }
       },
       "80": {
         "start": { "line": 81, "column": 0 },
-        "end": { "line": 81, "column": 39 }
+        "end": { "line": 81, "column": 79 }
       },
       "81": {
         "start": { "line": 82, "column": 0 },
-        "end": { "line": 82, "column": 37 }
+        "end": { "line": 82, "column": 31 }
       },
       "82": {
         "start": { "line": 83, "column": 0 },
-        "end": { "line": 83, "column": 29 }
+        "end": { "line": 83, "column": 41 }
       },
       "83": {
         "start": { "line": 84, "column": 0 },
-        "end": { "line": 84, "column": 37 }
+        "end": { "line": 84, "column": 41 }
       },
       "84": {
         "start": { "line": 85, "column": 0 },
-        "end": { "line": 85, "column": 47 }
+        "end": { "line": 85, "column": 39 }
       },
       "85": {
         "start": { "line": 86, "column": 0 },
-        "end": { "line": 86, "column": 55 }
+        "end": { "line": 86, "column": 31 }
       },
       "86": {
         "start": { "line": 87, "column": 0 },
-        "end": { "line": 87, "column": 16 }
+        "end": { "line": 87, "column": 39 }
       },
       "87": {
         "start": { "line": 88, "column": 0 },
-        "end": { "line": 88, "column": 23 }
+        "end": { "line": 88, "column": 49 }
+      },
+      "88": {
+        "start": { "line": 89, "column": 0 },
+        "end": { "line": 89, "column": 57 }
       },
       "89": {
         "start": { "line": 90, "column": 0 },
-        "end": { "line": 90, "column": 36 }
+        "end": { "line": 90, "column": 18 }
       },
       "90": {
         "start": { "line": 91, "column": 0 },
-        "end": { "line": 91, "column": 45 }
-      },
-      "91": {
-        "start": { "line": 92, "column": 0 },
-        "end": { "line": 92, "column": 43 }
+        "end": { "line": 91, "column": 25 }
       },
       "92": {
         "start": { "line": 93, "column": 0 },
-        "end": { "line": 93, "column": 49 }
+        "end": { "line": 93, "column": 38 }
       },
       "93": {
         "start": { "line": 94, "column": 0 },
-        "end": { "line": 94, "column": 16 }
+        "end": { "line": 94, "column": 47 }
       },
       "94": {
         "start": { "line": 95, "column": 0 },
-        "end": { "line": 95, "column": 37 }
+        "end": { "line": 95, "column": 45 }
       },
       "95": {
         "start": { "line": 96, "column": 0 },
-        "end": { "line": 96, "column": 18 }
+        "end": { "line": 96, "column": 51 }
+      },
+      "96": {
+        "start": { "line": 97, "column": 0 },
+        "end": { "line": 97, "column": 18 }
       },
       "97": {
         "start": { "line": 98, "column": 0 },
-        "end": { "line": 98, "column": 10 }
+        "end": { "line": 98, "column": 39 }
       },
-      "99": {
-        "start": { "line": 100, "column": 0 },
-        "end": { "line": 100, "column": 49 }
+      "98": {
+        "start": { "line": 99, "column": 0 },
+        "end": { "line": 99, "column": 20 }
       },
       "100": {
         "start": { "line": 101, "column": 0 },
-        "end": { "line": 101, "column": 15 }
+        "end": { "line": 101, "column": 12 }
       },
-      "101": {
-        "start": { "line": 102, "column": 0 },
-        "end": { "line": 102, "column": 13 }
+      "102": {
+        "start": { "line": 103, "column": 0 },
+        "end": { "line": 103, "column": 51 }
       },
       "103": {
         "start": { "line": 104, "column": 0 },
-        "end": { "line": 104, "column": 2 }
+        "end": { "line": 104, "column": 17 }
+      },
+      "104": {
+        "start": { "line": 105, "column": 0 },
+        "end": { "line": 105, "column": 15 }
       },
       "105": {
         "start": { "line": 106, "column": 0 },
-        "end": { "line": 106, "column": 19 }
+        "end": { "line": 106, "column": 20 }
+      },
+      "107": {
+        "start": { "line": 108, "column": 0 },
+        "end": { "line": 108, "column": 2 }
+      },
+      "109": {
+        "start": { "line": 110, "column": 0 },
+        "end": { "line": 110, "column": 19 }
       }
     },
     "s": {
@@ -383,8 +395,7 @@
       "8": 1,
       "9": 1,
       "10": 1,
-      "11": 38,
-      "12": 38,
+      "12": 1,
       "13": 38,
       "14": 38,
       "15": 38,
@@ -392,50 +403,50 @@
       "17": 38,
       "18": 38,
       "19": 38,
+      "20": 38,
       "21": 38,
-      "22": 38,
-      "23": 12,
-      "24": 12,
+      "23": 38,
+      "24": 38,
       "25": 12,
+      "26": 12,
       "27": 12,
-      "28": 12,
-      "30": 10,
-      "31": 10,
-      "32": 12,
-      "33": 2,
-      "34": 2,
+      "29": 12,
+      "30": 12,
+      "32": 10,
+      "33": 10,
+      "34": 12,
       "35": 2,
       "36": 2,
-      "37": 0,
+      "37": 2,
       "38": 2,
-      "39": 2,
+      "39": 0,
       "40": 2,
-      "41": 12,
-      "42": 12,
+      "41": 2,
+      "42": 2,
       "43": 12,
       "44": 12,
-      "45": 38,
-      "46": 38,
+      "45": 12,
+      "46": 12,
+      "47": 38,
       "48": 38,
-      "49": 38,
-      "50": 0,
-      "51": 0,
-      "52": 38,
-      "53": 38,
+      "50": 38,
+      "51": 38,
+      "52": 0,
+      "53": 0,
+      "54": 38,
       "55": 38,
-      "56": 1,
-      "57": 1,
+      "57": 38,
       "58": 1,
-      "60": 38,
-      "61": 2,
-      "62": 2,
+      "59": 1,
+      "60": 1,
+      "62": 38,
       "63": 2,
-      "65": 38,
-      "66": 1,
-      "67": 1,
+      "64": 2,
+      "65": 2,
+      "67": 38,
       "68": 1,
-      "70": 38,
-      "71": 38,
+      "69": 1,
+      "70": 1,
       "72": 38,
       "73": 38,
       "74": 38,
@@ -452,144 +463,148 @@
       "85": 38,
       "86": 38,
       "87": 38,
+      "88": 38,
       "89": 38,
       "90": 38,
-      "91": 38,
       "92": 38,
       "93": 38,
       "94": 38,
       "95": 38,
+      "96": 38,
       "97": 38,
-      "99": 38,
+      "98": 38,
       "100": 38,
-      "101": 38,
+      "102": 38,
       "103": 38,
-      "105": 1
+      "104": 38,
+      "105": 38,
+      "107": 38,
+      "109": 1
     },
     "branchMap": {
       "0": {
         "type": "branch",
-        "line": 11,
+        "line": 13,
         "loc": {
-          "start": { "line": 11, "column": 12 },
-          "end": { "line": 104, "column": 2 }
+          "start": { "line": 13, "column": 12 },
+          "end": { "line": 108, "column": 2 }
         },
         "locations": [
           {
-            "start": { "line": 11, "column": 12 },
-            "end": { "line": 104, "column": 2 }
+            "start": { "line": 13, "column": 12 },
+            "end": { "line": 108, "column": 2 }
           }
         ]
       },
       "1": {
         "type": "branch",
-        "line": 23,
+        "line": 25,
         "loc": {
-          "start": { "line": 23, "column": 4 },
-          "end": { "line": 45, "column": 6 }
+          "start": { "line": 25, "column": 4 },
+          "end": { "line": 47, "column": 6 }
         },
         "locations": [
           {
-            "start": { "line": 23, "column": 4 },
-            "end": { "line": 45, "column": 6 }
+            "start": { "line": 25, "column": 4 },
+            "end": { "line": 47, "column": 6 }
           }
         ]
       },
       "2": {
         "type": "branch",
-        "line": 29,
+        "line": 31,
         "loc": {
-          "start": { "line": 29, "column": 75 },
-          "end": { "line": 33, "column": 15 }
+          "start": { "line": 31, "column": 75 },
+          "end": { "line": 35, "column": 15 }
         },
         "locations": [
           {
-            "start": { "line": 29, "column": 75 },
-            "end": { "line": 33, "column": 15 }
+            "start": { "line": 31, "column": 75 },
+            "end": { "line": 35, "column": 15 }
           }
         ]
       },
       "3": {
         "type": "branch",
-        "line": 33,
+        "line": 35,
         "loc": {
-          "start": { "line": 33, "column": 6 },
-          "end": { "line": 42, "column": 8 }
+          "start": { "line": 35, "column": 6 },
+          "end": { "line": 44, "column": 8 }
         },
         "locations": [
           {
-            "start": { "line": 33, "column": 6 },
-            "end": { "line": 42, "column": 8 }
+            "start": { "line": 35, "column": 6 },
+            "end": { "line": 44, "column": 8 }
           }
         ]
       },
       "4": {
         "type": "branch",
-        "line": 37,
+        "line": 39,
         "loc": {
-          "start": { "line": 37, "column": 20 },
-          "end": { "line": 38, "column": 44 }
+          "start": { "line": 39, "column": 20 },
+          "end": { "line": 40, "column": 44 }
         },
         "locations": [
           {
-            "start": { "line": 37, "column": 20 },
-            "end": { "line": 38, "column": 44 }
+            "start": { "line": 39, "column": 20 },
+            "end": { "line": 40, "column": 44 }
           }
         ]
       },
       "5": {
         "type": "branch",
-        "line": 56,
+        "line": 58,
         "loc": {
-          "start": { "line": 56, "column": 22 },
-          "end": { "line": 59, "column": 4 }
+          "start": { "line": 58, "column": 22 },
+          "end": { "line": 61, "column": 4 }
         },
         "locations": [
           {
-            "start": { "line": 56, "column": 22 },
-            "end": { "line": 59, "column": 4 }
+            "start": { "line": 58, "column": 22 },
+            "end": { "line": 61, "column": 4 }
           }
         ]
       },
       "6": {
         "type": "branch",
-        "line": 57,
+        "line": 59,
         "loc": {
-          "start": { "line": 57, "column": 24 },
-          "end": { "line": 57, "column": 51 }
+          "start": { "line": 59, "column": 24 },
+          "end": { "line": 59, "column": 51 }
         },
         "locations": [
           {
-            "start": { "line": 57, "column": 24 },
-            "end": { "line": 57, "column": 51 }
+            "start": { "line": 59, "column": 24 },
+            "end": { "line": 59, "column": 51 }
           }
         ]
       },
       "7": {
         "type": "branch",
-        "line": 61,
+        "line": 63,
         "loc": {
-          "start": { "line": 61, "column": 31 },
-          "end": { "line": 64, "column": 4 }
+          "start": { "line": 63, "column": 31 },
+          "end": { "line": 66, "column": 4 }
         },
         "locations": [
           {
-            "start": { "line": 61, "column": 31 },
-            "end": { "line": 64, "column": 4 }
+            "start": { "line": 63, "column": 31 },
+            "end": { "line": 66, "column": 4 }
           }
         ]
       },
       "8": {
         "type": "branch",
-        "line": 66,
+        "line": 68,
         "loc": {
-          "start": { "line": 66, "column": 34 },
-          "end": { "line": 69, "column": 4 }
+          "start": { "line": 68, "column": 34 },
+          "end": { "line": 71, "column": 4 }
         },
         "locations": [
           {
-            "start": { "line": 66, "column": 34 },
-            "end": { "line": 69, "column": 4 }
+            "start": { "line": 68, "column": 34 },
+            "end": { "line": 71, "column": 4 }
           }
         ]
       }
@@ -609,56 +624,56 @@
       "0": {
         "name": "App",
         "decl": {
-          "start": { "line": 11, "column": 12 },
-          "end": { "line": 104, "column": 2 }
+          "start": { "line": 13, "column": 12 },
+          "end": { "line": 108, "column": 2 }
         },
         "loc": {
-          "start": { "line": 11, "column": 12 },
-          "end": { "line": 104, "column": 2 }
+          "start": { "line": 13, "column": 12 },
+          "end": { "line": 108, "column": 2 }
         },
-        "line": 11
+        "line": 13
       },
       "1": {
         "name": "handleRetry",
         "decl": {
-          "start": { "line": 56, "column": 22 },
-          "end": { "line": 59, "column": 4 }
+          "start": { "line": 58, "column": 22 },
+          "end": { "line": 61, "column": 4 }
         },
         "loc": {
-          "start": { "line": 56, "column": 22 },
-          "end": { "line": 59, "column": 4 }
+          "start": { "line": 58, "column": 22 },
+          "end": { "line": 61, "column": 4 }
         },
-        "line": 56
+        "line": 58
       },
       "2": {
         "name": "handleCharacterClick",
         "decl": {
-          "start": { "line": 61, "column": 31 },
-          "end": { "line": 64, "column": 4 }
+          "start": { "line": 63, "column": 31 },
+          "end": { "line": 66, "column": 4 }
         },
         "loc": {
-          "start": { "line": 61, "column": 31 },
-          "end": { "line": 64, "column": 4 }
+          "start": { "line": 63, "column": 31 },
+          "end": { "line": 66, "column": 4 }
         },
-        "line": 61
+        "line": 63
       },
       "3": {
         "name": "handleCloseDetailsPanel",
         "decl": {
-          "start": { "line": 66, "column": 34 },
-          "end": { "line": 69, "column": 4 }
+          "start": { "line": 68, "column": 34 },
+          "end": { "line": 71, "column": 4 }
         },
         "loc": {
-          "start": { "line": 66, "column": 34 },
-          "end": { "line": 69, "column": 4 }
+          "start": { "line": 68, "column": 34 },
+          "end": { "line": 71, "column": 4 }
         },
-        "line": 66
+        "line": 68
       }
     },
     "f": { "0": 38, "1": 1, "2": 2, "3": 1 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\About.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\About.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\About.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\About.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -679,7 +694,7 @@
       },
       "6": {
         "start": { "line": 7, "column": 0 },
-        "end": { "line": 7, "column": 60 }
+        "end": { "line": 7, "column": 116 }
       },
       "7": {
         "start": { "line": 8, "column": 0 },
@@ -699,71 +714,75 @@
       },
       "11": {
         "start": { "line": 12, "column": 0 },
-        "end": { "line": 12, "column": 67 }
+        "end": { "line": 12, "column": 60 }
       },
-      "12": {
-        "start": { "line": 13, "column": 0 },
-        "end": { "line": 13, "column": 16 }
+      "13": {
+        "start": { "line": 14, "column": 0 },
+        "end": { "line": 14, "column": 16 }
       },
       "14": {
         "start": { "line": 15, "column": 0 },
-        "end": { "line": 15, "column": 66 }
+        "end": { "line": 15, "column": 16 }
       },
       "16": {
         "start": { "line": 17, "column": 0 },
-        "end": { "line": 17, "column": 70 }
-      },
-      "17": {
-        "start": { "line": 18, "column": 0 },
-        "end": { "line": 18, "column": 14 }
+        "end": { "line": 17, "column": 66 }
       },
       "18": {
         "start": { "line": 19, "column": 0 },
-        "end": { "line": 19, "column": 54 }
+        "end": { "line": 19, "column": 70 }
       },
       "19": {
         "start": { "line": 20, "column": 0 },
-        "end": { "line": 20, "column": 29 }
+        "end": { "line": 20, "column": 14 }
       },
       "20": {
         "start": { "line": 21, "column": 0 },
-        "end": { "line": 21, "column": 39 }
+        "end": { "line": 21, "column": 54 }
       },
       "21": {
         "start": { "line": 22, "column": 0 },
-        "end": { "line": 22, "column": 112 }
+        "end": { "line": 22, "column": 29 }
+      },
+      "22": {
+        "start": { "line": 23, "column": 0 },
+        "end": { "line": 23, "column": 39 }
       },
       "23": {
         "start": { "line": 24, "column": 0 },
-        "end": { "line": 24, "column": 49 }
-      },
-      "24": {
-        "start": { "line": 25, "column": 0 },
-        "end": { "line": 25, "column": 50 }
+        "end": { "line": 24, "column": 112 }
       },
       "25": {
         "start": { "line": 26, "column": 0 },
-        "end": { "line": 26, "column": 16 }
+        "end": { "line": 26, "column": 49 }
       },
       "26": {
         "start": { "line": 27, "column": 0 },
-        "end": { "line": 27, "column": 16 }
+        "end": { "line": 27, "column": 50 }
       },
       "27": {
         "start": { "line": 28, "column": 0 },
-        "end": { "line": 28, "column": 14 }
+        "end": { "line": 28, "column": 16 }
       },
       "28": {
         "start": { "line": 29, "column": 0 },
-        "end": { "line": 29, "column": 12 }
+        "end": { "line": 29, "column": 16 }
       },
       "29": {
         "start": { "line": 30, "column": 0 },
-        "end": { "line": 30, "column": 10 }
+        "end": { "line": 30, "column": 14 }
+      },
+      "30": {
+        "start": { "line": 31, "column": 0 },
+        "end": { "line": 31, "column": 12 }
       },
       "31": {
         "start": { "line": 32, "column": 0 },
-        "end": { "line": 32, "column": 2 }
+        "end": { "line": 32, "column": 10 }
+      },
+      "33": {
+        "start": { "line": 34, "column": 0 },
+        "end": { "line": 34, "column": 2 }
       }
     },
     "s": {
@@ -777,22 +796,23 @@
       "9": 44,
       "10": 44,
       "11": 44,
-      "12": 44,
+      "13": 44,
       "14": 44,
       "16": 44,
-      "17": 44,
       "18": 44,
       "19": 44,
       "20": 44,
       "21": 44,
+      "22": 44,
       "23": 44,
-      "24": 44,
       "25": 44,
       "26": 44,
       "27": 44,
       "28": 44,
       "29": 44,
-      "31": 44
+      "30": 44,
+      "31": 44,
+      "33": 44
     },
     "branchMap": {
       "0": {
@@ -800,12 +820,12 @@
         "line": 3,
         "loc": {
           "start": { "line": 3, "column": 21 },
-          "end": { "line": 32, "column": 2 }
+          "end": { "line": 34, "column": 2 }
         },
         "locations": [
           {
             "start": { "line": 3, "column": 21 },
-            "end": { "line": 32, "column": 2 }
+            "end": { "line": 34, "column": 2 }
           }
         ]
       }
@@ -816,19 +836,19 @@
         "name": "About",
         "decl": {
           "start": { "line": 3, "column": 21 },
-          "end": { "line": 32, "column": 2 }
+          "end": { "line": 34, "column": 2 }
         },
         "loc": {
           "start": { "line": 3, "column": 21 },
-          "end": { "line": 32, "column": 2 }
+          "end": { "line": 34, "column": 2 }
         },
         "line": 3
       }
     },
     "f": { "0": 44 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\CharacterCard.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\CharacterCard.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\CharacterCard.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\CharacterCard.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -981,183 +1001,199 @@
       },
       "54": {
         "start": { "line": 55, "column": 0 },
-        "end": { "line": 55, "column": 67 }
+        "end": { "line": 55, "column": 16 }
       },
       "55": {
         "start": { "line": 56, "column": 0 },
-        "end": { "line": 56, "column": 9 }
+        "end": { "line": 56, "column": 81 }
       },
       "56": {
         "start": { "line": 57, "column": 0 },
-        "end": { "line": 57, "column": 27 }
+        "end": { "line": 57, "column": 50 }
+      },
+      "57": {
+        "start": { "line": 58, "column": 0 },
+        "end": { "line": 58, "column": 27 }
       },
       "58": {
         "start": { "line": 59, "column": 0 },
-        "end": { "line": 59, "column": 61 }
-      },
-      "59": {
-        "start": { "line": 60, "column": 0 },
-        "end": { "line": 60, "column": 14 }
+        "end": { "line": 59, "column": 27 }
       },
       "60": {
         "start": { "line": 61, "column": 0 },
-        "end": { "line": 61, "column": 25 }
+        "end": { "line": 61, "column": 61 }
       },
       "61": {
         "start": { "line": 62, "column": 0 },
-        "end": { "line": 62, "column": 28 }
+        "end": { "line": 62, "column": 14 }
       },
       "62": {
         "start": { "line": 63, "column": 0 },
-        "end": { "line": 63, "column": 41 }
+        "end": { "line": 63, "column": 25 }
       },
       "63": {
         "start": { "line": 64, "column": 0 },
-        "end": { "line": 64, "column": 112 }
+        "end": { "line": 64, "column": 28 }
       },
       "64": {
         "start": { "line": 65, "column": 0 },
-        "end": { "line": 65, "column": 46 }
+        "end": { "line": 65, "column": 41 }
       },
       "65": {
         "start": { "line": 66, "column": 0 },
-        "end": { "line": 66, "column": 10 }
+        "end": { "line": 66, "column": 130 }
       },
       "66": {
         "start": { "line": 67, "column": 0 },
-        "end": { "line": 67, "column": 12 }
+        "end": { "line": 67, "column": 46 }
+      },
+      "67": {
+        "start": { "line": 68, "column": 0 },
+        "end": { "line": 68, "column": 10 }
       },
       "68": {
         "start": { "line": 69, "column": 0 },
-        "end": { "line": 69, "column": 50 }
-      },
-      "69": {
-        "start": { "line": 70, "column": 0 },
-        "end": { "line": 70, "column": 39 }
+        "end": { "line": 69, "column": 12 }
       },
       "70": {
         "start": { "line": 71, "column": 0 },
-        "end": { "line": 71, "column": 129 }
+        "end": { "line": 71, "column": 50 }
       },
       "71": {
         "start": { "line": 72, "column": 0 },
-        "end": { "line": 72, "column": 72 }
+        "end": { "line": 72, "column": 39 }
       },
       "72": {
         "start": { "line": 73, "column": 0 },
-        "end": { "line": 73, "column": 16 }
+        "end": { "line": 73, "column": 129 }
       },
       "73": {
         "start": { "line": 74, "column": 0 },
-        "end": { "line": 74, "column": 14 }
+        "end": { "line": 74, "column": 72 }
+      },
+      "74": {
+        "start": { "line": 75, "column": 0 },
+        "end": { "line": 75, "column": 16 }
       },
       "75": {
         "start": { "line": 76, "column": 0 },
-        "end": { "line": 76, "column": 40 }
-      },
-      "76": {
-        "start": { "line": 77, "column": 0 },
-        "end": { "line": 77, "column": 67 }
+        "end": { "line": 76, "column": 14 }
       },
       "77": {
         "start": { "line": 78, "column": 0 },
-        "end": { "line": 78, "column": 28 }
+        "end": { "line": 78, "column": 40 }
       },
       "78": {
         "start": { "line": 79, "column": 0 },
-        "end": { "line": 79, "column": 15 }
+        "end": { "line": 79, "column": 83 }
+      },
+      "79": {
+        "start": { "line": 80, "column": 0 },
+        "end": { "line": 80, "column": 28 }
       },
       "80": {
         "start": { "line": 81, "column": 0 },
-        "end": { "line": 81, "column": 27 }
+        "end": { "line": 81, "column": 15 }
       },
-      "81": {
-        "start": { "line": 82, "column": 0 },
-        "end": { "line": 82, "column": 71 }
+      "82": {
+        "start": { "line": 83, "column": 0 },
+        "end": { "line": 83, "column": 27 }
+      },
+      "83": {
+        "start": { "line": 84, "column": 0 },
+        "end": { "line": 84, "column": 74 }
       },
       "84": {
         "start": { "line": 85, "column": 0 },
-        "end": { "line": 85, "column": 70 }
+        "end": { "line": 85, "column": 27 }
       },
       "85": {
         "start": { "line": 86, "column": 0 },
-        "end": { "line": 86, "column": 48 }
-      },
-      "86": {
-        "start": { "line": 87, "column": 0 },
-        "end": { "line": 87, "column": 59 }
-      },
-      "87": {
-        "start": { "line": 88, "column": 0 },
-        "end": { "line": 88, "column": 45 }
+        "end": { "line": 86, "column": 16 }
       },
       "88": {
         "start": { "line": 89, "column": 0 },
-        "end": { "line": 89, "column": 49 }
+        "end": { "line": 89, "column": 90 }
       },
       "89": {
         "start": { "line": 90, "column": 0 },
-        "end": { "line": 90, "column": 20 }
+        "end": { "line": 90, "column": 48 }
+      },
+      "90": {
+        "start": { "line": 91, "column": 0 },
+        "end": { "line": 91, "column": 59 }
+      },
+      "91": {
+        "start": { "line": 92, "column": 0 },
+        "end": { "line": 92, "column": 45 }
       },
       "92": {
         "start": { "line": 93, "column": 0 },
-        "end": { "line": 93, "column": 46 }
+        "end": { "line": 93, "column": 49 }
       },
       "93": {
         "start": { "line": 94, "column": 0 },
-        "end": { "line": 94, "column": 59 }
-      },
-      "94": {
-        "start": { "line": 95, "column": 0 },
-        "end": { "line": 95, "column": 46 }
-      },
-      "95": {
-        "start": { "line": 96, "column": 0 },
-        "end": { "line": 96, "column": 47 }
+        "end": { "line": 94, "column": 20 }
       },
       "96": {
         "start": { "line": 97, "column": 0 },
-        "end": { "line": 97, "column": 20 }
+        "end": { "line": 97, "column": 46 }
+      },
+      "97": {
+        "start": { "line": 98, "column": 0 },
+        "end": { "line": 98, "column": 59 }
+      },
+      "98": {
+        "start": { "line": 99, "column": 0 },
+        "end": { "line": 99, "column": 46 }
       },
       "99": {
         "start": { "line": 100, "column": 0 },
-        "end": { "line": 100, "column": 52 }
+        "end": { "line": 100, "column": 47 }
       },
       "100": {
         "start": { "line": 101, "column": 0 },
-        "end": { "line": 101, "column": 59 }
-      },
-      "101": {
-        "start": { "line": 102, "column": 0 },
-        "end": { "line": 102, "column": 48 }
-      },
-      "102": {
-        "start": { "line": 103, "column": 0 },
-        "end": { "line": 103, "column": 51 }
+        "end": { "line": 101, "column": 20 }
       },
       "103": {
         "start": { "line": 104, "column": 0 },
-        "end": { "line": 104, "column": 20 }
+        "end": { "line": 104, "column": 52 }
+      },
+      "104": {
+        "start": { "line": 105, "column": 0 },
+        "end": { "line": 105, "column": 59 }
       },
       "105": {
         "start": { "line": 106, "column": 0 },
-        "end": { "line": 106, "column": 16 }
+        "end": { "line": 106, "column": 48 }
       },
       "106": {
         "start": { "line": 107, "column": 0 },
-        "end": { "line": 107, "column": 14 }
+        "end": { "line": 107, "column": 51 }
       },
       "107": {
         "start": { "line": 108, "column": 0 },
-        "end": { "line": 108, "column": 12 }
+        "end": { "line": 108, "column": 20 }
       },
-      "108": {
-        "start": { "line": 109, "column": 0 },
-        "end": { "line": 109, "column": 10 }
+      "109": {
+        "start": { "line": 110, "column": 0 },
+        "end": { "line": 110, "column": 16 }
       },
       "110": {
         "start": { "line": 111, "column": 0 },
-        "end": { "line": 111, "column": 2 }
+        "end": { "line": 111, "column": 14 }
+      },
+      "111": {
+        "start": { "line": 112, "column": 0 },
+        "end": { "line": 112, "column": 12 }
+      },
+      "112": {
+        "start": { "line": 113, "column": 0 },
+        "end": { "line": 113, "column": 10 }
+      },
+      "114": {
+        "start": { "line": 115, "column": 0 },
+        "end": { "line": 115, "column": 2 }
       }
     },
     "s": {
@@ -1199,10 +1235,10 @@
       "52": 28,
       "53": 28,
       "54": 28,
-      "55": 28,
-      "56": 28,
+      "55": 1,
+      "56": 27,
+      "57": 28,
       "58": 28,
-      "59": 28,
       "60": 28,
       "61": 28,
       "62": 28,
@@ -1210,39 +1246,43 @@
       "64": 28,
       "65": 28,
       "66": 28,
+      "67": 28,
       "68": 28,
-      "69": 28,
       "70": 28,
       "71": 28,
       "72": 28,
       "73": 28,
+      "74": 28,
       "75": 28,
-      "76": 28,
       "77": 28,
       "78": 28,
+      "79": 28,
       "80": 28,
-      "81": 27,
-      "84": 28,
-      "85": 28,
-      "86": 27,
-      "87": 27,
-      "88": 27,
-      "89": 27,
-      "92": 28,
+      "82": 28,
+      "83": 27,
+      "84": 27,
+      "85": 27,
+      "88": 28,
+      "89": 28,
+      "90": 27,
+      "91": 27,
+      "92": 27,
       "93": 27,
-      "94": 27,
-      "95": 27,
-      "96": 27,
-      "99": 28,
+      "96": 28,
+      "97": 27,
+      "98": 27,
+      "99": 27,
       "100": 27,
-      "101": 27,
-      "102": 27,
-      "103": 27,
-      "105": 28,
-      "106": 28,
-      "107": 28,
-      "108": 28,
-      "110": 28
+      "103": 28,
+      "104": 27,
+      "105": 27,
+      "106": 27,
+      "107": 27,
+      "109": 28,
+      "110": 28,
+      "111": 28,
+      "112": 28,
+      "114": 28
     },
     "branchMap": {
       "0": {
@@ -1320,12 +1360,12 @@
         "line": 32,
         "loc": {
           "start": { "line": 32, "column": 29 },
-          "end": { "line": 111, "column": 2 }
+          "end": { "line": 115, "column": 2 }
         },
         "locations": [
           {
             "start": { "line": 32, "column": 29 },
-            "end": { "line": 111, "column": 2 }
+            "end": { "line": 115, "column": 2 }
           }
         ]
       },
@@ -1334,82 +1374,82 @@
         "line": 55,
         "loc": {
           "start": { "line": 55, "column": 8 },
-          "end": { "line": 55, "column": 50 }
+          "end": { "line": 56, "column": 81 }
         },
         "locations": [
           {
             "start": { "line": 55, "column": 8 },
-            "end": { "line": 55, "column": 50 }
+            "end": { "line": 56, "column": 81 }
           }
         ]
       },
       "7": {
         "type": "branch",
-        "line": 55,
+        "line": 56,
         "loc": {
-          "start": { "line": 55, "column": 19 },
-          "end": { "line": 55, "column": 67 }
+          "start": { "line": 56, "column": 12 },
+          "end": { "line": 57, "column": 50 }
         },
         "locations": [
           {
-            "start": { "line": 55, "column": 19 },
-            "end": { "line": 55, "column": 67 }
+            "start": { "line": 56, "column": 12 },
+            "end": { "line": 57, "column": 50 }
           }
         ]
       },
       "8": {
         "type": "branch",
-        "line": 81,
+        "line": 83,
         "loc": {
-          "start": { "line": 81, "column": 11 },
-          "end": { "line": 82, "column": 71 }
+          "start": { "line": 83, "column": 11 },
+          "end": { "line": 86, "column": 16 }
         },
         "locations": [
           {
-            "start": { "line": 81, "column": 11 },
-            "end": { "line": 82, "column": 71 }
+            "start": { "line": 83, "column": 11 },
+            "end": { "line": 86, "column": 16 }
           }
         ]
       },
       "9": {
         "type": "branch",
-        "line": 86,
+        "line": 90,
         "loc": {
-          "start": { "line": 86, "column": 34 },
-          "end": { "line": 90, "column": 20 }
+          "start": { "line": 90, "column": 34 },
+          "end": { "line": 94, "column": 20 }
         },
         "locations": [
           {
-            "start": { "line": 86, "column": 34 },
-            "end": { "line": 90, "column": 20 }
+            "start": { "line": 90, "column": 34 },
+            "end": { "line": 94, "column": 20 }
           }
         ]
       },
       "10": {
         "type": "branch",
-        "line": 93,
+        "line": 97,
         "loc": {
-          "start": { "line": 93, "column": 32 },
-          "end": { "line": 97, "column": 20 }
+          "start": { "line": 97, "column": 32 },
+          "end": { "line": 101, "column": 20 }
         },
         "locations": [
           {
-            "start": { "line": 93, "column": 32 },
-            "end": { "line": 97, "column": 20 }
+            "start": { "line": 97, "column": 32 },
+            "end": { "line": 101, "column": 20 }
           }
         ]
       },
       "11": {
         "type": "branch",
-        "line": 100,
+        "line": 104,
         "loc": {
-          "start": { "line": 100, "column": 38 },
-          "end": { "line": 104, "column": 20 }
+          "start": { "line": 104, "column": 38 },
+          "end": { "line": 108, "column": 20 }
         },
         "locations": [
           {
-            "start": { "line": 100, "column": 38 },
-            "end": { "line": 104, "column": 20 }
+            "start": { "line": 104, "column": 38 },
+            "end": { "line": 108, "column": 20 }
           }
         ]
       },
@@ -1457,15 +1497,15 @@
       },
       "15": {
         "type": "branch",
-        "line": 65,
+        "line": 67,
         "loc": {
-          "start": { "line": 65, "column": 19 },
-          "end": { "line": 65, "column": 46 }
+          "start": { "line": 67, "column": 19 },
+          "end": { "line": 67, "column": 46 }
         },
         "locations": [
           {
-            "start": { "line": 65, "column": 19 },
-            "end": { "line": 65, "column": 46 }
+            "start": { "line": 67, "column": 19 },
+            "end": { "line": 67, "column": 46 }
           }
         ]
       }
@@ -1505,11 +1545,11 @@
         "name": "CharacterCard",
         "decl": {
           "start": { "line": 32, "column": 29 },
-          "end": { "line": 111, "column": 2 }
+          "end": { "line": 115, "column": 2 }
         },
         "loc": {
           "start": { "line": 32, "column": 29 },
-          "end": { "line": 111, "column": 2 }
+          "end": { "line": 115, "column": 2 }
         },
         "line": 32
       },
@@ -1540,20 +1580,20 @@
       "4": {
         "name": "onClick",
         "decl": {
-          "start": { "line": 65, "column": 19 },
-          "end": { "line": 65, "column": 46 }
+          "start": { "line": 67, "column": 19 },
+          "end": { "line": 67, "column": 46 }
         },
         "loc": {
-          "start": { "line": 65, "column": 19 },
-          "end": { "line": 65, "column": 46 }
+          "start": { "line": 67, "column": 19 },
+          "end": { "line": 67, "column": 46 }
         },
-        "line": 65
+        "line": 67
       }
     },
     "f": { "0": 28, "1": 28, "2": 2, "3": 3, "4": 2 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\CharacterDetailsPanel.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\CharacterDetailsPanel.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\CharacterDetailsPanel.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\CharacterDetailsPanel.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -3073,8 +3113,8 @@
     },
     "f": { "0": 52, "1": 14, "2": 98 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\ErrorBoundary.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\ErrorBoundary.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\ErrorBoundary.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\ErrorBoundary.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -3229,20 +3269,20 @@
     "s": {
       "0": 1,
       "12": 1,
-      "13": 1,
+      "13": 10,
       "14": 11,
       "15": 11,
       "16": 11,
-      "18": 1,
+      "18": 10,
       "19": 10,
       "20": 10,
-      "22": 1,
+      "22": 10,
       "23": 5,
       "24": 5,
-      "26": 1,
+      "26": 10,
       "27": 1,
       "28": 1,
-      "30": 1,
+      "30": 10,
       "31": 22,
       "32": 10,
       "33": 10,
@@ -3263,10 +3303,24 @@
       "52": 10,
       "54": 12,
       "55": 22,
-      "56": 1
+      "56": 10
     },
     "branchMap": {
       "0": {
+        "type": "branch",
+        "line": 13,
+        "loc": {
+          "start": { "line": 13, "column": 59 },
+          "end": { "line": 57, "column": 1 }
+        },
+        "locations": [
+          {
+            "start": { "line": 13, "column": 59 },
+            "end": { "line": 57, "column": 1 }
+          }
+        ]
+      },
+      "1": {
         "type": "branch",
         "line": 14,
         "loc": {
@@ -3277,20 +3331,6 @@
           {
             "start": { "line": 14, "column": 2 },
             "end": { "line": 17, "column": 3 }
-          }
-        ]
-      },
-      "1": {
-        "type": "branch",
-        "line": 27,
-        "loc": {
-          "start": { "line": 27, "column": 16 },
-          "end": { "line": 29, "column": 4 }
-        },
-        "locations": [
-          {
-            "start": { "line": 27, "column": 16 },
-            "end": { "line": 29, "column": 4 }
           }
         ]
       },
@@ -3324,6 +3364,20 @@
       },
       "4": {
         "type": "branch",
+        "line": 27,
+        "loc": {
+          "start": { "line": 27, "column": 16 },
+          "end": { "line": 29, "column": 4 }
+        },
+        "locations": [
+          {
+            "start": { "line": 27, "column": 16 },
+            "end": { "line": 29, "column": 4 }
+          }
+        ]
+      },
+      "5": {
+        "type": "branch",
         "line": 31,
         "loc": {
           "start": { "line": 31, "column": 2 },
@@ -3336,7 +3390,7 @@
           }
         ]
       },
-      "5": {
+      "6": {
         "type": "branch",
         "line": 32,
         "loc": {
@@ -3350,7 +3404,7 @@
           }
         ]
       },
-      "6": {
+      "7": {
         "type": "branch",
         "line": 41,
         "loc": {
@@ -3364,7 +3418,7 @@
           }
         ]
       },
-      "7": {
+      "8": {
         "type": "branch",
         "line": 53,
         "loc": {
@@ -3380,17 +3434,30 @@
       }
     },
     "b": {
-      "0": [11],
-      "1": [1],
+      "0": [10],
+      "1": [11],
       "2": [10],
       "3": [5],
-      "4": [22],
-      "5": [10],
-      "6": [2],
-      "7": [12]
+      "4": [1],
+      "5": [22],
+      "6": [10],
+      "7": [2],
+      "8": [12]
     },
     "fnMap": {
       "0": {
+        "name": "<instance_members_initializer>",
+        "decl": {
+          "start": { "line": 13, "column": 59 },
+          "end": { "line": 57, "column": 1 }
+        },
+        "loc": {
+          "start": { "line": 13, "column": 59 },
+          "end": { "line": 57, "column": 1 }
+        },
+        "line": 13
+      },
+      "1": {
         "name": "ErrorBoundary",
         "decl": {
           "start": { "line": 14, "column": 2 },
@@ -3401,18 +3468,6 @@
           "end": { "line": 17, "column": 3 }
         },
         "line": 14
-      },
-      "1": {
-        "name": "ErrorBoundary.handleReset",
-        "decl": {
-          "start": { "line": 27, "column": 16 },
-          "end": { "line": 29, "column": 4 }
-        },
-        "loc": {
-          "start": { "line": 27, "column": 16 },
-          "end": { "line": 29, "column": 4 }
-        },
-        "line": 27
       },
       "2": {
         "name": "getDerivedStateFromError",
@@ -3439,6 +3494,18 @@
         "line": 23
       },
       "4": {
+        "name": "handleReset",
+        "decl": {
+          "start": { "line": 27, "column": 16 },
+          "end": { "line": 29, "column": 4 }
+        },
+        "loc": {
+          "start": { "line": 27, "column": 16 },
+          "end": { "line": 29, "column": 4 }
+        },
+        "line": 27
+      },
+      "5": {
         "name": "render",
         "decl": {
           "start": { "line": 31, "column": 2 },
@@ -3451,10 +3518,10 @@
         "line": 31
       }
     },
-    "f": { "0": 11, "1": 1, "2": 10, "3": 5, "4": 22 }
+    "f": { "0": 10, "1": 11, "2": 10, "3": 5, "4": 1, "5": 22 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\ErrorMessage.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\ErrorMessage.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\ErrorMessage.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\ErrorMessage.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -3598,8 +3665,8 @@
     },
     "f": { "0": 10 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\LoadingSpinner.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\LoadingSpinner.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\LoadingSpinner.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\LoadingSpinner.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -3628,7 +3695,7 @@
       },
       "7": {
         "start": { "line": 8, "column": 0 },
-        "end": { "line": 8, "column": 59 }
+        "end": { "line": 8, "column": 79 }
       },
       "8": {
         "start": { "line": 9, "column": 0 },
@@ -3636,15 +3703,19 @@
       },
       "9": {
         "start": { "line": 10, "column": 0 },
-        "end": { "line": 10, "column": 62 }
+        "end": { "line": 10, "column": 54 }
       },
-      "10": {
-        "start": { "line": 11, "column": 0 },
-        "end": { "line": 11, "column": 10 }
+      "11": {
+        "start": { "line": 12, "column": 0 },
+        "end": { "line": 12, "column": 10 }
       },
       "12": {
         "start": { "line": 13, "column": 0 },
-        "end": { "line": 13, "column": 2 }
+        "end": { "line": 13, "column": 10 }
+      },
+      "14": {
+        "start": { "line": 15, "column": 0 },
+        "end": { "line": 15, "column": 2 }
       }
     },
     "s": {
@@ -3657,8 +3728,9 @@
       "7": 17,
       "8": 17,
       "9": 17,
-      "10": 17,
-      "12": 17
+      "11": 17,
+      "12": 17,
+      "14": 17
     },
     "branchMap": {
       "0": {
@@ -3666,12 +3738,12 @@
         "line": 3,
         "loc": {
           "start": { "line": 3, "column": 30 },
-          "end": { "line": 13, "column": 2 }
+          "end": { "line": 15, "column": 2 }
         },
         "locations": [
           {
             "start": { "line": 3, "column": 30 },
-            "end": { "line": 13, "column": 2 }
+            "end": { "line": 15, "column": 2 }
           }
         ]
       }
@@ -3682,19 +3754,19 @@
         "name": "LoadingSpinner",
         "decl": {
           "start": { "line": 3, "column": 30 },
-          "end": { "line": 13, "column": 2 }
+          "end": { "line": 15, "column": 2 }
         },
         "loc": {
           "start": { "line": 3, "column": 30 },
-          "end": { "line": 13, "column": 2 }
+          "end": { "line": 15, "column": 2 }
         },
         "line": 3
       }
     },
     "f": { "0": 17 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\NotFound.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\NotFound.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\NotFound.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\NotFound.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -3933,8 +4005,8 @@
     },
     "f": { "0": 6 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\Pagination.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\Pagination.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\Pagination.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\Pagination.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -4067,7 +4139,7 @@
       },
       "55": {
         "start": { "line": 56, "column": 0 },
-        "end": { "line": 56, "column": 45 }
+        "end": { "line": 56, "column": 64 }
       },
       "56": {
         "start": { "line": 57, "column": 0 },
@@ -4095,7 +4167,7 @@
       },
       "65": {
         "start": { "line": 66, "column": 0 },
-        "end": { "line": 66, "column": 151 }
+        "end": { "line": 66, "column": 195 }
       },
       "66": {
         "start": { "line": 67, "column": 0 },
@@ -4179,11 +4251,11 @@
       },
       "93": {
         "start": { "line": 94, "column": 0 },
-        "end": { "line": 94, "column": 64 }
+        "end": { "line": 94, "column": 102 }
       },
       "94": {
         "start": { "line": 95, "column": 0 },
-        "end": { "line": 95, "column": 81 }
+        "end": { "line": 95, "column": 161 }
       },
       "95": {
         "start": { "line": 96, "column": 0 },
@@ -4223,7 +4295,7 @@
       },
       "108": {
         "start": { "line": 109, "column": 0 },
-        "end": { "line": 109, "column": 151 }
+        "end": { "line": 109, "column": 212 }
       },
       "109": {
         "start": { "line": 110, "column": 0 },
@@ -4251,7 +4323,7 @@
       },
       "118": {
         "start": { "line": 119, "column": 0 },
-        "end": { "line": 119, "column": 151 }
+        "end": { "line": 119, "column": 212 }
       },
       "119": {
         "start": { "line": 120, "column": 0 },
@@ -4609,12 +4681,12 @@
         "line": 93,
         "loc": {
           "start": { "line": 93, "column": 29 },
-          "end": { "line": 94, "column": 64 }
+          "end": { "line": 94, "column": 102 }
         },
         "locations": [
           {
             "start": { "line": 93, "column": 29 },
-            "end": { "line": 94, "column": 64 }
+            "end": { "line": 94, "column": 102 }
           }
         ]
       },
@@ -4623,12 +4695,12 @@
         "line": 94,
         "loc": {
           "start": { "line": 94, "column": 24 },
-          "end": { "line": 95, "column": 81 }
+          "end": { "line": 95, "column": 161 }
         },
         "locations": [
           {
             "start": { "line": 94, "column": 24 },
-            "end": { "line": 95, "column": 81 }
+            "end": { "line": 95, "column": 161 }
           }
         ]
       },
@@ -4787,8 +4859,8 @@
     },
     "f": { "0": 13, "1": 12, "2": 1, "3": 1, "4": 2, "5": 1, "6": 1 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\PaginationControls.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\PaginationControls.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\PaginationControls.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\PaginationControls.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -5442,8 +5514,8 @@
     },
     "f": { "0": 10, "1": 9, "2": 1, "3": 2, "4": 1 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\ResultsSection.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\ResultsSection.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\ResultsSection.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\ResultsSection.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -5492,7 +5564,7 @@
       },
       "26": {
         "start": { "line": 27, "column": 0 },
-        "end": { "line": 27, "column": 71 }
+        "end": { "line": 27, "column": 116 }
       },
       "27": {
         "start": { "line": 28, "column": 0 },
@@ -5516,7 +5588,7 @@
       },
       "34": {
         "start": { "line": 35, "column": 0 },
-        "end": { "line": 35, "column": 49 }
+        "end": { "line": 35, "column": 68 }
       },
       "36": {
         "start": { "line": 37, "column": 0 },
@@ -5540,7 +5612,7 @@
       },
       "43": {
         "start": { "line": 44, "column": 0 },
-        "end": { "line": 44, "column": 66 }
+        "end": { "line": 44, "column": 82 }
       },
       "45": {
         "start": { "line": 46, "column": 0 },
@@ -5548,7 +5620,7 @@
       },
       "46": {
         "start": { "line": 47, "column": 0 },
-        "end": { "line": 47, "column": 62 }
+        "end": { "line": 47, "column": 81 }
       },
       "47": {
         "start": { "line": 48, "column": 0 },
@@ -5934,189 +6006,181 @@
     },
     "f": { "0": 48 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\SearchSection.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\SearchSection.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\SearchSection.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\SearchSection.tsx",
     "all": false,
     "statementMap": {
       "0": {
         "start": { "line": 1, "column": 0 },
         "end": { "line": 1, "column": 64 }
       },
-      "8": {
-        "start": { "line": 9, "column": 0 },
-        "end": { "line": 9, "column": 43 }
-      },
-      "9": {
-        "start": { "line": 10, "column": 0 },
-        "end": { "line": 10, "column": 28 }
+      "10": {
+        "start": { "line": 11, "column": 0 },
+        "end": { "line": 11, "column": 43 }
       },
       "11": {
         "start": { "line": 12, "column": 0 },
-        "end": { "line": 12, "column": 64 }
-      },
-      "12": {
-        "start": { "line": 13, "column": 0 },
-        "end": { "line": 13, "column": 56 }
+        "end": { "line": 12, "column": 28 }
       },
       "13": {
         "start": { "line": 14, "column": 0 },
-        "end": { "line": 14, "column": 9 }
+        "end": { "line": 14, "column": 64 }
       },
       "14": {
         "start": { "line": 15, "column": 0 },
-        "end": { "line": 15, "column": 52 }
+        "end": { "line": 15, "column": 56 }
       },
       "15": {
         "start": { "line": 16, "column": 0 },
-        "end": { "line": 16, "column": 40 }
+        "end": { "line": 16, "column": 9 }
       },
       "16": {
         "start": { "line": 17, "column": 0 },
-        "end": { "line": 17, "column": 21 }
+        "end": { "line": 17, "column": 52 }
       },
       "17": {
         "start": { "line": 18, "column": 0 },
-        "end": { "line": 18, "column": 27 }
+        "end": { "line": 18, "column": 40 }
       },
       "18": {
         "start": { "line": 19, "column": 0 },
-        "end": { "line": 19, "column": 26 }
+        "end": { "line": 19, "column": 21 }
       },
       "19": {
         "start": { "line": 20, "column": 0 },
-        "end": { "line": 20, "column": 5 }
+        "end": { "line": 20, "column": 27 }
       },
       "20": {
         "start": { "line": 21, "column": 0 },
-        "end": { "line": 21, "column": 5 }
+        "end": { "line": 21, "column": 26 }
+      },
+      "21": {
+        "start": { "line": 22, "column": 0 },
+        "end": { "line": 22, "column": 5 }
       },
       "22": {
         "start": { "line": 23, "column": 0 },
-        "end": { "line": 23, "column": 39 }
-      },
-      "23": {
-        "start": { "line": 24, "column": 0 },
-        "end": { "line": 24, "column": 9 }
+        "end": { "line": 23, "column": 5 }
       },
       "24": {
         "start": { "line": 25, "column": 0 },
-        "end": { "line": 25, "column": 28 }
+        "end": { "line": 25, "column": 39 }
       },
       "25": {
         "start": { "line": 26, "column": 0 },
-        "end": { "line": 26, "column": 46 }
+        "end": { "line": 26, "column": 9 }
       },
       "26": {
         "start": { "line": 27, "column": 0 },
-        "end": { "line": 27, "column": 21 }
+        "end": { "line": 27, "column": 28 }
       },
       "27": {
         "start": { "line": 28, "column": 0 },
-        "end": { "line": 28, "column": 27 }
+        "end": { "line": 28, "column": 46 }
       },
       "28": {
         "start": { "line": 29, "column": 0 },
-        "end": { "line": 29, "column": 5 }
+        "end": { "line": 29, "column": 21 }
       },
       "29": {
         "start": { "line": 30, "column": 0 },
-        "end": { "line": 30, "column": 4 }
+        "end": { "line": 30, "column": 27 }
+      },
+      "30": {
+        "start": { "line": 31, "column": 0 },
+        "end": { "line": 31, "column": 5 }
       },
       "31": {
         "start": { "line": 32, "column": 0 },
-        "end": { "line": 32, "column": 42 }
+        "end": { "line": 32, "column": 4 }
       },
-      "32": {
-        "start": { "line": 33, "column": 0 },
-        "end": { "line": 33, "column": 2 }
+      "33": {
+        "start": { "line": 34, "column": 0 },
+        "end": { "line": 34, "column": 42 }
       },
       "34": {
         "start": { "line": 35, "column": 0 },
-        "end": { "line": 35, "column": 55 }
+        "end": { "line": 35, "column": 2 }
       },
-      "35": {
-        "start": { "line": 36, "column": 0 },
-        "end": { "line": 36, "column": 62 }
+      "36": {
+        "start": { "line": 37, "column": 0 },
+        "end": { "line": 37, "column": 55 }
       },
       "37": {
         "start": { "line": 38, "column": 0 },
-        "end": { "line": 38, "column": 19 }
-      },
-      "38": {
-        "start": { "line": 39, "column": 0 },
-        "end": { "line": 39, "column": 38 }
+        "end": { "line": 38, "column": 62 }
       },
       "39": {
         "start": { "line": 40, "column": 0 },
-        "end": { "line": 40, "column": 31 }
+        "end": { "line": 40, "column": 19 }
       },
       "40": {
         "start": { "line": 41, "column": 0 },
-        "end": { "line": 41, "column": 14 }
+        "end": { "line": 41, "column": 38 }
+      },
+      "41": {
+        "start": { "line": 42, "column": 0 },
+        "end": { "line": 42, "column": 31 }
       },
       "42": {
         "start": { "line": 43, "column": 0 },
-        "end": { "line": 43, "column": 18 }
-      },
-      "43": {
-        "start": { "line": 44, "column": 0 },
-        "end": { "line": 44, "column": 28 }
+        "end": { "line": 43, "column": 14 }
       },
       "44": {
         "start": { "line": 45, "column": 0 },
-        "end": { "line": 45, "column": 6 }
+        "end": { "line": 45, "column": 18 }
       },
       "45": {
         "start": { "line": 46, "column": 0 },
-        "end": { "line": 46, "column": 21 }
+        "end": { "line": 46, "column": 28 }
+      },
+      "46": {
+        "start": { "line": 47, "column": 0 },
+        "end": { "line": 47, "column": 6 }
       },
       "47": {
         "start": { "line": 48, "column": 0 },
-        "end": { "line": 48, "column": 24 }
+        "end": { "line": 48, "column": 21 }
       },
-      "48": {
-        "start": { "line": 49, "column": 0 },
-        "end": { "line": 49, "column": 2 }
+      "49": {
+        "start": { "line": 50, "column": 0 },
+        "end": { "line": 50, "column": 24 }
       },
       "50": {
         "start": { "line": 51, "column": 0 },
-        "end": { "line": 51, "column": 66 }
-      },
-      "51": {
-        "start": { "line": 52, "column": 0 },
-        "end": { "line": 52, "column": 71 }
+        "end": { "line": 51, "column": 2 }
       },
       "52": {
         "start": { "line": 53, "column": 0 },
-        "end": { "line": 53, "column": 70 }
+        "end": { "line": 53, "column": 66 }
       },
       "53": {
         "start": { "line": 54, "column": 0 },
-        "end": { "line": 54, "column": 61 }
+        "end": { "line": 54, "column": 71 }
+      },
+      "54": {
+        "start": { "line": 55, "column": 0 },
+        "end": { "line": 55, "column": 70 }
       },
       "55": {
         "start": { "line": 56, "column": 0 },
-        "end": { "line": 56, "column": 47 }
-      },
-      "56": {
-        "start": { "line": 57, "column": 0 },
-        "end": { "line": 57, "column": 23 }
+        "end": { "line": 56, "column": 61 }
       },
       "57": {
         "start": { "line": 58, "column": 0 },
-        "end": { "line": 58, "column": 4 }
+        "end": { "line": 58, "column": 47 }
+      },
+      "58": {
+        "start": { "line": 59, "column": 0 },
+        "end": { "line": 59, "column": 23 }
       },
       "59": {
         "start": { "line": 60, "column": 0 },
-        "end": { "line": 60, "column": 19 }
-      },
-      "60": {
-        "start": { "line": 61, "column": 0 },
-        "end": { "line": 61, "column": 25 }
+        "end": { "line": 60, "column": 4 }
       },
       "61": {
         "start": { "line": 62, "column": 0 },
-        "end": { "line": 62, "column": 66 }
+        "end": { "line": 62, "column": 19 }
       },
       "62": {
         "start": { "line": 63, "column": 0 },
@@ -6124,334 +6188,344 @@
       },
       "63": {
         "start": { "line": 64, "column": 0 },
-        "end": { "line": 64, "column": 34 }
+        "end": { "line": 64, "column": 66 }
       },
       "64": {
         "start": { "line": 65, "column": 0 },
-        "end": { "line": 65, "column": 7 }
+        "end": { "line": 65, "column": 25 }
       },
       "65": {
         "start": { "line": 66, "column": 0 },
-        "end": { "line": 66, "column": 5 }
+        "end": { "line": 66, "column": 34 }
       },
       "66": {
         "start": { "line": 67, "column": 0 },
-        "end": { "line": 67, "column": 54 }
+        "end": { "line": 67, "column": 7 }
+      },
+      "67": {
+        "start": { "line": 68, "column": 0 },
+        "end": { "line": 68, "column": 5 }
       },
       "68": {
         "start": { "line": 69, "column": 0 },
-        "end": { "line": 69, "column": 19 }
-      },
-      "69": {
-        "start": { "line": 70, "column": 0 },
-        "end": { "line": 70, "column": 55 }
+        "end": { "line": 69, "column": 54 }
       },
       "70": {
         "start": { "line": 71, "column": 0 },
-        "end": { "line": 71, "column": 23 }
+        "end": { "line": 71, "column": 19 }
       },
       "71": {
         "start": { "line": 72, "column": 0 },
-        "end": { "line": 72, "column": 32 }
+        "end": { "line": 72, "column": 55 }
       },
       "72": {
         "start": { "line": 73, "column": 0 },
-        "end": { "line": 73, "column": 5 }
+        "end": { "line": 73, "column": 23 }
+      },
+      "73": {
+        "start": { "line": 74, "column": 0 },
+        "end": { "line": 74, "column": 32 }
       },
       "74": {
         "start": { "line": 75, "column": 0 },
-        "end": { "line": 75, "column": 9 }
+        "end": { "line": 75, "column": 5 }
       },
       "76": {
         "start": { "line": 77, "column": 0 },
-        "end": { "line": 77, "column": 77 }
-      },
-      "77": {
-        "start": { "line": 78, "column": 0 },
-        "end": { "line": 78, "column": 38 }
+        "end": { "line": 77, "column": 9 }
       },
       "78": {
         "start": { "line": 79, "column": 0 },
-        "end": { "line": 79, "column": 28 }
+        "end": { "line": 79, "column": 77 }
       },
       "79": {
         "start": { "line": 80, "column": 0 },
-        "end": { "line": 80, "column": 4 }
+        "end": { "line": 80, "column": 38 }
+      },
+      "80": {
+        "start": { "line": 81, "column": 0 },
+        "end": { "line": 81, "column": 28 }
       },
       "81": {
         "start": { "line": 82, "column": 0 },
-        "end": { "line": 82, "column": 42 }
-      },
-      "82": {
-        "start": { "line": 83, "column": 0 },
-        "end": { "line": 83, "column": 55 }
+        "end": { "line": 82, "column": 4 }
       },
       "83": {
         "start": { "line": 84, "column": 0 },
-        "end": { "line": 84, "column": 23 }
+        "end": { "line": 84, "column": 42 }
       },
       "84": {
         "start": { "line": 85, "column": 0 },
-        "end": { "line": 85, "column": 31 }
+        "end": { "line": 85, "column": 55 }
       },
       "85": {
         "start": { "line": 86, "column": 0 },
-        "end": { "line": 86, "column": 32 }
+        "end": { "line": 86, "column": 23 }
       },
       "86": {
         "start": { "line": 87, "column": 0 },
-        "end": { "line": 87, "column": 5 }
+        "end": { "line": 87, "column": 31 }
       },
       "87": {
         "start": { "line": 88, "column": 0 },
-        "end": { "line": 88, "column": 29 }
+        "end": { "line": 88, "column": 32 }
+      },
+      "88": {
+        "start": { "line": 89, "column": 0 },
+        "end": { "line": 89, "column": 5 }
       },
       "89": {
         "start": { "line": 90, "column": 0 },
-        "end": { "line": 90, "column": 19 }
-      },
-      "90": {
-        "start": { "line": 91, "column": 0 },
-        "end": { "line": 91, "column": 40 }
+        "end": { "line": 90, "column": 29 }
       },
       "91": {
         "start": { "line": 92, "column": 0 },
-        "end": { "line": 92, "column": 30 }
+        "end": { "line": 92, "column": 19 }
       },
       "92": {
         "start": { "line": 93, "column": 0 },
-        "end": { "line": 93, "column": 5 }
+        "end": { "line": 93, "column": 40 }
       },
       "93": {
         "start": { "line": 94, "column": 0 },
-        "end": { "line": 94, "column": 34 }
+        "end": { "line": 94, "column": 30 }
+      },
+      "94": {
+        "start": { "line": 95, "column": 0 },
+        "end": { "line": 95, "column": 5 }
       },
       "95": {
         "start": { "line": 96, "column": 0 },
-        "end": { "line": 96, "column": 76 }
-      },
-      "96": {
-        "start": { "line": 97, "column": 0 },
-        "end": { "line": 97, "column": 32 }
+        "end": { "line": 96, "column": 34 }
       },
       "97": {
         "start": { "line": 98, "column": 0 },
-        "end": { "line": 98, "column": 21 }
+        "end": { "line": 98, "column": 76 }
       },
       "98": {
         "start": { "line": 99, "column": 0 },
-        "end": { "line": 99, "column": 5 }
+        "end": { "line": 99, "column": 32 }
       },
       "99": {
         "start": { "line": 100, "column": 0 },
-        "end": { "line": 100, "column": 4 }
+        "end": { "line": 100, "column": 21 }
+      },
+      "100": {
+        "start": { "line": 101, "column": 0 },
+        "end": { "line": 101, "column": 5 }
       },
       "101": {
         "start": { "line": 102, "column": 0 },
-        "end": { "line": 102, "column": 10 }
-      },
-      "102": {
-        "start": { "line": 103, "column": 0 },
-        "end": { "line": 103, "column": 69 }
+        "end": { "line": 102, "column": 4 }
       },
       "103": {
         "start": { "line": 104, "column": 0 },
-        "end": { "line": 104, "column": 41 }
+        "end": { "line": 104, "column": 10 }
       },
       "104": {
         "start": { "line": 105, "column": 0 },
-        "end": { "line": 105, "column": 74 }
+        "end": { "line": 105, "column": 126 }
+      },
+      "105": {
+        "start": { "line": 106, "column": 0 },
+        "end": { "line": 106, "column": 41 }
       },
       "106": {
         "start": { "line": 107, "column": 0 },
-        "end": { "line": 107, "column": 13 }
+        "end": { "line": 107, "column": 90 }
       },
       "108": {
         "start": { "line": 109, "column": 0 },
-        "end": { "line": 109, "column": 87 }
-      },
-      "109": {
-        "start": { "line": 110, "column": 0 },
-        "end": { "line": 110, "column": 43 }
+        "end": { "line": 109, "column": 13 }
       },
       "110": {
         "start": { "line": 111, "column": 0 },
-        "end": { "line": 111, "column": 107 }
+        "end": { "line": 111, "column": 87 }
       },
       "111": {
         "start": { "line": 112, "column": 0 },
-        "end": { "line": 112, "column": 18 }
+        "end": { "line": 112, "column": 25 }
       },
       "112": {
         "start": { "line": 113, "column": 0 },
-        "end": { "line": 113, "column": 38 }
+        "end": { "line": 113, "column": 43 }
       },
       "113": {
         "start": { "line": 114, "column": 0 },
-        "end": { "line": 114, "column": 25 }
+        "end": { "line": 114, "column": 107 }
       },
       "114": {
         "start": { "line": 115, "column": 0 },
-        "end": { "line": 115, "column": 32 }
+        "end": { "line": 115, "column": 18 }
       },
       "115": {
         "start": { "line": 116, "column": 0 },
-        "end": { "line": 116, "column": 42 }
+        "end": { "line": 116, "column": 38 }
       },
       "116": {
         "start": { "line": 117, "column": 0 },
-        "end": { "line": 117, "column": 41 }
+        "end": { "line": 117, "column": 25 }
       },
       "117": {
         "start": { "line": 118, "column": 0 },
-        "end": { "line": 118, "column": 62 }
+        "end": { "line": 118, "column": 32 }
       },
       "118": {
         "start": { "line": 119, "column": 0 },
-        "end": { "line": 119, "column": 34 }
+        "end": { "line": 119, "column": 42 }
       },
       "119": {
         "start": { "line": 120, "column": 0 },
-        "end": { "line": 120, "column": 217 }
+        "end": { "line": 120, "column": 41 }
       },
       "120": {
         "start": { "line": 121, "column": 0 },
-        "end": { "line": 121, "column": 14 }
+        "end": { "line": 121, "column": 62 }
       },
       "121": {
         "start": { "line": 122, "column": 0 },
-        "end": { "line": 122, "column": 16 }
+        "end": { "line": 122, "column": 34 }
+      },
+      "122": {
+        "start": { "line": 123, "column": 0 },
+        "end": { "line": 123, "column": 234 }
       },
       "123": {
         "start": { "line": 124, "column": 0 },
-        "end": { "line": 124, "column": 17 }
+        "end": { "line": 124, "column": 14 }
       },
       "124": {
         "start": { "line": 125, "column": 0 },
-        "end": { "line": 125, "column": 39 }
-      },
-      "125": {
-        "start": { "line": 126, "column": 0 },
-        "end": { "line": 126, "column": 34 }
+        "end": { "line": 125, "column": 16 }
       },
       "126": {
         "start": { "line": 127, "column": 0 },
-        "end": { "line": 127, "column": 32 }
+        "end": { "line": 127, "column": 17 }
       },
       "127": {
         "start": { "line": 128, "column": 0 },
-        "end": { "line": 128, "column": 164 }
+        "end": { "line": 128, "column": 39 }
+      },
+      "128": {
+        "start": { "line": 129, "column": 0 },
+        "end": { "line": 129, "column": 34 }
       },
       "129": {
         "start": { "line": 130, "column": 0 },
-        "end": { "line": 130, "column": 51 }
+        "end": { "line": 130, "column": 32 }
       },
       "130": {
         "start": { "line": 131, "column": 0 },
-        "end": { "line": 131, "column": 19 }
-      },
-      "131": {
-        "start": { "line": 132, "column": 0 },
-        "end": { "line": 132, "column": 14 }
+        "end": { "line": 131, "column": 164 }
       },
       "132": {
         "start": { "line": 133, "column": 0 },
-        "end": { "line": 133, "column": 12 }
+        "end": { "line": 133, "column": 51 }
       },
       "133": {
         "start": { "line": 134, "column": 0 },
-        "end": { "line": 134, "column": 10 }
+        "end": { "line": 134, "column": 19 }
+      },
+      "134": {
+        "start": { "line": 135, "column": 0 },
+        "end": { "line": 135, "column": 14 }
       },
       "135": {
         "start": { "line": 136, "column": 0 },
-        "end": { "line": 136, "column": 2 }
+        "end": { "line": 136, "column": 12 }
+      },
+      "136": {
+        "start": { "line": 137, "column": 0 },
+        "end": { "line": 137, "column": 10 }
+      },
+      "138": {
+        "start": { "line": 139, "column": 0 },
+        "end": { "line": 139, "column": 2 }
       }
     },
     "s": {
       "0": 1,
-      "8": 1,
-      "9": 1,
+      "10": 1,
       "11": 1,
-      "12": 156,
-      "13": 21,
-      "14": 21,
+      "13": 1,
+      "14": 156,
       "15": 21,
       "16": 21,
-      "17": 0,
-      "18": 0,
+      "17": 21,
+      "18": 21,
       "19": 0,
-      "20": 156,
+      "20": 0,
+      "21": 0,
       "22": 156,
-      "23": 91,
-      "24": 91,
+      "24": 156,
       "25": 91,
       "26": 91,
-      "27": 0,
-      "28": 0,
-      "29": 91,
-      "31": 156,
-      "32": 156,
-      "34": 1,
-      "35": 156,
+      "27": 91,
+      "28": 91,
+      "29": 0,
+      "30": 0,
+      "31": 91,
+      "33": 156,
+      "34": 156,
+      "36": 1,
       "37": 156,
-      "38": 112,
-      "39": 0,
+      "39": 156,
       "40": 112,
+      "41": 0,
       "42": 112,
-      "43": 112,
       "44": 112,
-      "45": 156,
+      "45": 112,
+      "46": 112,
       "47": 156,
-      "48": 156,
-      "50": 1,
-      "51": 156,
-      "52": 156,
+      "49": 156,
+      "50": 156,
+      "52": 1,
       "53": 156,
+      "54": 156,
       "55": 156,
-      "56": 70,
-      "57": 70,
-      "59": 156,
-      "60": 49,
-      "61": 35,
-      "62": 35,
-      "63": 2,
-      "64": 2,
-      "65": 35,
-      "66": 156,
+      "57": 156,
+      "58": 70,
+      "59": 70,
+      "61": 156,
+      "62": 49,
+      "63": 35,
+      "64": 35,
+      "65": 2,
+      "66": 2,
+      "67": 35,
       "68": 156,
-      "69": 21,
-      "70": 21,
-      "71": 2,
-      "72": 2,
-      "74": 156,
+      "70": 156,
+      "71": 21,
+      "72": 21,
+      "73": 2,
+      "74": 2,
       "76": 156,
-      "77": 91,
-      "78": 91,
+      "78": 156,
       "79": 91,
-      "81": 156,
-      "82": 14,
-      "83": 14,
+      "80": 91,
+      "81": 91,
+      "83": 156,
       "84": 14,
       "85": 14,
       "86": 14,
-      "87": 156,
+      "87": 14,
+      "88": 14,
       "89": 156,
-      "90": 62,
-      "91": 14,
-      "92": 14,
-      "93": 156,
+      "91": 156,
+      "92": 62,
+      "93": 14,
+      "94": 14,
       "95": 156,
-      "96": 91,
-      "97": 1,
-      "98": 1,
-      "99": 91,
-      "101": 156,
-      "102": 156,
+      "97": 156,
+      "98": 91,
+      "99": 1,
+      "100": 1,
+      "101": 91,
       "103": 156,
       "104": 156,
+      "105": 156,
       "106": 156,
       "108": 156,
-      "109": 156,
       "110": 156,
       "111": 156,
       "112": 156,
@@ -6464,380 +6538,383 @@
       "119": 156,
       "120": 156,
       "121": 156,
+      "122": 156,
       "123": 156,
       "124": 156,
-      "125": 156,
       "126": 156,
       "127": 156,
+      "128": 156,
       "129": 156,
       "130": 156,
-      "131": 156,
       "132": 156,
       "133": 156,
-      "135": 156
+      "134": 156,
+      "135": 156,
+      "136": 156,
+      "138": 156
     },
     "branchMap": {
       "0": {
         "type": "branch",
-        "line": 12,
+        "line": 14,
         "loc": {
-          "start": { "line": 12, "column": 24 },
-          "end": { "line": 33, "column": 2 }
+          "start": { "line": 14, "column": 24 },
+          "end": { "line": 35, "column": 2 }
         },
         "locations": [
           {
-            "start": { "line": 12, "column": 24 },
-            "end": { "line": 33, "column": 2 }
+            "start": { "line": 14, "column": 24 },
+            "end": { "line": 35, "column": 2 }
           }
         ]
       },
       "1": {
         "type": "branch",
-        "line": 13,
+        "line": 15,
         "loc": {
-          "start": { "line": 13, "column": 49 },
-          "end": { "line": 21, "column": 3 }
+          "start": { "line": 15, "column": 49 },
+          "end": { "line": 23, "column": 3 }
         },
         "locations": [
           {
-            "start": { "line": 13, "column": 49 },
-            "end": { "line": 21, "column": 3 }
+            "start": { "line": 15, "column": 49 },
+            "end": { "line": 23, "column": 3 }
           }
         ]
       },
       "2": {
         "type": "branch",
-        "line": 16,
+        "line": 18,
         "loc": {
-          "start": { "line": 16, "column": 13 },
-          "end": { "line": 16, "column": 27 }
+          "start": { "line": 18, "column": 13 },
+          "end": { "line": 18, "column": 27 }
         },
         "locations": [
           {
-            "start": { "line": 16, "column": 13 },
-            "end": { "line": 16, "column": 27 }
+            "start": { "line": 18, "column": 13 },
+            "end": { "line": 18, "column": 27 }
           }
         ]
       },
       "3": {
         "type": "branch",
-        "line": 16,
+        "line": 18,
         "loc": {
-          "start": { "line": 16, "column": 20 },
-          "end": { "line": 16, "column": 40 }
+          "start": { "line": 18, "column": 20 },
+          "end": { "line": 18, "column": 40 }
         },
         "locations": [
           {
-            "start": { "line": 16, "column": 20 },
-            "end": { "line": 16, "column": 40 }
+            "start": { "line": 18, "column": 20 },
+            "end": { "line": 18, "column": 40 }
           }
         ]
       },
       "4": {
         "type": "branch",
-        "line": 17,
+        "line": 19,
         "loc": {
-          "start": { "line": 17, "column": 4 },
-          "end": { "line": 20, "column": 5 }
+          "start": { "line": 19, "column": 4 },
+          "end": { "line": 22, "column": 5 }
         },
         "locations": [
           {
-            "start": { "line": 17, "column": 4 },
-            "end": { "line": 20, "column": 5 }
+            "start": { "line": 19, "column": 4 },
+            "end": { "line": 22, "column": 5 }
           }
         ]
       },
       "5": {
         "type": "branch",
-        "line": 23,
+        "line": 25,
         "loc": {
-          "start": { "line": 23, "column": 19 },
-          "end": { "line": 30, "column": 4 }
+          "start": { "line": 25, "column": 19 },
+          "end": { "line": 32, "column": 4 }
         },
         "locations": [
           {
-            "start": { "line": 23, "column": 19 },
-            "end": { "line": 30, "column": 4 }
+            "start": { "line": 25, "column": 19 },
+            "end": { "line": 32, "column": 4 }
           }
         ]
       },
       "6": {
         "type": "branch",
-        "line": 27,
+        "line": 29,
         "loc": {
-          "start": { "line": 27, "column": 4 },
-          "end": { "line": 29, "column": 5 }
+          "start": { "line": 29, "column": 4 },
+          "end": { "line": 31, "column": 5 }
         },
         "locations": [
           {
-            "start": { "line": 27, "column": 4 },
-            "end": { "line": 29, "column": 5 }
+            "start": { "line": 29, "column": 4 },
+            "end": { "line": 31, "column": 5 }
           }
         ]
       },
       "7": {
         "type": "branch",
-        "line": 35,
+        "line": 37,
         "loc": {
-          "start": { "line": 35, "column": 20 },
-          "end": { "line": 49, "column": 2 }
+          "start": { "line": 37, "column": 20 },
+          "end": { "line": 51, "column": 2 }
         },
         "locations": [
           {
-            "start": { "line": 35, "column": 20 },
-            "end": { "line": 49, "column": 2 }
+            "start": { "line": 37, "column": 20 },
+            "end": { "line": 51, "column": 2 }
           }
         ]
       },
       "8": {
         "type": "branch",
-        "line": 38,
+        "line": 40,
         "loc": {
-          "start": { "line": 38, "column": 12 },
-          "end": { "line": 46, "column": 5 }
+          "start": { "line": 40, "column": 12 },
+          "end": { "line": 48, "column": 5 }
         },
         "locations": [
           {
-            "start": { "line": 38, "column": 12 },
-            "end": { "line": 46, "column": 5 }
+            "start": { "line": 40, "column": 12 },
+            "end": { "line": 48, "column": 5 }
           }
         ]
       },
       "9": {
         "type": "branch",
-        "line": 43,
+        "line": 45,
         "loc": {
-          "start": { "line": 43, "column": 11 },
-          "end": { "line": 45, "column": 6 }
+          "start": { "line": 45, "column": 11 },
+          "end": { "line": 47, "column": 6 }
         },
         "locations": [
           {
-            "start": { "line": 43, "column": 11 },
-            "end": { "line": 45, "column": 6 }
+            "start": { "line": 45, "column": 11 },
+            "end": { "line": 47, "column": 6 }
           }
         ]
       },
       "10": {
         "type": "branch",
-        "line": 51,
+        "line": 53,
         "loc": {
-          "start": { "line": 51, "column": 29 },
-          "end": { "line": 136, "column": 2 }
+          "start": { "line": 53, "column": 29 },
+          "end": { "line": 139, "column": 2 }
         },
         "locations": [
           {
-            "start": { "line": 51, "column": 29 },
-            "end": { "line": 136, "column": 2 }
+            "start": { "line": 53, "column": 29 },
+            "end": { "line": 139, "column": 2 }
           }
         ]
       },
       "11": {
         "type": "branch",
-        "line": 130,
+        "line": 133,
         "loc": {
-          "start": { "line": 130, "column": 13 },
-          "end": { "line": 130, "column": 42 }
+          "start": { "line": 133, "column": 13 },
+          "end": { "line": 133, "column": 42 }
         },
         "locations": [
           {
-            "start": { "line": 130, "column": 13 },
-            "end": { "line": 130, "column": 42 }
+            "start": { "line": 133, "column": 13 },
+            "end": { "line": 133, "column": 42 }
           }
         ]
       },
       "12": {
         "type": "branch",
-        "line": 130,
+        "line": 133,
         "loc": {
-          "start": { "line": 130, "column": 25 },
-          "end": { "line": 130, "column": 51 }
+          "start": { "line": 133, "column": 25 },
+          "end": { "line": 133, "column": 51 }
         },
         "locations": [
           {
-            "start": { "line": 130, "column": 25 },
-            "end": { "line": 130, "column": 51 }
+            "start": { "line": 133, "column": 25 },
+            "end": { "line": 133, "column": 51 }
           }
         ]
       },
       "13": {
         "type": "branch",
-        "line": 56,
+        "line": 58,
         "loc": {
-          "start": { "line": 56, "column": 28 },
-          "end": { "line": 58, "column": 4 }
+          "start": { "line": 58, "column": 28 },
+          "end": { "line": 60, "column": 4 }
         },
         "locations": [
           {
-            "start": { "line": 56, "column": 28 },
-            "end": { "line": 58, "column": 4 }
+            "start": { "line": 58, "column": 28 },
+            "end": { "line": 60, "column": 4 }
           }
         ]
       },
       "14": {
         "type": "branch",
-        "line": 60,
+        "line": 62,
         "loc": {
-          "start": { "line": 60, "column": 12 },
-          "end": { "line": 67, "column": 5 }
+          "start": { "line": 62, "column": 12 },
+          "end": { "line": 69, "column": 5 }
         },
         "locations": [
           {
-            "start": { "line": 60, "column": 12 },
-            "end": { "line": 67, "column": 5 }
+            "start": { "line": 62, "column": 12 },
+            "end": { "line": 69, "column": 5 }
           }
         ]
       },
       "15": {
         "type": "branch",
-        "line": 61,
+        "line": 63,
         "loc": {
-          "start": { "line": 61, "column": 24 },
-          "end": { "line": 66, "column": 5 }
+          "start": { "line": 63, "column": 24 },
+          "end": { "line": 68, "column": 5 }
         },
         "locations": [
           {
-            "start": { "line": 61, "column": 24 },
-            "end": { "line": 66, "column": 5 }
+            "start": { "line": 63, "column": 24 },
+            "end": { "line": 68, "column": 5 }
           }
         ]
       },
       "16": {
         "type": "branch",
-        "line": 63,
+        "line": 65,
         "loc": {
-          "start": { "line": 63, "column": 24 },
-          "end": { "line": 65, "column": 7 }
+          "start": { "line": 65, "column": 24 },
+          "end": { "line": 67, "column": 7 }
         },
         "locations": [
           {
-            "start": { "line": 63, "column": 24 },
-            "end": { "line": 65, "column": 7 }
+            "start": { "line": 65, "column": 24 },
+            "end": { "line": 67, "column": 7 }
           }
         ]
       },
       "17": {
         "type": "branch",
-        "line": 69,
+        "line": 71,
         "loc": {
-          "start": { "line": 69, "column": 12 },
-          "end": { "line": 75, "column": 5 }
+          "start": { "line": 71, "column": 12 },
+          "end": { "line": 77, "column": 5 }
         },
         "locations": [
           {
-            "start": { "line": 69, "column": 12 },
-            "end": { "line": 75, "column": 5 }
+            "start": { "line": 71, "column": 12 },
+            "end": { "line": 77, "column": 5 }
           }
         ]
       },
       "18": {
         "type": "branch",
-        "line": 71,
+        "line": 73,
         "loc": {
-          "start": { "line": 71, "column": 22 },
-          "end": { "line": 73, "column": 5 }
+          "start": { "line": 73, "column": 22 },
+          "end": { "line": 75, "column": 5 }
         },
         "locations": [
           {
-            "start": { "line": 71, "column": 22 },
-            "end": { "line": 73, "column": 5 }
+            "start": { "line": 73, "column": 22 },
+            "end": { "line": 75, "column": 5 }
           }
         ]
       },
       "19": {
         "type": "branch",
-        "line": 77,
+        "line": 79,
         "loc": {
-          "start": { "line": 77, "column": 28 },
-          "end": { "line": 80, "column": 4 }
+          "start": { "line": 79, "column": 28 },
+          "end": { "line": 82, "column": 4 }
         },
         "locations": [
           {
-            "start": { "line": 77, "column": 28 },
-            "end": { "line": 80, "column": 4 }
+            "start": { "line": 79, "column": 28 },
+            "end": { "line": 82, "column": 4 }
           }
         ]
       },
       "20": {
         "type": "branch",
-        "line": 82,
+        "line": 84,
         "loc": {
-          "start": { "line": 82, "column": 35 },
-          "end": { "line": 88, "column": 5 }
+          "start": { "line": 84, "column": 35 },
+          "end": { "line": 90, "column": 5 }
         },
         "locations": [
           {
-            "start": { "line": 82, "column": 35 },
-            "end": { "line": 88, "column": 5 }
+            "start": { "line": 84, "column": 35 },
+            "end": { "line": 90, "column": 5 }
           }
         ]
       },
       "21": {
         "type": "branch",
-        "line": 90,
+        "line": 92,
         "loc": {
-          "start": { "line": 90, "column": 12 },
-          "end": { "line": 94, "column": 5 }
+          "start": { "line": 92, "column": 12 },
+          "end": { "line": 96, "column": 5 }
         },
         "locations": [
           {
-            "start": { "line": 90, "column": 12 },
-            "end": { "line": 94, "column": 5 }
+            "start": { "line": 92, "column": 12 },
+            "end": { "line": 96, "column": 5 }
           }
         ]
       },
       "22": {
         "type": "branch",
-        "line": 91,
+        "line": 93,
         "loc": {
-          "start": { "line": 91, "column": 9 },
-          "end": { "line": 91, "column": 39 }
+          "start": { "line": 93, "column": 9 },
+          "end": { "line": 93, "column": 39 }
         },
         "locations": [
           {
-            "start": { "line": 91, "column": 9 },
-            "end": { "line": 91, "column": 39 }
+            "start": { "line": 93, "column": 9 },
+            "end": { "line": 93, "column": 39 }
           }
         ]
       },
       "23": {
         "type": "branch",
-        "line": 91,
+        "line": 93,
         "loc": {
-          "start": { "line": 91, "column": 39 },
-          "end": { "line": 93, "column": 5 }
+          "start": { "line": 93, "column": 39 },
+          "end": { "line": 95, "column": 5 }
         },
         "locations": [
           {
-            "start": { "line": 91, "column": 39 },
-            "end": { "line": 93, "column": 5 }
+            "start": { "line": 93, "column": 39 },
+            "end": { "line": 95, "column": 5 }
           }
         ]
       },
       "24": {
         "type": "branch",
-        "line": 96,
+        "line": 98,
         "loc": {
-          "start": { "line": 96, "column": 25 },
-          "end": { "line": 100, "column": 4 }
+          "start": { "line": 98, "column": 25 },
+          "end": { "line": 102, "column": 4 }
         },
         "locations": [
           {
-            "start": { "line": 96, "column": 25 },
-            "end": { "line": 100, "column": 4 }
+            "start": { "line": 98, "column": 25 },
+            "end": { "line": 102, "column": 4 }
           }
         ]
       },
       "25": {
         "type": "branch",
-        "line": 97,
+        "line": 99,
         "loc": {
-          "start": { "line": 97, "column": 31 },
-          "end": { "line": 99, "column": 5 }
+          "start": { "line": 99, "column": 31 },
+          "end": { "line": 101, "column": 5 }
         },
         "locations": [
           {
-            "start": { "line": 97, "column": 31 },
-            "end": { "line": 99, "column": 5 }
+            "start": { "line": 99, "column": 31 },
+            "end": { "line": 101, "column": 5 }
           }
         ]
       }
@@ -6874,92 +6951,92 @@
       "0": {
         "name": "useLocalStorage",
         "decl": {
-          "start": { "line": 12, "column": 24 },
-          "end": { "line": 33, "column": 2 }
+          "start": { "line": 14, "column": 24 },
+          "end": { "line": 35, "column": 2 }
         },
         "loc": {
-          "start": { "line": 12, "column": 24 },
-          "end": { "line": 33, "column": 2 }
+          "start": { "line": 14, "column": 24 },
+          "end": { "line": 35, "column": 2 }
         },
-        "line": 12
+        "line": 14
       },
       "1": {
         "name": "setValue",
         "decl": {
-          "start": { "line": 23, "column": 19 },
-          "end": { "line": 30, "column": 4 }
+          "start": { "line": 25, "column": 19 },
+          "end": { "line": 32, "column": 4 }
         },
         "loc": {
-          "start": { "line": 23, "column": 19 },
-          "end": { "line": 30, "column": 4 }
+          "start": { "line": 25, "column": 19 },
+          "end": { "line": 32, "column": 4 }
         },
-        "line": 23
+        "line": 25
       },
       "2": {
         "name": "useDebounce",
         "decl": {
-          "start": { "line": 35, "column": 20 },
-          "end": { "line": 49, "column": 2 }
+          "start": { "line": 37, "column": 20 },
+          "end": { "line": 51, "column": 2 }
         },
         "loc": {
-          "start": { "line": 35, "column": 20 },
-          "end": { "line": 49, "column": 2 }
+          "start": { "line": 37, "column": 20 },
+          "end": { "line": 51, "column": 2 }
         },
-        "line": 35
+        "line": 37
       },
       "3": {
         "name": "SearchSection",
         "decl": {
-          "start": { "line": 51, "column": 29 },
-          "end": { "line": 136, "column": 2 }
+          "start": { "line": 53, "column": 29 },
+          "end": { "line": 139, "column": 2 }
         },
         "loc": {
-          "start": { "line": 51, "column": 29 },
-          "end": { "line": 136, "column": 2 }
+          "start": { "line": 53, "column": 29 },
+          "end": { "line": 139, "column": 2 }
         },
-        "line": 51
+        "line": 53
       },
       "4": {
         "name": "prepareSearchTerm",
         "decl": {
-          "start": { "line": 56, "column": 28 },
-          "end": { "line": 58, "column": 4 }
+          "start": { "line": 58, "column": 28 },
+          "end": { "line": 60, "column": 4 }
         },
         "loc": {
-          "start": { "line": 56, "column": 28 },
-          "end": { "line": 58, "column": 4 }
+          "start": { "line": 58, "column": 28 },
+          "end": { "line": 60, "column": 4 }
         },
-        "line": 56
+        "line": 58
       },
       "5": {
         "name": "handleInputChange",
         "decl": {
-          "start": { "line": 77, "column": 28 },
-          "end": { "line": 80, "column": 4 }
+          "start": { "line": 79, "column": 28 },
+          "end": { "line": 82, "column": 4 }
         },
         "loc": {
-          "start": { "line": 77, "column": 28 },
-          "end": { "line": 80, "column": 4 }
+          "start": { "line": 79, "column": 28 },
+          "end": { "line": 82, "column": 4 }
         },
-        "line": 77
+        "line": 79
       },
       "6": {
         "name": "handleKeyPress",
         "decl": {
-          "start": { "line": 96, "column": 25 },
-          "end": { "line": 100, "column": 4 }
+          "start": { "line": 98, "column": 25 },
+          "end": { "line": 102, "column": 4 }
         },
         "loc": {
-          "start": { "line": 96, "column": 25 },
-          "end": { "line": 100, "column": 4 }
+          "start": { "line": 98, "column": 25 },
+          "end": { "line": 102, "column": 4 }
         },
-        "line": 96
+        "line": 98
       }
     },
     "f": { "0": 156, "1": 91, "2": 156, "3": 156, "4": 70, "5": 91, "6": 91 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\SelectedItemsFlyout.tsx": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\components\\SelectedItemsFlyout.tsx",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\SelectedItemsFlyout.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\SelectedItemsFlyout.tsx",
     "all": false,
     "statementMap": {
       "0": {
@@ -7502,8 +7579,621 @@
     },
     "f": { "0": 40, "1": 1 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\hooks\\useLocalStorage.ts": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\hooks\\useLocalStorage.ts",
+  "C:\\Users\\user\\react-2025\\react\\src\\components\\ThemeToggle.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\components\\ThemeToggle.tsx",
+    "all": false,
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 41 }
+      },
+      "5": {
+        "start": { "line": 6, "column": 0 },
+        "end": { "line": 6, "column": 34 }
+      },
+      "6": {
+        "start": { "line": 7, "column": 0 },
+        "end": { "line": 7, "column": 44 }
+      },
+      "8": {
+        "start": { "line": 9, "column": 0 },
+        "end": { "line": 9, "column": 10 }
+      },
+      "9": {
+        "start": { "line": 10, "column": 0 },
+        "end": { "line": 10, "column": 11 }
+      },
+      "10": {
+        "start": { "line": 11, "column": 0 },
+        "end": { "line": 11, "column": 27 }
+      },
+      "11": {
+        "start": { "line": 12, "column": 0 },
+        "end": { "line": 12, "column": 120 }
+      },
+      "12": {
+        "start": { "line": 13, "column": 0 },
+        "end": { "line": 13, "column": 76 }
+      },
+      "13": {
+        "start": { "line": 14, "column": 0 },
+        "end": { "line": 14, "column": 71 }
+      },
+      "15": {
+        "start": { "line": 16, "column": 0 },
+        "end": { "line": 16, "column": 28 }
+      },
+      "16": {
+        "start": { "line": 17, "column": 0 },
+        "end": { "line": 17, "column": 69 }
+      },
+      "18": {
+        "start": { "line": 19, "column": 0 },
+        "end": { "line": 19, "column": 68 }
+      },
+      "20": {
+        "start": { "line": 21, "column": 0 },
+        "end": { "line": 21, "column": 13 }
+      },
+      "22": {
+        "start": { "line": 23, "column": 0 },
+        "end": { "line": 23, "column": 2 }
+      }
+    },
+    "s": {
+      "0": 1,
+      "5": 1,
+      "6": 156,
+      "8": 156,
+      "9": 156,
+      "10": 156,
+      "11": 156,
+      "12": 156,
+      "13": 156,
+      "15": 156,
+      "16": 154,
+      "18": 2,
+      "20": 156,
+      "22": 156
+    },
+    "branchMap": {
+      "0": {
+        "type": "branch",
+        "line": 6,
+        "loc": {
+          "start": { "line": 6, "column": 27 },
+          "end": { "line": 23, "column": 2 }
+        },
+        "locations": [
+          {
+            "start": { "line": 6, "column": 27 },
+            "end": { "line": 23, "column": 2 }
+          }
+        ]
+      },
+      "1": {
+        "type": "branch",
+        "line": 13,
+        "loc": {
+          "start": { "line": 13, "column": 41 },
+          "end": { "line": 13, "column": 60 }
+        },
+        "locations": [
+          {
+            "start": { "line": 13, "column": 41 },
+            "end": { "line": 13, "column": 60 }
+          }
+        ]
+      },
+      "2": {
+        "type": "branch",
+        "line": 13,
+        "loc": {
+          "start": { "line": 13, "column": 51 },
+          "end": { "line": 13, "column": 67 }
+        },
+        "locations": [
+          {
+            "start": { "line": 13, "column": 51 },
+            "end": { "line": 13, "column": 67 }
+          }
+        ]
+      },
+      "3": {
+        "type": "branch",
+        "line": 14,
+        "loc": {
+          "start": { "line": 14, "column": 36 },
+          "end": { "line": 14, "column": 55 }
+        },
+        "locations": [
+          {
+            "start": { "line": 14, "column": 36 },
+            "end": { "line": 14, "column": 55 }
+          }
+        ]
+      },
+      "4": {
+        "type": "branch",
+        "line": 14,
+        "loc": {
+          "start": { "line": 14, "column": 46 },
+          "end": { "line": 14, "column": 62 }
+        },
+        "locations": [
+          {
+            "start": { "line": 14, "column": 46 },
+            "end": { "line": 14, "column": 62 }
+          }
+        ]
+      },
+      "5": {
+        "type": "branch",
+        "line": 16,
+        "loc": {
+          "start": { "line": 16, "column": 17 },
+          "end": { "line": 17, "column": 69 }
+        },
+        "locations": [
+          {
+            "start": { "line": 16, "column": 17 },
+            "end": { "line": 17, "column": 69 }
+          }
+        ]
+      },
+      "6": {
+        "type": "branch",
+        "line": 17,
+        "loc": {
+          "start": { "line": 17, "column": 67 },
+          "end": { "line": 19, "column": 68 }
+        },
+        "locations": [
+          {
+            "start": { "line": 17, "column": 67 },
+            "end": { "line": 19, "column": 68 }
+          }
+        ]
+      }
+    },
+    "b": {
+      "0": [156],
+      "1": [154],
+      "2": [2],
+      "3": [154],
+      "4": [2],
+      "5": [154],
+      "6": [2]
+    },
+    "fnMap": {
+      "0": {
+        "name": "ThemeToggle",
+        "decl": {
+          "start": { "line": 6, "column": 27 },
+          "end": { "line": 23, "column": 2 }
+        },
+        "loc": {
+          "start": { "line": 6, "column": 27 },
+          "end": { "line": 23, "column": 2 }
+        },
+        "line": 6
+      }
+    },
+    "f": { "0": 156 }
+  },
+  "C:\\Users\\user\\react-2025\\react\\src\\contexts\\ThemeContext.tsx": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\contexts\\ThemeContext.tsx",
+    "all": false,
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 15 }
+      },
+      "15": {
+        "start": { "line": 16, "column": 0 },
+        "end": { "line": 16, "column": 76 }
+      },
+      "21": {
+        "start": { "line": 22, "column": 0 },
+        "end": { "line": 22, "column": 78 }
+      },
+      "22": {
+        "start": { "line": 23, "column": 0 },
+        "end": { "line": 23, "column": 51 }
+      },
+      "23": {
+        "start": { "line": 24, "column": 0 },
+        "end": { "line": 24, "column": 62 }
+      },
+      "24": {
+        "start": { "line": 25, "column": 0 },
+        "end": { "line": 25, "column": 21 }
+      },
+      "25": {
+        "start": { "line": 26, "column": 0 },
+        "end": { "line": 26, "column": 24 }
+      },
+      "26": {
+        "start": { "line": 27, "column": 0 },
+        "end": { "line": 27, "column": 5 }
+      },
+      "28": {
+        "start": { "line": 29, "column": 0 },
+        "end": { "line": 29, "column": 8 }
+      },
+      "29": {
+        "start": { "line": 30, "column": 0 },
+        "end": { "line": 30, "column": 26 }
+      },
+      "30": {
+        "start": { "line": 31, "column": 0 },
+        "end": { "line": 31, "column": 63 }
+      },
+      "31": {
+        "start": { "line": 32, "column": 0 },
+        "end": { "line": 32, "column": 7 }
+      },
+      "32": {
+        "start": { "line": 33, "column": 0 },
+        "end": { "line": 33, "column": 20 }
+      },
+      "33": {
+        "start": { "line": 34, "column": 0 },
+        "end": { "line": 34, "column": 5 }
+      },
+      "35": {
+        "start": { "line": 36, "column": 0 },
+        "end": { "line": 36, "column": 19 }
+      },
+      "36": {
+        "start": { "line": 37, "column": 0 },
+        "end": { "line": 37, "column": 5 }
+      },
+      "38": {
+        "start": { "line": 39, "column": 0 },
+        "end": { "line": 39, "column": 19 }
+      },
+      "39": {
+        "start": { "line": 40, "column": 0 },
+        "end": { "line": 40, "column": 41 }
+      },
+      "41": {
+        "start": { "line": 42, "column": 0 },
+        "end": { "line": 42, "column": 27 }
+      },
+      "42": {
+        "start": { "line": 43, "column": 0 },
+        "end": { "line": 43, "column": 53 }
+      },
+      "43": {
+        "start": { "line": 44, "column": 0 },
+        "end": { "line": 44, "column": 12 }
+      },
+      "44": {
+        "start": { "line": 45, "column": 0 },
+        "end": { "line": 45, "column": 56 }
+      },
+      "45": {
+        "start": { "line": 46, "column": 0 },
+        "end": { "line": 46, "column": 5 }
+      },
+      "46": {
+        "start": { "line": 47, "column": 0 },
+        "end": { "line": 47, "column": 14 }
+      },
+      "48": {
+        "start": { "line": 49, "column": 0 },
+        "end": { "line": 49, "column": 29 }
+      },
+      "49": {
+        "start": { "line": 50, "column": 0 },
+        "end": { "line": 50, "column": 72 }
+      },
+      "50": {
+        "start": { "line": 51, "column": 0 },
+        "end": { "line": 51, "column": 4 }
+      },
+      "52": {
+        "start": { "line": 53, "column": 0 },
+        "end": { "line": 53, "column": 10 }
+      },
+      "53": {
+        "start": { "line": 54, "column": 0 },
+        "end": { "line": 54, "column": 58 }
+      },
+      "54": {
+        "start": { "line": 55, "column": 0 },
+        "end": { "line": 55, "column": 16 }
+      },
+      "55": {
+        "start": { "line": 56, "column": 0 },
+        "end": { "line": 56, "column": 28 }
+      },
+      "57": {
+        "start": { "line": 58, "column": 0 },
+        "end": { "line": 58, "column": 2 }
+      },
+      "59": {
+        "start": { "line": 60, "column": 0 },
+        "end": { "line": 60, "column": 31 }
+      },
+      "60": {
+        "start": { "line": 61, "column": 0 },
+        "end": { "line": 61, "column": 43 }
+      },
+      "61": {
+        "start": { "line": 62, "column": 0 },
+        "end": { "line": 62, "column": 30 }
+      },
+      "62": {
+        "start": { "line": 63, "column": 0 },
+        "end": { "line": 63, "column": 68 }
+      },
+      "63": {
+        "start": { "line": 64, "column": 0 },
+        "end": { "line": 64, "column": 3 }
+      },
+      "64": {
+        "start": { "line": 65, "column": 0 },
+        "end": { "line": 65, "column": 17 }
+      },
+      "65": {
+        "start": { "line": 66, "column": 0 },
+        "end": { "line": 66, "column": 2 }
+      }
+    },
+    "s": {
+      "0": 1,
+      "15": 1,
+      "21": 1,
+      "22": 48,
+      "23": 21,
+      "24": 21,
+      "25": 2,
+      "26": 2,
+      "28": 19,
+      "29": 19,
+      "30": 0,
+      "31": 21,
+      "32": 0,
+      "33": 0,
+      "35": 19,
+      "36": 48,
+      "38": 48,
+      "39": 21,
+      "41": 21,
+      "42": 0,
+      "43": 21,
+      "44": 21,
+      "45": 21,
+      "46": 48,
+      "48": 48,
+      "49": 0,
+      "50": 0,
+      "52": 48,
+      "53": 48,
+      "54": 48,
+      "55": 48,
+      "57": 48,
+      "59": 1,
+      "60": 156,
+      "61": 156,
+      "62": 0,
+      "63": 0,
+      "64": 156,
+      "65": 156
+    },
+    "branchMap": {
+      "0": {
+        "type": "branch",
+        "line": 22,
+        "loc": {
+          "start": { "line": 22, "column": 59 },
+          "end": { "line": 58, "column": 2 }
+        },
+        "locations": [
+          {
+            "start": { "line": 22, "column": 59 },
+            "end": { "line": 58, "column": 2 }
+          }
+        ]
+      },
+      "1": {
+        "type": "branch",
+        "line": 23,
+        "loc": {
+          "start": { "line": 23, "column": 44 },
+          "end": { "line": 37, "column": 3 }
+        },
+        "locations": [
+          {
+            "start": { "line": 23, "column": 44 },
+            "end": { "line": 37, "column": 3 }
+          }
+        ]
+      },
+      "2": {
+        "type": "branch",
+        "line": 25,
+        "loc": {
+          "start": { "line": 25, "column": 20 },
+          "end": { "line": 27, "column": 5 }
+        },
+        "locations": [
+          {
+            "start": { "line": 25, "column": 20 },
+            "end": { "line": 27, "column": 5 }
+          }
+        ]
+      },
+      "3": {
+        "type": "branch",
+        "line": 27,
+        "loc": {
+          "start": { "line": 27, "column": 4 },
+          "end": { "line": 30, "column": 26 }
+        },
+        "locations": [
+          {
+            "start": { "line": 27, "column": 4 },
+            "end": { "line": 30, "column": 26 }
+          }
+        ]
+      },
+      "4": {
+        "type": "branch",
+        "line": 30,
+        "loc": {
+          "start": { "line": 30, "column": 13 },
+          "end": { "line": 31, "column": 63 }
+        },
+        "locations": [
+          {
+            "start": { "line": 30, "column": 13 },
+            "end": { "line": 31, "column": 63 }
+          }
+        ]
+      },
+      "5": {
+        "type": "branch",
+        "line": 32,
+        "loc": {
+          "start": { "line": 32, "column": 6 },
+          "end": { "line": 34, "column": 5 }
+        },
+        "locations": [
+          {
+            "start": { "line": 32, "column": 6 },
+            "end": { "line": 34, "column": 5 }
+          }
+        ]
+      },
+      "6": {
+        "type": "branch",
+        "line": 34,
+        "loc": {
+          "start": { "line": 34, "column": 4 },
+          "end": { "line": 36, "column": 19 }
+        },
+        "locations": [
+          {
+            "start": { "line": 34, "column": 4 },
+            "end": { "line": 36, "column": 19 }
+          }
+        ]
+      },
+      "7": {
+        "type": "branch",
+        "line": 39,
+        "loc": {
+          "start": { "line": 39, "column": 12 },
+          "end": { "line": 47, "column": 5 }
+        },
+        "locations": [
+          {
+            "start": { "line": 39, "column": 12 },
+            "end": { "line": 47, "column": 5 }
+          }
+        ]
+      },
+      "8": {
+        "type": "branch",
+        "line": 42,
+        "loc": {
+          "start": { "line": 42, "column": 26 },
+          "end": { "line": 44, "column": 11 }
+        },
+        "locations": [
+          {
+            "start": { "line": 42, "column": 26 },
+            "end": { "line": 44, "column": 11 }
+          }
+        ]
+      },
+      "9": {
+        "type": "branch",
+        "line": 60,
+        "loc": {
+          "start": { "line": 60, "column": 24 },
+          "end": { "line": 66, "column": 2 }
+        },
+        "locations": [
+          {
+            "start": { "line": 60, "column": 24 },
+            "end": { "line": 66, "column": 2 }
+          }
+        ]
+      },
+      "10": {
+        "type": "branch",
+        "line": 62,
+        "loc": {
+          "start": { "line": 62, "column": 29 },
+          "end": { "line": 64, "column": 3 }
+        },
+        "locations": [
+          {
+            "start": { "line": 62, "column": 29 },
+            "end": { "line": 64, "column": 3 }
+          }
+        ]
+      }
+    },
+    "b": {
+      "0": [48],
+      "1": [21],
+      "2": [2],
+      "3": [19],
+      "4": [0],
+      "5": [0],
+      "6": [19],
+      "7": [21],
+      "8": [0],
+      "9": [156],
+      "10": [0]
+    },
+    "fnMap": {
+      "0": {
+        "name": "ThemeProvider",
+        "decl": {
+          "start": { "line": 22, "column": 59 },
+          "end": { "line": 58, "column": 2 }
+        },
+        "loc": {
+          "start": { "line": 22, "column": 59 },
+          "end": { "line": 58, "column": 2 }
+        },
+        "line": 22
+      },
+      "1": {
+        "name": "toggleTheme",
+        "decl": {
+          "start": { "line": 49, "column": 22 },
+          "end": { "line": 51, "column": 4 }
+        },
+        "loc": {
+          "start": { "line": 49, "column": 22 },
+          "end": { "line": 51, "column": 4 }
+        },
+        "line": 49
+      },
+      "2": {
+        "name": "useTheme",
+        "decl": {
+          "start": { "line": 60, "column": 24 },
+          "end": { "line": 66, "column": 2 }
+        },
+        "loc": {
+          "start": { "line": 60, "column": 24 },
+          "end": { "line": 66, "column": 2 }
+        },
+        "line": 60
+      }
+    },
+    "f": { "0": 48, "1": 0, "2": 156 }
+  },
+  "C:\\Users\\user\\react-2025\\react\\src\\hooks\\useLocalStorage.ts": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\hooks\\useLocalStorage.ts",
     "all": true,
     "statementMap": {
       "0": {
@@ -7664,12 +8354,12 @@
         "type": "branch",
         "line": 1,
         "loc": {
-          "start": { "line": 1, "column": 957 },
+          "start": { "line": 1, "column": 923 },
           "end": { "line": 35, "column": 1 }
         },
         "locations": [
           {
-            "start": { "line": 1, "column": 957 },
+            "start": { "line": 1, "column": 923 },
             "end": { "line": 35, "column": 1 }
           }
         ]
@@ -7680,11 +8370,11 @@
       "0": {
         "name": "(empty-report)",
         "decl": {
-          "start": { "line": 1, "column": 957 },
+          "start": { "line": 1, "column": 923 },
           "end": { "line": 35, "column": 1 }
         },
         "loc": {
-          "start": { "line": 1, "column": 957 },
+          "start": { "line": 1, "column": 923 },
           "end": { "line": 35, "column": 1 }
         },
         "line": 1
@@ -7692,8 +8382,93 @@
     },
     "f": { "0": 0 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\services\\api.ts": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\services\\api.ts",
+  "C:\\Users\\user\\react-2025\\react\\src\\hooks\\useTheme.ts": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\hooks\\useTheme.ts",
+    "all": true,
+    "statementMap": {
+      "0": {
+        "start": { "line": 1, "column": 0 },
+        "end": { "line": 1, "column": 50 }
+      },
+      "8": {
+        "start": { "line": 9, "column": 0 },
+        "end": { "line": 9, "column": 76 }
+      },
+      "10": {
+        "start": { "line": 11, "column": 0 },
+        "end": { "line": 11, "column": 31 }
+      },
+      "11": {
+        "start": { "line": 12, "column": 0 },
+        "end": { "line": 12, "column": 43 }
+      },
+      "12": {
+        "start": { "line": 13, "column": 0 },
+        "end": { "line": 13, "column": 30 }
+      },
+      "13": {
+        "start": { "line": 14, "column": 0 },
+        "end": { "line": 14, "column": 68 }
+      },
+      "14": {
+        "start": { "line": 15, "column": 0 },
+        "end": { "line": 15, "column": 3 }
+      },
+      "15": {
+        "start": { "line": 16, "column": 0 },
+        "end": { "line": 16, "column": 17 }
+      },
+      "16": {
+        "start": { "line": 17, "column": 0 },
+        "end": { "line": 17, "column": 2 }
+      }
+    },
+    "s": {
+      "0": 0,
+      "8": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0
+    },
+    "branchMap": {
+      "0": {
+        "type": "branch",
+        "line": 1,
+        "loc": {
+          "start": { "line": 1, "column": 452 },
+          "end": { "line": 17, "column": 2 }
+        },
+        "locations": [
+          {
+            "start": { "line": 1, "column": 452 },
+            "end": { "line": 17, "column": 2 }
+          }
+        ]
+      }
+    },
+    "b": { "0": [0] },
+    "fnMap": {
+      "0": {
+        "name": "(empty-report)",
+        "decl": {
+          "start": { "line": 1, "column": 452 },
+          "end": { "line": 17, "column": 2 }
+        },
+        "loc": {
+          "start": { "line": 1, "column": 452 },
+          "end": { "line": 17, "column": 2 }
+        },
+        "line": 1
+      }
+    },
+    "f": { "0": 0 }
+  },
+  "C:\\Users\\user\\react-2025\\react\\src\\services\\api.ts": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\services\\api.ts",
     "all": false,
     "statementMap": {
       "2": {
@@ -14065,8 +14840,8 @@
     },
     "f": { "0": 1, "1": 0, "2": 0, "3": 8 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\stores\\selectedItemsStore.ts": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\stores\\selectedItemsStore.ts",
+  "C:\\Users\\user\\react-2025\\react\\src\\stores\\selectedItemsStore.ts": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\stores\\selectedItemsStore.ts",
     "all": false,
     "statementMap": {
       "0": {
@@ -14363,8 +15138,8 @@
     },
     "f": { "0": 4, "1": 0, "2": 0, "3": 19, "4": 0, "5": 38 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\test\\setup.ts": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\test\\setup.ts",
+  "C:\\Users\\user\\react-2025\\react\\src\\test\\setup.ts": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\test\\setup.ts",
     "all": true,
     "statementMap": {
       "0": {
@@ -14406,8 +15181,8 @@
     },
     "f": { "0": 0 }
   },
-  "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\types\\Character.ts": {
-    "path": "C:\\Users\\user\\Documents\\pet-projects\\react\\src\\types\\Character.ts",
+  "C:\\Users\\user\\react-2025\\react\\src\\types\\Character.ts": {
+    "path": "C:\\Users\\user\\react-2025\\react\\src\\types\\Character.ts",
     "all": true,
     "statementMap": {},
     "s": {},
@@ -14416,12 +15191,12 @@
         "type": "branch",
         "line": 1,
         "loc": {
-          "start": { "line": 1, "column": 648 },
+          "start": { "line": 1, "column": 616 },
           "end": { "line": 33, "column": 1 }
         },
         "locations": [
           {
-            "start": { "line": 1, "column": 648 },
+            "start": { "line": 1, "column": 616 },
             "end": { "line": 33, "column": 1 }
           }
         ]
@@ -14432,11 +15207,11 @@
       "0": {
         "name": "(empty-report)",
         "decl": {
-          "start": { "line": 1, "column": 648 },
+          "start": { "line": 1, "column": 616 },
           "end": { "line": 33, "column": 1 }
         },
         "loc": {
-          "start": { "line": 1, "column": 648 },
+          "start": { "line": 1, "column": 616 },
           "end": { "line": 33, "column": 1 }
         },
         "line": 1

@@ -8,6 +8,8 @@ import { About } from './components/About';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { NotFound } from './components/NotFound';
 import { SelectedItemsFlyout } from './components/SelectedItemsFlyout';
+import { ThemeProvider } from './contexts/ThemeContext';
+
 const App = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
   const [pagination, setPagination] = useState<PaginationInfo | null>(null);
@@ -69,37 +71,39 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="min-h-screen bg-gray-50 flex flex-col relative">
-              <SearchSection onSearch={handleSearch} isLoading={isLoading} />
-              <ResultsSection
-                characters={characters}
-                pagination={pagination}
-                isLoading={isLoading}
-                error={error}
-                onRetry={handleRetry}
-                onPageChange={handlePageChange}
-                onCharacterClick={handleCharacterClick}
-              />
-              <About />
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="min-h-screen bg-gray-50 flex flex-col relative dark:bg-gray-900 transition-colors">
+                <SearchSection onSearch={handleSearch} isLoading={isLoading} />
+                <ResultsSection
+                  characters={characters}
+                  pagination={pagination}
+                  isLoading={isLoading}
+                  error={error}
+                  onRetry={handleRetry}
+                  onPageChange={handlePageChange}
+                  onCharacterClick={handleCharacterClick}
+                />
+                <About />
 
-              <CharacterDetailsPanel
-                character={selectedCharacter}
-                isOpen={isDetailsPanelOpen}
-                onClose={handleCloseDetailsPanel}
-              />
-              <SelectedItemsFlyout />
-            </div>
-          }
-        />
+                <CharacterDetailsPanel
+                  character={selectedCharacter}
+                  isOpen={isDetailsPanelOpen}
+                  onClose={handleCloseDetailsPanel}
+                />
+                <SelectedItemsFlyout />
+              </div>
+            }
+          />
 
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 };
 

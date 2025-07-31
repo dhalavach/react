@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.73% </span>
+                <span class="strong">96.84% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>89/92</span>
+                <span class='fraction'>92/95</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.73% </span>
+                <span class="strong">96.84% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>89/92</span>
+                <span class='fraction'>92/95</span>
             </div>
         
             
@@ -169,7 +169,11 @@
 <a name='L104'></a><a href='#L104'>104</a>
 <a name='L105'></a><a href='#L105'>105</a>
 <a name='L106'></a><a href='#L106'>106</a>
-<a name='L107'></a><a href='#L107'>107</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -179,6 +183,8 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-yes">38x</span>
@@ -257,17 +263,19 @@
 <span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-yes">38x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">38x</span>
-<span class="cline-any cline-yes">38x</span>
-<span class="cline-any cline-yes">38x</span>
-<span class="cline-any cline-yes">38x</span>
-<span class="cline-any cline-yes">38x</span>
-<span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-yes">38x</span>
@@ -285,6 +293,8 @@ import { About } from './components/About';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { NotFound } from './components/NotFound';
 import { SelectedItemsFlyout } from './components/SelectedItemsFlyout';
+import { ThemeProvider } from './contexts/ThemeContext';
+&nbsp;
 const App = () =&gt; {
   const [characters, setCharacters] = useState&lt;Character[]&gt;([]);
   const [pagination, setPagination] = useState&lt;PaginationInfo | null&gt;(null);
@@ -346,37 +356,39 @@ const App = () =&gt; {
   };
 &nbsp;
   return (
-    &lt;Router&gt;
-      &lt;Routes&gt;
-        &lt;Route
-          path="/"
-          element={
-            &lt;div className="min-h-screen bg-gray-50 flex flex-col relative"&gt;
-              &lt;SearchSection onSearch={handleSearch} isLoading={isLoading} /&gt;
-              &lt;ResultsSection
-                characters={characters}
-                pagination={pagination}
-                isLoading={isLoading}
-                error={error}
-                onRetry={handleRetry}
-                onPageChange={handlePageChange}
-                onCharacterClick={handleCharacterClick}
-              /&gt;
-              &lt;About /&gt;
+    &lt;ThemeProvider&gt;
+      &lt;Router&gt;
+        &lt;Routes&gt;
+          &lt;Route
+            path="/"
+            element={
+              &lt;div className="min-h-screen bg-gray-50 flex flex-col relative dark:bg-gray-900 transition-colors"&gt;
+                &lt;SearchSection onSearch={handleSearch} isLoading={isLoading} /&gt;
+                &lt;ResultsSection
+                  characters={characters}
+                  pagination={pagination}
+                  isLoading={isLoading}
+                  error={error}
+                  onRetry={handleRetry}
+                  onPageChange={handlePageChange}
+                  onCharacterClick={handleCharacterClick}
+                /&gt;
+                &lt;About /&gt;
 &nbsp;
-              &lt;CharacterDetailsPanel
-                character={selectedCharacter}
-                isOpen={isDetailsPanelOpen}
-                onClose={handleCloseDetailsPanel}
-              /&gt;
-              &lt;SelectedItemsFlyout /&gt;
-            &lt;/div&gt;
-          }
-        /&gt;
+                &lt;CharacterDetailsPanel
+                  character={selectedCharacter}
+                  isOpen={isDetailsPanelOpen}
+                  onClose={handleCloseDetailsPanel}
+                /&gt;
+                &lt;SelectedItemsFlyout /&gt;
+              &lt;/div&gt;
+            }
+          /&gt;
 &nbsp;
-        &lt;Route path="*" element={&lt;NotFound /&gt;} /&gt;
-      &lt;/Routes&gt;
-    &lt;/Router&gt;
+          &lt;Route path="*" element={&lt;NotFound /&gt;} /&gt;
+        &lt;/Routes&gt;
+      &lt;/Router&gt;
+    &lt;/ThemeProvider&gt;
   );
 };
 &nbsp;
@@ -388,7 +400,7 @@ export default App;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-07-30T21:53:54.881Z
+                at 2025-07-31T10:20:17.016Z
             </div>
         <script src="../prettify.js"></script>
         <script>

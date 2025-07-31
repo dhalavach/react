@@ -24,7 +24,7 @@ export const ResultsSection = ({
   onCharacterClick,
 }: Props) => {
   return (
-    <div className="flex-1 p-6 bg-gray-50 transition-all duration-300">
+    <div className="flex-1 p-6 bg-gray-50 transition-all duration-300 dark:bg-gray-900 transition-all duration-300">
       <div className="max-w-4xl mx-auto">
         {isLoading && <LoadingSpinner />}
 
@@ -32,7 +32,7 @@ export const ResultsSection = ({
 
         {!isLoading && !error && characters.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">
+            <p className="text-gray-500 text-lg dark:text-gray-400">
               No characters found. Try a different search term.
             </p>
           </div>
@@ -41,10 +41,10 @@ export const ResultsSection = ({
         {!isLoading && !error && characters.length > 0 && (
           <div>
             <div className="mb-6">
-              <h2 className="text-xl font-semibold text-gray-900">
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Search Results
                 {pagination && (
-                  <span className="text-gray-600 font-normal">
+                  <span className="text-gray-600 font-normal dark:text-gray-400">
                     {' '}
                     ({pagination.totalCount} character
                     {pagination.totalCount !== 1 ? 's' : ''} found)

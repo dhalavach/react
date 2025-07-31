@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Search } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
+//import { useLocalStorage } from '../hooks/useLocalStorage';
 
 interface Props {
   onSearch: (searchTerm: string, page?: number) => void;
@@ -100,13 +102,14 @@ export const SearchSection = ({ onSearch, isLoading }: Props) => {
   };
 
   return (
-    <div className="bg-white shadow-sm border-b border-gray-200 p-6">
+    <div className="bg-white shadow-sm border-b border-gray-200 p-6 dark:bg-gray-800  dark:border-gray-700 transition-colors">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center dark:text-white">
           Star Wars Character Search
         </h1>
 
         <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+          <ThemeToggle />
           <div className="flex-1 relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
@@ -117,7 +120,7 @@ export const SearchSection = ({ onSearch, isLoading }: Props) => {
               onKeyPress={handleKeyPress}
               placeholder="Search for Star Wars characters..."
               disabled={isLoading}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all disabled:bg-gray-100 disabled:cursor-not-allowed"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all disabled:bg-gray-100 disabled:cursor-not-allowed dark:bg-gray-300"
             />
           </div>
 

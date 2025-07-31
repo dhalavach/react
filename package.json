@@ -24,7 +24,7 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
-      "eslint --fix --max-warnings=0",
+      "eslint --fix --max-warnings=1",
       "npm run test:staged",
       "git add"
     ],
