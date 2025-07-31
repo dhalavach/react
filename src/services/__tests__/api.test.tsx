@@ -1,7 +1,7 @@
 import { APIService } from '../api';
 import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest';
 
-global.fetch = vi.fn();
+globalThis.fetch = vi.fn();
 
 describe('APIService', () => {
   beforeEach(() => {
@@ -42,14 +42,14 @@ describe('APIService', () => {
         ],
       };
 
-      global.fetch = vi.fn().mockResolvedValueOnce({
+      globalThis.fetch = vi.fn().mockResolvedValueOnce({
         ok: true,
         json: async () => mockResponse,
       });
 
       const result = await APIService.searchCharacters('Luke');
 
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(globalThis.fetch).toHaveBeenCalledWith(
         'https://swapi.py4e.com/api//people/?search=Luke&page=1',
         expect.objectContaining({
           method: 'GET',
@@ -71,14 +71,14 @@ describe('APIService', () => {
         results: [],
       };
 
-      global.fetch = vi.fn().mockResolvedValueOnce({
+      globalThis.fetch = vi.fn().mockResolvedValueOnce({
         ok: true,
         json: async () => mockResponse,
       });
 
       const result = await APIService.searchCharacters('');
 
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(globalThis.fetch).toHaveBeenCalledWith(
         'https://swapi.py4e.com/api//people/?page=1',
         expect.any(Object)
       );
@@ -94,14 +94,14 @@ describe('APIService', () => {
         results: [],
       };
 
-      global.fetch = vi.fn().mockResolvedValueOnce({
+      globalThis.fetch = vi.fn().mockResolvedValueOnce({
         ok: true,
         json: async () => mockResponse,
       });
 
       await APIService.searchCharacters('C-3PO & R2-D2');
 
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(globalThis.fetch).toHaveBeenCalledWith(
         'https://swapi.py4e.com/api//people/?search=C-3PO+%2526+R2-D2&page=1',
         expect.any(Object)
       );
@@ -110,7 +110,7 @@ describe('APIService', () => {
 
   describe('Error Handling', () => {
     it('handles 4xx client errors', async () => {
-      global.fetch = vi.fn().mockResolvedValueOnce({
+      globalThis.fetch = vi.fn().mockResolvedValueOnce({
         ok: false,
         status: 404,
         statusText: 'Not Found',
@@ -122,7 +122,7 @@ describe('APIService', () => {
     });
 
     it('handles 5xx server errors', async () => {
-      global.fetch = vi.fn().mockResolvedValueOnce({
+      globalThis.fetch = vi.fn().mockResolvedValueOnce({
         ok: false,
         status: 500,
         statusText: 'Internal Server Error',
@@ -134,7 +134,7 @@ describe('APIService', () => {
     });
 
     it('handles CORS errors with fallback', async () => {
-      global.fetch = vi.fn().mockRejectedValueOnce(new Error('CORS error'));
+      globalThis.fetch = vi.fn().mockRejectedValueOnce(new Error('CORS error'));
 
       const result = await APIService.searchCharacters('Vader');
 
@@ -146,7 +146,7 @@ describe('APIService', () => {
 
   describe('Request Configuration', () => {
     it('sets correct headers', async () => {
-      global.fetch = vi.fn().mockResolvedValueOnce({
+      globalThis.fetch = vi.fn().mockResolvedValueOnce({
         ok: true,
         json: async () => ({
           count: 0,
@@ -158,7 +158,7 @@ describe('APIService', () => {
 
       await APIService.searchCharacters('test');
 
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(globalThis.fetch).toHaveBeenCalledWith(
         expect.any(String),
         expect.objectContaining({
           method: 'GET',
@@ -171,7 +171,7 @@ describe('APIService', () => {
     });
 
     it('sets up abort controller for timeout', async () => {
-      global.fetch = vi.fn().mockResolvedValueOnce({
+      globalThis.fetch = vi.fn().mockResolvedValueOnce({
         ok: true,
         json: async () => ({
           count: 0,
@@ -183,7 +183,7 @@ describe('APIService', () => {
 
       await APIService.searchCharacters('test');
 
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(globalThis.fetch).toHaveBeenCalledWith(
         expect.any(String),
         expect.objectContaining({
           signal: expect.any(AbortSignal),

@@ -1,35 +1,41 @@
 import { useState, useEffect } from 'react';
 
-export function useLocalStorage<T>(
+export function useLocalStorage(
   key: string,
-  initialValue: T,
-  onLoadCallback?: (value: T) => void
-): [T, (value: T) => void] {
-  const [storedValue, setStoredValue] = useState<T>(() => {
+  initialValue: string
+): [string, (value: string) => void] {
+  const [storedValue, setStoredValue] = useState<string>(() => {
     try {
       const item = localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      console.error('Error reading localStorage:', error);
+      return item ?? initialValue;
+    } catch (err) {
+      console.error(`Error accessing localStorage key "${key}":`, err);
       return initialValue;
     }
   });
 
-  const setValue = (value: T) => {
+  const setValue = (value: string) => {
     try {
+      localStorage.setItem(key, value);
       setStoredValue(value);
-      localStorage.setItem(key, JSON.stringify(value));
-    } catch (error) {
-      console.error('Error saving to localStorage:', error);
+    } catch (err) {
+      console.error(`Error writing to localStorage key "${key}":`, err);
     }
   };
 
   useEffect(() => {
-    if (onLoadCallback && storedValue !== initialValue) {
-      onLoadCallback(storedValue);
+    try {
+      const handleStorage = (event: StorageEvent) => {
+        if (event.key === key && event.newValue !== null) {
+          setStoredValue(event.newValue);
+        }
+      };
+      window.addEventListener('storage', handleStorage);
+      return () => window.removeEventListener('storage', handleStorage);
+    } catch {
+      // Do nothing if storage events aren't supported
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [key]);
 
   return [storedValue, setValue];
 }
