@@ -1,52 +1,41 @@
 import { User, Calendar, Ruler, Weight } from 'lucide-react';
 import type { Character } from '../types/Character';
 import { useSelectedItemsStore } from '../stores/selectedItemsStore';
+import { useMemo } from 'react';
 
 interface Props {
   character: Character;
   onClick?: (character: Character) => void;
 }
 
-const formatDescription = (character: Character): string => {
-  const details = [];
+const isKnown = (value: string) => value.toLowerCase() !== 'unknown';
 
-  if (character.gender !== 'unknown') {
-    details.push(character.gender);
-  }
+const useCharacterDescription = (character: Character) =>
+  useMemo(() => {
+    const parts: string[] = [];
 
-  if (character.birth_year !== 'unknown') {
-    details.push(`Born ${character.birth_year}`);
-  }
+    if (isKnown(character.gender)) parts.push(character.gender);
+    if (isKnown(character.birth_year))
+      parts.push(`Born ${character.birth_year}`);
+    if (isKnown(character.height)) parts.push(`${character.height}cm tall`);
+    if (isKnown(character.mass)) parts.push(`${character.mass}kg`);
 
-  if (character.height !== 'unknown') {
-    details.push(`${character.height}cm tall`);
-  }
-
-  if (character.mass !== 'unknown') {
-    details.push(`${character.mass}kg`);
-  }
-
-  return details.join(' • ');
-};
+    return parts.join(' • ');
+  }, [character]);
 
 export const CharacterCard = ({ character, onClick }: Props) => {
-  const description = formatDescription(character);
+  const description = useCharacterDescription(character);
   const { isSelected, addItem, removeItem } = useSelectedItemsStore();
   const selected = isSelected(character.url);
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.stopPropagation();
-    if (e.target.checked) {
-      addItem(character);
-    } else {
-      removeItem(character.url);
-    }
+    if (e.target.checked) addItem(character);
+    else removeItem(character.url);
   };
 
   const handleClick = () => {
-    if (onClick) {
-      onClick(character);
-    }
+    onClick?.(character);
   };
 
   return (
@@ -63,8 +52,8 @@ export const CharacterCard = ({ character, onClick }: Props) => {
           type="checkbox"
           checked={selected}
           onChange={handleCheckboxChange}
-          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 dark:bg-gray-700 "
           onClick={(e) => e.stopPropagation()}
+          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 dark:bg-gray-700 "
         />
       </div>
 
@@ -87,21 +76,21 @@ export const CharacterCard = ({ character, onClick }: Props) => {
           )}
 
           <div className="flex flex-wrap gap-4 text-xs text-gray-500 dark:text-gray-400 ">
-            {character.height !== 'unknown' && (
+            {isKnown(character.height) && (
               <div className="flex items-center space-x-1">
                 <Ruler className="w-3 h-3" />
                 <span>{character.height}cm</span>
               </div>
             )}
 
-            {character.mass !== 'unknown' && (
+            {isKnown(character.mass) && (
               <div className="flex items-center space-x-1">
                 <Weight className="w-3 h-3" />
                 <span>{character.mass}kg</span>
               </div>
             )}
 
-            {character.birth_year !== 'unknown' && (
+            {isKnown(character.birth_year) && (
               <div className="flex items-center space-x-1">
                 <Calendar className="w-3 h-3" />
                 <span>{character.birth_year}</span>
