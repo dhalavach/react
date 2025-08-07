@@ -2,6 +2,7 @@ import { User, Calendar, Ruler, Weight } from 'lucide-react';
 import type { Character } from '../types/Character';
 import { useSelectedItemsStore } from '../stores/selectedItemsStore';
 import { useMemo } from 'react';
+//import { useCharacterDetailsStore } from '../stores/characterDetailsStore';
 
 interface Props {
   character: Character;
@@ -24,6 +25,8 @@ const useCharacterDescription = (character: Character) =>
   }, [character]);
 
 export const CharacterCard = ({ character, onClick }: Props) => {
+  //const { setCharacter } = useCharacterDetailsStore();
+
   const description = useCharacterDescription(character);
   const { isSelected, addItem, removeItem } = useSelectedItemsStore();
   const selected = isSelected(character.url);
@@ -36,6 +39,7 @@ export const CharacterCard = ({ character, onClick }: Props) => {
 
   const handleClick = () => {
     onClick?.(character);
+    // setCharacter(character); //test addition - maybe remove later
   };
 
   return (

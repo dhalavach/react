@@ -1,23 +1,18 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+  usePaginationActions,
+  useCurrentPage,
+  usePaginationData,
+} from '../stores/currentPageStore';
 
-interface Pagination {
-  currentPage: number;
-  totalPages: number;
-  totalCount: number;
-}
+export const PaginationControls = () => {
+  const currentPage = useCurrentPage();
+  const { setCurrentPage } = usePaginationActions();
 
-interface PaginationControlsProps {
-  pagination: Pagination;
-  onPageChange: (page: number) => void;
-  isLoading: boolean;
-}
+  const { totalPages } = usePaginationData();
+  //console.log(totalCount);
 
-export const PaginationControls = ({
-  pagination,
-  onPageChange,
-  isLoading,
-}: PaginationControlsProps) => {
-  if (pagination.totalPages <= 1) {
+  if (totalPages <= 1) {
     return null;
   }
 
@@ -27,14 +22,14 @@ export const PaginationControls = ({
     const rangeWithDots = [];
 
     for (
-      let i = Math.max(2, pagination.currentPage - delta);
-      i <= Math.min(pagination.totalPages - 1, pagination.currentPage + delta);
+      let i = Math.max(2, currentPage - delta);
+      i <= Math.min(totalPages - 1, currentPage + delta);
       i++
     ) {
       range.push(i);
     }
 
-    if (pagination.currentPage - delta > 2) {
+    if (currentPage - delta > 2) {
       rangeWithDots.push(1, '...');
     } else {
       rangeWithDots.push(1);
@@ -42,10 +37,10 @@ export const PaginationControls = ({
 
     rangeWithDots.push(...range);
 
-    if (pagination.currentPage + delta < pagination.totalPages - 1) {
-      rangeWithDots.push('...', pagination.totalPages);
+    if (currentPage + delta < totalPages - 1) {
+      rangeWithDots.push('...', totalPages);
     } else {
-      rangeWithDots.push(pagination.totalPages);
+      rangeWithDots.push(totalPages);
     }
 
     return rangeWithDots;
@@ -54,8 +49,8 @@ export const PaginationControls = ({
   return (
     <div className="flex justify-center items-center mt-8 gap-2">
       <button
-        onClick={() => onPageChange(pagination.currentPage - 1)}
-        disabled={pagination.currentPage === 1 || isLoading}
+        onClick={() => setCurrentPage(currentPage - 1)}
+        disabled={currentPage === 1}
         className="inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
       >
         <ChevronLeft className="w-4 h-4" />
@@ -66,10 +61,10 @@ export const PaginationControls = ({
         {getVisiblePages().map((page, index) => (
           <button
             key={index}
-            onClick={() => typeof page === 'number' && onPageChange(page)}
-            disabled={isLoading || page === '...'}
+            onClick={() => typeof page === 'number' && setCurrentPage(page)}
+            disabled={page === '...'}
             className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-              page === pagination.currentPage
+              page === currentPage
                 ? 'bg-blue-600 text-white'
                 : page === '...'
                   ? 'text-gray-400 cursor-default'
@@ -83,8 +78,8 @@ export const PaginationControls = ({
 
       <button
         data-testid="next"
-        onClick={() => onPageChange(pagination.currentPage + 1)}
-        disabled={pagination.currentPage === pagination.totalPages || isLoading}
+        onClick={() => setCurrentPage(currentPage + 1)}
+        disabled={currentPage === totalPages}
         className="inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
       >
         Next

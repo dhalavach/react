@@ -9,19 +9,11 @@ import {
   Rocket,
   Car,
 } from 'lucide-react';
-import type { Character } from '../types/Character';
+import { useCharacterDetailsStore } from '../stores/characterDetailsStore';
 
-interface Props {
-  character: Character | null;
-  isOpen: boolean;
-  onClose: () => void;
-}
+export const CharacterDetailsPanel = () => {
+  const { character, isOpen, closePanel } = useCharacterDetailsStore();
 
-export const CharacterDetailsPanel = ({
-  character,
-  isOpen,
-  onClose,
-}: Props) => {
   if (!isOpen || !character) return null;
 
   const formatList = (items: string[], label: string) => {
@@ -41,29 +33,26 @@ export const CharacterDetailsPanel = ({
       ? value
       : defaultText;
   };
-
   return (
     <>
-      {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-        onClick={onClose}
+        className="fixed inset-0 bg-black bg-opacity-50 z-40 "
+        onClick={closePanel}
       />
 
-      {/* Panel */}
       <div
         className={`fixed top-0 right-0 h-full w-full lg:w-96 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
+        onClick={(e) => e.stopPropagation()} // prevent bubbling to backdrop
       >
         <div className="flex flex-col h-full">
-          {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gradient-to-r from-blue-500 to-purple-600">
             <h2 className="text-xl font-bold text-white truncate pr-4">
               {character.name}
             </h2>
             <button
-              onClick={onClose}
+              onClick={closePanel}
               className="p-2 hover:bg-white hover:bg-opacity-20 rounded-full transition-colors flex-shrink-0"
               aria-label="Close details panel"
             >
