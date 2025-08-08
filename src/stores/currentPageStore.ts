@@ -17,7 +17,7 @@ interface PaginationState {
   };
 }
 
-const usePaginationStore = create<PaginationState>((set) => ({
+export const usePaginationStore = create<PaginationState>((set) => ({
   currentPage: 1,
   searchTerm: '',
   totalPages: 1,

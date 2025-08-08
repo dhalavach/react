@@ -39,7 +39,8 @@ export const SearchSection = () => {
           <button
             data-testid="search-button"
             type="submit"
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               console.log('The search button has been clicked.');
             }}
             className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed transition-colors font-medium"

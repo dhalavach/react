@@ -1,224 +1,179 @@
+import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { PaginationControls } from '../PaginationControls';
+import {
+  useCurrentPage,
+  usePaginationActions,
+  usePaginationData,
+} from '../../stores/currentPageStore';
 
-const mockOnPageChange = vi.fn();
+vi.mock('../../stores/currentPageStore', () => ({
+  useCurrentPage: vi.fn(),
+  usePaginationActions: vi.fn(() => ({
+    setCurrentPage: vi.fn(),
+    setSearchTerm: vi.fn(),
+    resetPagination: vi.fn(),
+    updatePaginationData: vi.fn(),
+  })),
+  usePaginationData: vi.fn(),
+}));
 
 describe('PaginationControls', () => {
+  const mockSetCurrentPage = vi.fn();
+  const mockActions = {
+    setCurrentPage: mockSetCurrentPage,
+    setSearchTerm: vi.fn(),
+    resetPagination: vi.fn(),
+    updatePaginationData: vi.fn(),
+  };
+
   beforeEach(() => {
     vi.clearAllMocks();
+
+    vi.mocked(usePaginationActions).mockReturnValue(mockActions);
+    console.log(vi.mocked(useCurrentPage));
+    console.log(vi.mocked(usePaginationData));
   });
 
-  describe('Rendering Tests', () => {
-    it('renders pagination controls when there are multiple pages', () => {
-      const pagination = {
-        currentPage: 1,
-        totalPages: 3,
-        totalCount: 30,
-      };
-
-      render(
-        <PaginationControls
-          pagination={pagination}
-          onPageChange={mockOnPageChange}
-          isLoading={false}
-        />
-      );
-
-      expect(screen.getByText('Previous')).toBeInTheDocument();
-      expect(screen.getByText('Next')).toBeInTheDocument();
-      expect(screen.getByText('1')).toBeInTheDocument();
-      expect(screen.getByText('2')).toBeInTheDocument();
-      expect(screen.getByText('3')).toBeInTheDocument();
+  it('should not render when totalPages is 1', () => {
+    vi.mocked(useCurrentPage).mockReturnValue(1);
+    vi.mocked(usePaginationData).mockReturnValue({
+      totalPages: 1,
+      totalCount: 10,
     });
 
-    it('does not render when there is only one page', () => {
-      const pagination = {
-        currentPage: 1,
-        totalPages: 1,
-        totalCount: 5,
-      };
-
-      render(
-        <PaginationControls
-          pagination={pagination}
-          onPageChange={mockOnPageChange}
-          isLoading={false}
-        />
-      );
-
-      expect(screen.queryByText('Previous')).not.toBeInTheDocument();
-      expect(screen.queryByText('Next')).not.toBeInTheDocument();
-    });
-
-    it('highlights current page', () => {
-      const pagination = {
-        currentPage: 2,
-        totalPages: 3,
-        totalCount: 30,
-      };
-
-      render(
-        <PaginationControls
-          pagination={pagination}
-          onPageChange={mockOnPageChange}
-          isLoading={false}
-        />
-      );
-
-      const currentPageButton = screen.getByText('2');
-      expect(currentPageButton).toHaveClass('bg-blue-600', 'text-white');
-    });
-
-    it('disables Previous button on first page', () => {
-      const pagination = {
-        currentPage: 1,
-        totalPages: 3,
-        totalCount: 30,
-      };
-
-      render(
-        <PaginationControls
-          pagination={pagination}
-          onPageChange={mockOnPageChange}
-          isLoading={false}
-        />
-      );
-
-      const previousButton = screen.getByText('Previous');
-      expect(previousButton).toBeDisabled();
-    });
-
-    it('disables Next button on last page', () => {
-      const pagination = {
-        currentPage: 3,
-        totalPages: 3,
-        totalCount: 30,
-      };
-
-      render(
-        <PaginationControls
-          pagination={pagination}
-          onPageChange={mockOnPageChange}
-          isLoading={false}
-        />
-      );
-
-      const nextButton = screen.getByText('Next');
-      expect(nextButton).toBeDisabled();
-    });
-
-    it('disables all buttons when loading', () => {
-      const pagination = {
-        currentPage: 2,
-        totalPages: 3,
-        totalCount: 30,
-      };
-
-      render(
-        <PaginationControls
-          pagination={pagination}
-          onPageChange={mockOnPageChange}
-          isLoading={true}
-        />
-      );
-
-      expect(screen.getByText('Previous')).toBeDisabled();
-      expect(screen.getByText('Next')).toBeDisabled();
-      expect(screen.getByText('1')).toBeDisabled();
-      expect(screen.getByText('2')).toBeDisabled();
-      expect(screen.getByText('3')).toBeDisabled();
-    });
+    const { container } = render(<PaginationControls />);
+    expect(container.firstChild).toBeNull();
   });
 
-  describe('User Interaction Tests', () => {
-    it('calls onPageChange when page number is clicked', async () => {
-      const user = userEvent.setup();
-      const pagination = {
-        currentPage: 1,
-        totalPages: 3,
-        totalCount: 30,
-      };
-
-      render(
-        <PaginationControls
-          pagination={pagination}
-          onPageChange={mockOnPageChange}
-          isLoading={false}
-        />
-      );
-
-      const pageButton = screen.getByText('2');
-      await user.click(pageButton);
-
-      expect(mockOnPageChange).toHaveBeenCalledWith(2);
+  it('should render correctly with 5 pages', () => {
+    vi.mocked(useCurrentPage).mockReturnValue(3);
+    vi.mocked(usePaginationData).mockReturnValue({
+      totalPages: 5,
+      totalCount: 50,
     });
 
-    it('calls onPageChange when Previous button is clicked', async () => {
-      const user = userEvent.setup();
-      const pagination = {
-        currentPage: 2,
-        totalPages: 3,
-        totalCount: 30,
-      };
+    render(<PaginationControls />);
 
-      render(
-        <PaginationControls
-          pagination={pagination}
-          onPageChange={mockOnPageChange}
-          isLoading={false}
-        />
-      );
+    expect(screen.getByText('Previous')).toBeInTheDocument();
+    expect(screen.getByText('Next')).toBeInTheDocument();
 
-      const previousButton = screen.getByText('Previous');
-      await user.click(previousButton);
+    expect(screen.getByText('1')).toBeInTheDocument();
+    expect(screen.getByText('2')).toBeInTheDocument();
+    expect(screen.getByText('3')).toBeInTheDocument();
+    expect(screen.getByText('4')).toBeInTheDocument();
+    expect(screen.getByText('5')).toBeInTheDocument();
+  });
 
-      expect(mockOnPageChange).toHaveBeenCalledWith(1);
+  it('should render with ellipsis when many pages exist', () => {
+    vi.mocked(useCurrentPage).mockReturnValue(5);
+    vi.mocked(usePaginationData).mockReturnValue({
+      totalPages: 10,
+      totalCount: 100,
     });
 
-    it('calls onPageChange when Next button is clicked', async () => {
-      const user = userEvent.setup();
-      const pagination = {
-        currentPage: 1,
-        totalPages: 3,
-        totalCount: 30,
-      };
+    render(<PaginationControls />);
 
-      render(
-        <PaginationControls
-          pagination={pagination}
-          onPageChange={mockOnPageChange}
-          isLoading={false}
-        />
-      );
+    expect(screen.getByText('1')).toBeInTheDocument();
+    expect(screen.getAllByText('...')).toHaveLength(2);
+    expect(screen.getByText('3')).toBeInTheDocument();
+    expect(screen.getByText('4')).toBeInTheDocument();
+    expect(screen.getByText('5')).toBeInTheDocument();
+    expect(screen.getByText('6')).toBeInTheDocument();
+    expect(screen.getByText('7')).toBeInTheDocument();
+    expect(screen.getByText('10')).toBeInTheDocument();
+  });
 
-      const nextButton = screen.getByText('Next');
-      await user.click(nextButton);
-
-      expect(mockOnPageChange).toHaveBeenCalledWith(2);
+  it('should highlight the current page', () => {
+    vi.mocked(useCurrentPage).mockReturnValue(3);
+    vi.mocked(usePaginationData).mockReturnValue({
+      totalPages: 5,
+      totalCount: 50,
     });
 
-    it('does not call onPageChange when current page is clicked', async () => {
-      const user = userEvent.setup();
-      const pagination = {
-        currentPage: 2,
-        totalPages: 3,
-        totalCount: 30,
-      };
+    render(<PaginationControls />);
 
-      render(
-        <PaginationControls
-          pagination={pagination}
-          onPageChange={mockOnPageChange}
-          isLoading={false}
-        />
-      );
+    const currentPageButton = screen.getByText('3');
+    expect(currentPageButton).toHaveClass('bg-blue-600');
+    expect(currentPageButton).toHaveClass('text-white');
+  });
 
-      const currentPageButton = screen.getByText('2');
-      await user.click(currentPageButton);
-
-      expect(mockOnPageChange).toHaveBeenCalledWith(2);
+  it('should disable Previous button on first page', () => {
+    vi.mocked(useCurrentPage).mockReturnValue(1);
+    vi.mocked(usePaginationData).mockReturnValue({
+      totalPages: 5,
+      totalCount: 50,
     });
+
+    render(<PaginationControls />);
+
+    const prevButton = screen.getByText('Previous');
+    expect(prevButton).toBeDisabled();
+  });
+
+  it('should disable Next button on last page', () => {
+    vi.mocked(useCurrentPage).mockReturnValue(5);
+    vi.mocked(usePaginationData).mockReturnValue({
+      totalPages: 5,
+      totalCount: 50,
+    });
+
+    render(<PaginationControls />);
+
+    const nextButton = screen.getByText('Next');
+    expect(nextButton).toBeDisabled();
+  });
+
+  it('should call setCurrentPage when clicking on a page number', () => {
+    vi.mocked(useCurrentPage).mockReturnValue(3);
+    vi.mocked(usePaginationData).mockReturnValue({
+      totalPages: 5,
+      totalCount: 50,
+    });
+
+    render(<PaginationControls />);
+
+    fireEvent.click(screen.getByText('2'));
+    expect(mockSetCurrentPage).toHaveBeenCalledWith(2);
+  });
+
+  it('should not call setCurrentPage when clicking on ellipsis', () => {
+    vi.mocked(useCurrentPage).mockReturnValue(5);
+    vi.mocked(usePaginationData).mockReturnValue({
+      totalPages: 10,
+      totalCount: 100,
+    });
+
+    render(<PaginationControls />);
+
+    const ellipsisButtons = screen.getAllByText('...');
+    fireEvent.click(ellipsisButtons[0]);
+    expect(mockSetCurrentPage).not.toHaveBeenCalled();
+  });
+
+  it('should call setCurrentPage with previous page when Previous is clicked', () => {
+    vi.mocked(useCurrentPage).mockReturnValue(3);
+    vi.mocked(usePaginationData).mockReturnValue({
+      totalPages: 5,
+      totalCount: 50,
+    });
+
+    render(<PaginationControls />);
+
+    fireEvent.click(screen.getByText('Previous'));
+    expect(mockSetCurrentPage).toHaveBeenCalledWith(2);
+  });
+
+  it('should call setCurrentPage with next page when Next is clicked', () => {
+    vi.mocked(useCurrentPage).mockReturnValue(3);
+    vi.mocked(usePaginationData).mockReturnValue({
+      totalPages: 5,
+      totalCount: 50,
+    });
+
+    render(<PaginationControls />);
+
+    fireEvent.click(screen.getByText('Next'));
+    expect(mockSetCurrentPage).toHaveBeenCalledWith(4);
   });
 });

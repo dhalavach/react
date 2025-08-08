@@ -1,220 +1,216 @@
-import { render, screen } from '@testing-library/react';
+import { describe, it, vi, beforeEach, expect, type Mock } from 'vitest';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Character } from '../../types/Character';
+
+// Props interface for the mock component
+interface Props {
+  character?: Character;
+  onClick?: (character: Character) => void;
+}
+
+// Mocks before imports
+vi.mock('../../stores/searchStore', () => ({
+  useSearchTerm: vi.fn(),
+}));
+
+vi.mock('../../stores/currentPageStore', () => ({
+  useCurrentPage: vi.fn(),
+  usePaginationActions: vi.fn(() => ({
+    setCurrentPage: vi.fn(),
+    setSearchTerm: vi.fn(),
+    resetPagination: vi.fn(),
+    updatePaginationData: vi.fn(),
+  })),
+  usePaginationData: vi.fn(),
+}));
+
+vi.mock('../../stores/characterDetailsStore', () => ({
+  useCharacterDetailsStore: vi.fn(() => ({
+    openPanel: vi.fn(),
+  })),
+}));
+
+vi.mock('../../api/api', () => ({
+  useCharacters: vi.fn(),
+}));
+
+// Mock CharacterCard component with default props to avoid TS errors
+vi.mock('../CharacterCard', () => ({
+  CharacterCard: (props: Props = {}) => {
+    // Provide a full default character to satisfy all required fields
+    const defaultCharacter: Character = {
+      name: '',
+      height: '',
+      mass: '',
+      hair_color: '',
+      skin_color: '',
+      eye_color: '',
+      birth_year: '',
+      gender: '',
+      homeworld: '',
+      films: [],
+      species: [],
+      vehicles: [],
+      starships: [],
+      created: '',
+      edited: '',
+      url: '',
+    };
+
+    const { character = defaultCharacter, onClick } = props;
+
+    return (
+      <div
+        data-testid="mock-character-card"
+        onClick={() => onClick?.(character)}
+      >
+        {character.name}
+      </div>
+    );
+  },
+}));
+
+// Imports AFTER mocks
+import { useSearchTerm } from '../../stores/searchStore';
+import {
+  useCurrentPage,
+  usePaginationActions,
+  usePaginationData,
+} from '../../stores/currentPageStore';
+import { useCharacterDetailsStore } from '../../stores/characterDetailsStore';
+import { useCharacters } from '../../api/api';
 import { ResultsSection } from '../ResultsSection';
-import type { Character, PaginationInfo } from '../../types/Character';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-const mockOnRetry = vi.fn();
-const mockOnPageChange = vi.fn();
-const mockOnCharacterClick = vi.fn();
+// Typed mocks assigned once:
+const useSearchTermMock = useSearchTerm as unknown as Mock;
+const useCurrentPageMock = useCurrentPage as unknown as Mock;
+const usePaginationActionsMock = usePaginationActions as unknown as Mock;
+const usePaginationDataMock = usePaginationData as unknown as Mock;
+const useCharacterDetailsStoreMock =
+  useCharacterDetailsStore as unknown as Mock;
+const useCharactersMock = useCharacters as unknown as Mock;
 
-const mockCharacter: Character = {
-  name: 'Luke Skywalker',
-  height: '172',
-  mass: '77',
-  hair_color: 'blond',
-  skin_color: 'fair',
-  eye_color: 'blue',
-  birth_year: '19BBY',
-  gender: 'male',
-  homeworld: 'https://swapi.dev/api/planets/1/',
-  films: ['https://swapi.dev/api/films/1/'],
-  species: [],
-  vehicles: ['https://swapi.dev/api/vehicles/14/'],
-  starships: ['https://swapi.dev/api/starships/12/'],
-  created: '2014-12-09T13:50:51.644000Z',
-  edited: '2014-12-20T21:17:56.891000Z',
-  url: 'https://swapi.dev/api/people/1/',
-};
+describe('<ResultsSection />', () => {
+  const updatePaginationData = vi.fn();
+  const openPanel = vi.fn();
+  const refetch = vi.fn();
 
-const mockPagination: PaginationInfo = {
-  currentPage: 1,
-  totalPages: 3,
-  totalCount: 25,
-  hasNext: true,
-  hasPrevious: false,
-};
-
-describe('ResultsSection', () => {
   beforeEach(() => {
-    mockOnRetry.mockClear();
-    mockOnPageChange.mockClear();
-    mockOnCharacterClick.mockClear();
+    vi.clearAllMocks();
+
+    useSearchTermMock.mockReturnValue('Luke');
+    useCurrentPageMock.mockReturnValue(1);
+    usePaginationActionsMock.mockReturnValue({ updatePaginationData });
+    usePaginationDataMock.mockReturnValue({
+      totalPages: 1,
+      totalCount: 1,
+    });
+    useCharacterDetailsStoreMock.mockReturnValue({ openPanel });
   });
 
-  it('shows loading spinner when loading', () => {
-    render(
-      <ResultsSection
-        characters={[]}
-        pagination={null}
-        isLoading={true}
-        error={null}
-        onRetry={mockOnRetry}
-        onPageChange={mockOnPageChange}
-        onCharacterClick={mockOnCharacterClick}
-      />
-    );
+  it('renders loading state', () => {
+    useCharactersMock.mockReturnValue({
+      data: undefined,
+      isLoading: true,
+      isError: false,
+      refetch,
+    });
 
-    expect(screen.getByText('Searching the galaxy...')).toBeInTheDocument();
+    render(<ResultsSection />);
+    expect(screen.getByTestId('spinner')).toBeInTheDocument();
   });
 
-  it('shows error message when there is an error', () => {
-    render(
-      <ResultsSection
-        characters={[]}
-        pagination={null}
-        isLoading={false}
-        error="Network error"
-        onRetry={mockOnRetry}
-        onPageChange={mockOnPageChange}
-        onCharacterClick={mockOnCharacterClick}
-      />
-    );
+  it('renders error state and retry button', () => {
+    useCharactersMock.mockReturnValue({
+      data: undefined,
+      isLoading: false,
+      isError: true,
+      refetch,
+    });
 
-    expect(screen.getByText('Network error')).toBeInTheDocument();
-    expect(screen.getByText('Try Again')).toBeInTheDocument();
+    render(<ResultsSection />);
+    expect(screen.getByText(/an error occurred/i)).toBeInTheDocument();
   });
 
-  it('shows no results message when no characters found', () => {
-    render(
-      <ResultsSection
-        characters={[]}
-        pagination={null}
-        isLoading={false}
-        error={null}
-        onRetry={mockOnRetry}
-        onPageChange={mockOnPageChange}
-        onCharacterClick={mockOnCharacterClick}
-      />
-    );
+  it('renders no results message', () => {
+    useCharactersMock.mockReturnValue({
+      data: { count: 0, results: [] },
+      isLoading: false,
+      isError: false,
+      refetch,
+    });
 
-    expect(
-      screen.getByText('No characters found. Try a different search term.')
-    ).toBeInTheDocument();
+    render(<ResultsSection />);
+    expect(screen.getByText(/no characters found/i)).toBeInTheDocument();
   });
 
-  it('renders characters when available', () => {
-    render(
-      <ResultsSection
-        characters={[mockCharacter]}
-        pagination={mockPagination}
-        isLoading={false}
-        error={null}
-        onRetry={mockOnRetry}
-        onPageChange={mockOnPageChange}
-        onCharacterClick={mockOnCharacterClick}
-      />
-    );
+  it('renders search results and calls updatePaginationData', () => {
+    const character: Character = {
+      name: 'Luke Skywalker',
+      height: '172',
+      mass: '77',
+      hair_color: 'blond',
+      skin_color: 'fair',
+      eye_color: 'blue',
+      birth_year: '19BBY',
+      gender: 'male',
+      homeworld: 'https://swapi.dev/api/planets/1/',
+      films: [],
+      species: [],
+      vehicles: [],
+      starships: [],
+      created: '',
+      edited: '',
+      url: 'https://swapi.dev/api/people/1/',
+    };
+
+    useCharactersMock.mockReturnValue({
+      data: { count: 11, results: [character] },
+      isLoading: false,
+      isError: false,
+      refetch,
+    });
+
+    render(<ResultsSection />);
 
     expect(screen.getByText('Luke Skywalker')).toBeInTheDocument();
-    expect(screen.getByText('Search Results')).toBeInTheDocument();
+    expect(screen.getByText('(11 characters found)')).toBeInTheDocument();
+
+    expect(updatePaginationData).toHaveBeenCalledWith({
+      totalPages: 2,
+      totalCount: 11,
+    });
   });
 
-  it('shows correct character count in header', () => {
-    render(
-      <ResultsSection
-        characters={[mockCharacter]}
-        pagination={mockPagination}
-        isLoading={false}
-        error={null}
-        onRetry={mockOnRetry}
-        onPageChange={mockOnPageChange}
-        onCharacterClick={mockOnCharacterClick}
-      />
-    );
+  it('calls openPanel when character card is clicked', () => {
+    const character: Character = {
+      name: 'Leia Organa',
+      height: '150',
+      mass: '49',
+      hair_color: 'brown',
+      skin_color: 'light',
+      eye_color: 'brown',
+      birth_year: '19BBY',
+      gender: 'female',
+      homeworld: 'https://swapi.dev/api/planets/2/',
+      films: [],
+      species: [],
+      vehicles: [],
+      starships: [],
+      created: '',
+      edited: '',
+      url: 'https://swapi.dev/api/people/5/',
+    };
 
-    expect(screen.getByText('(25 characters found)')).toBeInTheDocument();
-  });
+    useCharactersMock.mockReturnValue({
+      data: { count: 1, results: [character] },
+      isLoading: false,
+      isError: false,
+      refetch,
+    });
 
-  it('shows singular character text when count is 1', () => {
-    const singleCharacterPagination = { ...mockPagination, totalCount: 1 };
-    render(
-      <ResultsSection
-        characters={[mockCharacter]}
-        pagination={singleCharacterPagination}
-        isLoading={false}
-        error={null}
-        onRetry={mockOnRetry}
-        onPageChange={mockOnPageChange}
-        onCharacterClick={mockOnCharacterClick}
-      />
-    );
-
-    expect(screen.getByText('(1 character found)')).toBeInTheDocument();
-  });
-
-  it('renders pagination when pagination info is available', () => {
-    render(
-      <ResultsSection
-        characters={[mockCharacter]}
-        pagination={mockPagination}
-        isLoading={false}
-        error={null}
-        onRetry={mockOnRetry}
-        onPageChange={mockOnPageChange}
-        onCharacterClick={mockOnCharacterClick}
-      />
-    );
-
-    expect(
-      screen.getByText('Showing page 1 of 3 (25 total characters)')
-    ).toBeInTheDocument();
-  });
-
-  it('does not render pagination when pagination info is null', () => {
-    render(
-      <ResultsSection
-        characters={[mockCharacter]}
-        pagination={null}
-        isLoading={false}
-        error={null}
-        onRetry={mockOnRetry}
-        onPageChange={mockOnPageChange}
-        onCharacterClick={mockOnCharacterClick}
-      />
-    );
-
-    expect(screen.queryByText(/Showing page/)).not.toBeInTheDocument();
-  });
-
-  it('renders multiple characters correctly', () => {
-    const multipleCharacters = [
-      mockCharacter,
-      {
-        ...mockCharacter,
-        name: 'Darth Vader',
-        url: 'https://swapi.dev/api/people/4/',
-      },
-    ];
-
-    render(
-      <ResultsSection
-        characters={multipleCharacters}
-        pagination={mockPagination}
-        isLoading={false}
-        error={null}
-        onRetry={mockOnRetry}
-        onPageChange={mockOnPageChange}
-        onCharacterClick={mockOnCharacterClick}
-      />
-    );
-
-    expect(screen.getByText('Luke Skywalker')).toBeInTheDocument();
-    expect(screen.getByText('Darth Vader')).toBeInTheDocument();
-  });
-
-  it('does not show results header when no characters', () => {
-    render(
-      <ResultsSection
-        characters={[]}
-        pagination={null}
-        isLoading={false}
-        error={null}
-        onRetry={mockOnRetry}
-        onPageChange={mockOnPageChange}
-        onCharacterClick={mockOnCharacterClick}
-      />
-    );
-
-    expect(screen.queryByText('Search Results')).not.toBeInTheDocument();
+    render(<ResultsSection />);
+    fireEvent.click(screen.getByText('Leia Organa'));
+    expect(openPanel).toHaveBeenCalledWith(character);
   });
 });

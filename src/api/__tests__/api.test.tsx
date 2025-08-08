@@ -1,177 +1,120 @@
-import { ReactNode } from 'react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { renderHook, waitFor } from '@testing-library/react';
+import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest';
+
+// Mock modules before importing the code under test
+vi.mock('../../stores/searchStore', () => ({
+  useSearchStore: vi.fn(),
+}));
+
+vi.mock('@tanstack/react-query', () => ({
+  useQuery: vi.fn(),
+}));
+
 import { fetchCharacters, useCharacters } from '../api';
+import { queryKeys } from '../queryKeys';
+import { useSearchStore } from '../../stores/searchStore';
+import { useQuery } from '@tanstack/react-query';
 
-const createTestQueryClient = () =>
-  new QueryClient({
-    defaultOptions: {
-      queries: {
-        retry: false,
-      },
-    },
-  });
-
-const QueryWrapper = ({ children }: { children: ReactNode }) => {
-  const queryClient = createTestQueryClient();
-  return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-  );
-};
-
-const mockApiResponse = {
-  results: [{ name: 'Luke Skywalker', url: 'https://swapi.dev/api/people/1/' }],
-  next: null,
-  previous: null,
-  count: 1,
-};
-
-beforeEach(() => {
-  vi.resetAllMocks();
-});
+// Give fetch a proper mock type once
+const fetchMock = global.fetch as unknown as Mock;
 
 describe('fetchCharacters', () => {
-  it('fetches character data successfully', async () => {
-    vi.stubGlobal(
-      'fetch',
-      vi.fn(() =>
-        Promise.resolve({
-          ok: true,
-          json: () => Promise.resolve(mockApiResponse),
-          status: 200,
-        } as Response)
-      )
-    );
-
-    const data = await fetchCharacters(1);
-    expect(data).toEqual(mockApiResponse);
+  beforeEach(() => {
+    vi.resetAllMocks();
   });
 
-  it('throws client error for 4xx response', async () => {
-    vi.stubGlobal(
-      'fetch',
-      vi.fn(() =>
-        Promise.resolve({
-          ok: false,
-          status: 404,
-          statusText: 'Not Found',
-          json: () => Promise.resolve({ detail: 'Page not found' }),
-        } as Response)
-      )
-    );
+  it('fetches and returns data successfully', async () => {
+    const mockData = { count: 42, results: [] };
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      json: async () => mockData,
+    });
 
-    await expect(fetchCharacters(2)).rejects.toThrow(
-      'Client error (404): Page not found'
+    const data = await fetchCharacters('luke', 2);
+
+    expect(fetch).toHaveBeenCalledWith(
+      'https://swapi.py4e.com/api/people/?page=2&search=luke'
     );
+    expect(data).toEqual(mockData);
   });
 
-  it('throws server error for 5xx response', async () => {
-    vi.stubGlobal(
-      'fetch',
-      vi.fn(() =>
-        Promise.resolve({
-          ok: false,
-          status: 500,
-          statusText: 'Internal Server Error',
-          json: () => Promise.resolve({ detail: 'Something broke' }),
-        } as Response)
-      )
-    );
+  it('throws client error with message from detail', async () => {
+    fetchMock.mockResolvedValueOnce({
+      ok: false,
+      status: 404,
+      json: async () => ({ detail: 'Not found' }),
+      statusText: 'Not Found',
+    });
 
-    await expect(fetchCharacters(3)).rejects.toThrow(
-      'Server error (500): Something broke'
+    await expect(fetchCharacters('foo')).rejects.toThrow(
+      'Client error (404): Not found'
     );
   });
 
-  it('handles malformed error response gracefully', async () => {
-    vi.stubGlobal(
-      'fetch',
-      vi.fn(() =>
-        Promise.resolve({
-          ok: false,
-          status: 418,
-          statusText: "I'm a teapot",
-          json: () => Promise.reject(new Error('Invalid JSON')),
-        } as Response)
-      )
-    );
+  it('throws server error with message from detail', async () => {
+    fetchMock.mockResolvedValueOnce({
+      ok: false,
+      status: 500,
+      json: async () => ({ detail: 'Server crashed' }),
+      statusText: 'Internal Server Error',
+    });
 
-    await expect(fetchCharacters(4)).rejects.toThrow(
-      "Client error (418): I'm a teapot"
+    await expect(fetchCharacters('foo')).rejects.toThrow(
+      'Server error (500): Server crashed'
+    );
+  });
+
+  it('throws error with fallback message when json parsing fails', async () => {
+    fetchMock.mockResolvedValueOnce({
+      ok: false,
+      status: 400,
+      json: async () => {
+        throw new Error('Invalid JSON');
+      },
+      statusText: 'Bad Request',
+    });
+
+    await expect(fetchCharacters('foo')).rejects.toThrow(
+      'Client error (400): Bad Request'
     );
   });
 });
 
 describe('useCharacters hook', () => {
-  it('returns data when successful', async () => {
-    vi.stubGlobal(
-      'fetch',
-      vi.fn(() =>
-        Promise.resolve({
-          ok: true,
-          status: 200,
-          json: () => Promise.resolve(mockApiResponse),
-        } as Response)
-      )
-    );
-
-    const { result } = renderHook(() => useCharacters(1), {
-      wrapper: QueryWrapper,
-    });
-
-    await waitFor(() => result.current.isSuccess);
-    expect(result.current.data).toEqual(mockApiResponse);
-    expect(result.current.isError).toBe(false);
+  beforeEach(() => {
+    vi.clearAllMocks();
   });
 
-  it('sets error state on 4xx response', async () => {
-    vi.stubGlobal(
-      'fetch',
-      vi.fn(() =>
-        Promise.resolve({
-          ok: false,
-          status: 400,
-          json: () => Promise.resolve({ detail: 'Bad request' }),
-        } as Response)
-      )
-    );
+  it('calls useQuery with correct parameters when shouldFetch is true', () => {
+    (useSearchStore as unknown as Mock).mockReturnValue({ shouldFetch: true });
 
-    const { result } = renderHook(() => useCharacters(1), {
-      wrapper: QueryWrapper,
-    });
+    const searchTerm = 'yoda';
+    const page = 3;
 
-    await waitFor(() => result.current.isError);
-    expect(result.current.error).toBeInstanceOf(Error);
-    expect((result.current.error as Error).message).toMatch(
-      /Client error \(400\)/
-    );
-  });
+    useCharacters(searchTerm, page);
 
-  it('retries on 5xx, but not on 4xx', async () => {
-    const fetchSpy = vi.fn();
-
-    fetchSpy
-      .mockResolvedValueOnce({
-        ok: false,
-        status: 500,
-        statusText: 'Server Error',
-        json: () => Promise.resolve({ detail: 'Server down' }),
+    expect(useQuery).toHaveBeenCalledWith(
+      expect.objectContaining({
+        queryKey: queryKeys.characters(searchTerm, page),
+        queryFn: expect.any(Function),
+        enabled: true,
+        retry: 1,
+        staleTime: 60 * 1000,
       })
-      .mockResolvedValueOnce({
-        ok: true,
-        status: 200,
-        json: () => Promise.resolve(mockApiResponse),
-      });
+    );
+  });
 
-    vi.stubGlobal('fetch', fetchSpy);
+  it('sets enabled false when shouldFetch is false', () => {
+    (useSearchStore as unknown as Mock).mockReturnValue({ shouldFetch: false });
 
-    const { result } = renderHook(() => useCharacters(1), {
-      wrapper: QueryWrapper,
-    });
+    const searchTerm = '';
+    const page = 1;
 
-    await waitFor(() => result.current.isSuccess);
-    expect(fetchSpy).toHaveBeenCalledTimes(2);
-    expect(result.current.data).toEqual(mockApiResponse);
+    useCharacters(searchTerm, page);
+
+    expect(useQuery).toHaveBeenCalledWith(
+      expect.objectContaining({
+        enabled: false,
+      })
+    );
   });
 });

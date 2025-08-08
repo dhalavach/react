@@ -4,8 +4,11 @@ export const About = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-800 text-center px-6 py-16 dark:text-gray-200 transition-colors">
-      <div className="max-w-2xl mx-auto space-y-6">
+    <div
+      data-testid="about"
+      className="min-h-screen bg-white dark:bg-gray-800 text-center px-6 py-16 dark:text-gray-200 transition-colors"
+    >
+      <div data-testid="created-by" className="max-w-2xl mx-auto space-y-6">
         <div className="flex items-center justify-center space-x-2">
           <Heart data-testid="heart-icon" className="w-5 h-5 text-red-500" />
           <p className="text-gray-600 dark:text-gray-300">

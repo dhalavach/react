@@ -233,7 +233,10 @@ export const CharacterDetailsPanel = () => {
                 )}
 
                 {character.vehicles.length > 0 && (
-                  <div className="flex items-center space-x-2">
+                  <div
+                    data-testid="vehicle-test"
+                    className="flex items-center space-x-2"
+                  >
                     <Car className="w-4 h-4 text-gray-500" />
                     <div>
                       <p className="text-xs text-gray-500 uppercase tracking-wide">

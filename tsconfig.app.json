@@ -26,5 +26,6 @@
     "tailwind.config.js",
     "src/vitest.config.ts",
     "vite.config.ts"
-  ]
+  ],
+  "types": ["vitest/globals"]
 }
