@@ -8,16 +8,20 @@ import {
 } from '../stores/currentPageStore';
 import { useSearchTerm } from '../stores/searchStore';
 import { useCharacters } from '../api/api';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { CharacterDetailsPanel } from './CharacterDetailsPanel';
 import { useCharacterDetailsStore } from '../stores/characterDetailsStore';
+import { useQueryClient } from '@tanstack/react-query';
+import { queryKeys } from '../api/queryKeys';
+import { RefreshCw, Check } from 'lucide-react';
 
 export const ResultsSection = () => {
-  //const submittedTerm = useSubmittedTerm();
   const searchTerm = useSearchTerm();
   const currentPage = useCurrentPage();
   const { updatePaginationData } = usePaginationActions();
   const { openPanel } = useCharacterDetailsStore();
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const { data, isLoading, isError, refetch } = useCharacters(
     searchTerm,
@@ -30,6 +34,27 @@ export const ResultsSection = () => {
       updatePaginationData({ totalPages, totalCount: data.count });
     }
   }, [data?.count, updatePaginationData]);
+
+  const queryClient = useQueryClient();
+
+  const handleRefresh = async () => {
+    setIsRefreshing(true);
+    setShowSuccess(false);
+
+    try {
+      await queryClient.refetchQueries({
+        queryKey: queryKeys.characters(searchTerm, currentPage),
+        exact: true,
+        type: 'active',
+      });
+
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 2000);
+    } finally {
+      console.log('cache refreshed');
+      setIsRefreshing(false);
+    }
+  };
 
   return (
     <div className="flex-1 p-6 bg-gray-50 dark:bg-gray-900 transition-all duration-300">
@@ -53,7 +78,7 @@ export const ResultsSection = () => {
 
         {!isLoading && !isError && data && data?.count > 0 && (
           <div>
-            <div className="mb-6">
+            <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Search Results
                 {data.count > 10 && (
@@ -63,6 +88,27 @@ export const ResultsSection = () => {
                   </span>
                 )}
               </h2>
+              <button
+                onClick={handleRefresh}
+                disabled={isRefreshing}
+                className={`flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${
+                  isRefreshing ? 'opacity-75 cursor-not-allowed' : ''
+                }`}
+                aria-label="Refresh cache"
+              >
+                {isRefreshing ? (
+                  <RefreshCw className="w-4 h-4 animate-spin" />
+                ) : showSuccess ? (
+                  <Check className="w-4 h-4 text-green-500" />
+                ) : (
+                  <RefreshCw className="w-4 h-4" />
+                )}
+                {isRefreshing
+                  ? 'Refreshing...'
+                  : showSuccess
+                    ? 'Refreshed!'
+                    : 'Refresh cache'}
+              </button>
             </div>
 
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-1">

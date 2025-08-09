@@ -1,5 +1,5 @@
 import { describe, it, vi, beforeEach, expect, type Mock } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { Character } from '../../types/Character';
 
 // Props interface for the mock component
@@ -33,6 +33,16 @@ vi.mock('../../stores/characterDetailsStore', () => ({
 vi.mock('../../api/api', () => ({
   useCharacters: vi.fn(),
 }));
+
+vi.mock('@tanstack/react-query', async () => {
+  const actual = await vi.importActual('@tanstack/react-query');
+  return {
+    ...actual,
+    useQueryClient: vi.fn(() => ({
+      refetchQueries: vi.fn().mockResolvedValue(undefined),
+    })),
+  };
+});
 
 // Mock CharacterCard component with default props to avoid TS errors
 vi.mock('../CharacterCard', () => ({
@@ -80,6 +90,7 @@ import {
 import { useCharacterDetailsStore } from '../../stores/characterDetailsStore';
 import { useCharacters } from '../../api/api';
 import { ResultsSection } from '../ResultsSection';
+import { useQueryClient } from '@tanstack/react-query';
 
 // Typed mocks assigned once:
 const useSearchTermMock = useSearchTerm as unknown as Mock;
@@ -89,11 +100,13 @@ const usePaginationDataMock = usePaginationData as unknown as Mock;
 const useCharacterDetailsStoreMock =
   useCharacterDetailsStore as unknown as Mock;
 const useCharactersMock = useCharacters as unknown as Mock;
+const useQueryClientMock = useQueryClient as unknown as Mock;
 
 describe('<ResultsSection />', () => {
   const updatePaginationData = vi.fn();
   const openPanel = vi.fn();
   const refetch = vi.fn();
+  const mockRefetchQueries = vi.fn().mockResolvedValue(undefined);
 
   beforeEach(() => {
     vi.clearAllMocks();
@@ -106,6 +119,9 @@ describe('<ResultsSection />', () => {
       totalCount: 1,
     });
     useCharacterDetailsStoreMock.mockReturnValue({ openPanel });
+    useQueryClientMock.mockReturnValue({
+      refetchQueries: mockRefetchQueries,
+    });
   });
 
   it('renders loading state', () => {
@@ -212,5 +228,149 @@ describe('<ResultsSection />', () => {
     render(<ResultsSection />);
     fireEvent.click(screen.getByText('Leia Organa'));
     expect(openPanel).toHaveBeenCalledWith(character);
+  });
+
+  describe('Refresh button', () => {
+    it('renders refresh button when there are results', () => {
+      const character: Character = {
+        name: 'Luke Skywalker',
+        url: 'https://swapi.dev/api/people/1/',
+        mass: '77',
+        height: '172',
+        hair_color: 'blond',
+        skin_color: 'fair',
+        eye_color: 'blue',
+        birth_year: '19BBY',
+        gender: 'male',
+        homeworld: 'https://swapi.dev/api/planets/1/',
+        films: [],
+        species: [],
+        vehicles: [],
+        starships: [],
+        created: '',
+        edited: '',
+      };
+
+      useCharactersMock.mockReturnValue({
+        data: { count: 1, results: [character] },
+        isLoading: false,
+        isError: false,
+        refetch,
+      });
+
+      render(<ResultsSection />);
+      expect(
+        screen.getByRole('button', { name: /refresh/i })
+      ).toBeInTheDocument();
+    });
+
+    it('calls refetchQueries when refresh button is clicked', async () => {
+      const character: Character = {
+        name: 'Luke Skywalker',
+        url: 'https://swapi.dev/api/people/1/',
+        mass: '77',
+        height: '172',
+        hair_color: 'blond',
+        skin_color: 'fair',
+        eye_color: 'blue',
+        birth_year: '19BBY',
+        gender: 'male',
+        homeworld: 'https://swapi.dev/api/planets/1/',
+        films: [],
+        species: [],
+        vehicles: [],
+        starships: [],
+        created: '',
+        edited: '',
+      };
+
+      useCharactersMock.mockReturnValue({
+        data: { count: 1, results: [character] },
+        isLoading: false,
+        isError: false,
+        refetch,
+      });
+
+      render(<ResultsSection />);
+      const refreshButton = screen.getByRole('button', { name: /refresh/i });
+      fireEvent.click(refreshButton);
+
+      expect(mockRefetchQueries).toHaveBeenCalled();
+    });
+
+    it('shows loading state while refreshing', async () => {
+      const character: Character = {
+        name: 'Luke Skywalker',
+        url: 'https://swapi.dev/api/people/1/',
+        mass: '77',
+        height: '172',
+        hair_color: 'blond',
+        skin_color: 'fair',
+        eye_color: 'blue',
+        birth_year: '19BBY',
+        gender: 'male',
+        homeworld: 'https://swapi.dev/api/planets/1/',
+        films: [],
+        species: [],
+        vehicles: [],
+        starships: [],
+        created: '',
+        edited: '',
+      };
+
+      useCharactersMock.mockReturnValue({
+        data: { count: 1, results: [character] },
+        isLoading: false,
+        isError: false,
+        refetch,
+      });
+
+      mockRefetchQueries.mockImplementation(
+        () => new Promise((resolve) => setTimeout(resolve, 100))
+      );
+
+      render(<ResultsSection />);
+      const refreshButton = screen.getByRole('button', { name: /refresh/i });
+      fireEvent.click(refreshButton);
+
+      expect(screen.getByText('Refreshing...')).toBeInTheDocument();
+      expect(screen.getByRole('button')).toBeDisabled();
+    });
+
+    it('shows success state after refresh completes', async () => {
+      const character: Character = {
+        name: 'Luke Skywalker',
+        url: 'https://swapi.dev/api/people/1/',
+        mass: '77',
+        height: '172',
+        hair_color: 'blond',
+        skin_color: 'fair',
+        eye_color: 'blue',
+        birth_year: '19BBY',
+        gender: 'male',
+        homeworld: 'https://swapi.dev/api/planets/1/',
+        films: [],
+        species: [],
+        vehicles: [],
+        starships: [],
+        created: '',
+        edited: '',
+      };
+
+      useCharactersMock.mockReturnValue({
+        data: { count: 1, results: [character] },
+        isLoading: false,
+        isError: false,
+        refetch,
+      });
+
+      render(<ResultsSection />);
+      const refreshButton = screen.getByRole('button', { name: /refresh/i });
+      fireEvent.click(refreshButton);
+
+      await waitFor(() => {
+        expect(screen.getByText('Refreshed!')).toBeInTheDocument();
+      });
+    });
   });
 });
