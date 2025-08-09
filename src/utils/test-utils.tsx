@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-export const createTestQueryClient = () =>
+const createTestQueryClient = () =>
   new QueryClient({
     defaultOptions: {
       queries: {
-        retry: false, 
+        retry: false,
       },
     },
   });

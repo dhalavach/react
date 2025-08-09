@@ -118,3 +118,32 @@ describe('useCharacters hook', () => {
     );
   });
 });
+it('fetchCharacters throws error when fetch rejects', async () => {
+  fetchMock.mockRejectedValueOnce(new Error('Network error'));
+
+  await expect(fetchCharacters('vader')).rejects.toThrow('Network error');
+});
+
+it('fetchCharacters returns empty results for empty search', async () => {
+  const mockData = { count: 0, results: [] };
+  fetchMock.mockResolvedValueOnce({
+    ok: true,
+    json: async () => mockData,
+  });
+
+  const data = await fetchCharacters('', 1);
+
+  expect(data).toEqual(mockData);
+});
+
+it('useCharacters passes correct queryFn to useQuery', () => {
+  (useSearchStore as unknown as Mock).mockReturnValue({ shouldFetch: true });
+
+  const searchTerm = 'leia';
+  const page = 2;
+
+  useCharacters(searchTerm, page);
+
+  const call = (useQuery as Mock).mock.calls[0][0];
+  expect(typeof call.queryFn).toBe('function');
+});
