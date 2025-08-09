@@ -15,7 +15,6 @@ describe('NotFound Component', () => {
   it('renders the 404 error message with correct elements', () => {
     renderNotFound();
 
-    // Check main error elements
     expect(screen.getByText('404')).toBeInTheDocument();
     expect(screen.getByText('Page Not Found')).toBeInTheDocument();
     expect(
@@ -42,13 +41,11 @@ describe('NotFound Component', () => {
     const homeLink = screen.getByRole('link', { name: /Return to Home/ });
     const searchLink = screen.getByRole('link', { name: /Search Characters/ });
 
-    // Check links exist and point to home
     expect(homeLink).toBeInTheDocument();
     expect(searchLink).toBeInTheDocument();
     expect(homeLink).toHaveAttribute('href', '/');
     expect(searchLink).toHaveAttribute('href', '/');
 
-    // Check link styling classes
     expect(homeLink).toHaveClass('bg-blue-600 text-white hover:bg-blue-700');
     expect(searchLink).toHaveClass(
       'bg-gray-100 text-gray-700 hover:bg-gray-200'

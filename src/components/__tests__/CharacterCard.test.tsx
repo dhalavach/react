@@ -92,13 +92,6 @@ describe('CharacterCard', () => {
 
     fireEvent.click(checkbox);
     expect(addItem).toHaveBeenCalledWith(character);
-
-    // Now simulate it being checked and then unchecked
-    // isSelected.mockReturnValue(true);
-    // render(<CharacterCard character={character} />);
-    // const newCheckbox = screen.getByTestId('checkbox');
-    // fireEvent.change(newCheckbox, { target: { checked: false } });
-    // expect(removeItem).toHaveBeenCalledWith(character.url);
   });
 
   it('calls onClick with character when card is clicked', () => {

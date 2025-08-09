@@ -8,7 +8,6 @@ interface Props {
   onClick?: (character: Character) => void;
 }
 
-// Mocks before imports
 vi.mock('../../stores/searchStore', () => ({
   useSearchTerm: vi.fn(),
 }));
@@ -44,10 +43,8 @@ vi.mock('@tanstack/react-query', async () => {
   };
 });
 
-// Mock CharacterCard component with default props to avoid TS errors
 vi.mock('../CharacterCard', () => ({
   CharacterCard: (props: Props = {}) => {
-    // Provide a full default character to satisfy all required fields
     const defaultCharacter: Character = {
       name: '',
       height: '',
@@ -80,7 +77,6 @@ vi.mock('../CharacterCard', () => ({
   },
 }));
 
-// Imports AFTER mocks
 import { useSearchTerm } from '../../stores/searchStore';
 import {
   useCurrentPage,
@@ -92,7 +88,7 @@ import { useCharacters } from '../../api/api';
 import { ResultsSection } from '../ResultsSection';
 import { useQueryClient } from '@tanstack/react-query';
 
-// Typed mocks assigned once:
+// Typed mocks ...
 const useSearchTermMock = useSearchTerm as unknown as Mock;
 const useCurrentPageMock = useCurrentPage as unknown as Mock;
 const usePaginationActionsMock = usePaginationActions as unknown as Mock;

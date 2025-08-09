@@ -8,7 +8,7 @@ export const SearchSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    submitSearch(); // Uses the current searchTerm in the store
+    submitSearch();
   };
 
   return (

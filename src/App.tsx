@@ -1,8 +1,6 @@
-//import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { SearchSection } from './components/SearchSection';
 import { ResultsSection } from './components/ResultsSection';
-//import { CharacterDetailsPanel } from './components/CharacterDetailsPanel';
 import { SelectedItemsFlyout } from './components/SelectedItemsFlyout';
 import { About } from './components/About';
 import { NotFound } from './components/NotFound';

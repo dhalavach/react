@@ -44,7 +44,7 @@ export const CharacterDetailsPanel = () => {
         className={`fixed top-0 right-0 h-full w-full lg:w-96 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        onClick={(e) => e.stopPropagation()} // prevent bubbling to backdrop
+        onClick={(e) => e.stopPropagation()}
       >
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gradient-to-r from-blue-500 to-purple-600">

@@ -8,9 +8,7 @@ import {
 export const PaginationControls = () => {
   const currentPage = useCurrentPage();
   const { setCurrentPage } = usePaginationActions();
-
   const { totalPages } = usePaginationData();
-  //console.log(totalCount);
 
   if (totalPages <= 1) {
     return null;
