@@ -11375,7 +11375,7 @@ const ba = ts((e) => ({
     const e = Eh(),
       { setSearchTerm: t, submitSearch: n } = Iv(),
       r = (l) => {
-        (l.preventDefault(), n());
+        (l.preventDefault(), l.stopPropagation(), n());
       };
     return y.jsx('div', {
       className:
@@ -11406,6 +11406,10 @@ const ba = ts((e) => ({
                     type: 'text',
                     value: e,
                     onChange: (l) => t(l.target.value),
+                    onKeyDown: (l) => {
+                      l.key === 'Enter' &&
+                        (l.preventDefault(), l.stopPropagation(), n());
+                    },
                     placeholder: 'Search for Star Wars characters...',
                     className:
                       'w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all disabled:bg-gray-100 disabled:cursor-not-allowed dark:bg-gray-300',
