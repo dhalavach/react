@@ -1,8 +1,10 @@
+'use client';
+
 import { Search } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { useSearchActions, useSearchTerm } from '../stores/searchStore';
 import { useLocalStorage } from '../hooks/useLocalStorage';
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 
 export const SearchSection = () => {
   const searchTerm = useSearchTerm();
@@ -12,12 +14,16 @@ export const SearchSection = () => {
     ''
   );
 
+  const [hydrated, setHydrated] = useState(false);
+
   useEffect(() => {
+    setHydrated(true);
+
     if (searchTerm !== localStorageSearchTerm) {
       setSearchTerm(localStorageSearchTerm);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [localStorageSearchTerm]);
 
   const runSearch = useCallback(() => {
     setLocalStorageSearchTerm(searchTerm);
@@ -44,7 +50,7 @@ export const SearchSection = () => {
     (e: React.KeyboardEvent<HTMLInputElement>) => {
       if (e.key === 'Enter') {
         e.preventDefault();
-        e.stopPropagation(); // prevent bubbling to ThemeToggle
+        e.stopPropagation();
         runSearch();
       }
     },
@@ -55,6 +61,11 @@ export const SearchSection = () => {
     e.stopPropagation();
     console.log('The search button has been clicked.');
   }, []);
+
+  // Avoid rendering mismatched value before hydration
+  if (!hydrated) {
+    return null;
+  }
 
   return (
     <div className="bg-white shadow-sm border-b border-gray-200 p-6 dark:bg-gray-800 dark:border-gray-700 transition-colors">

@@ -1,41 +1,35 @@
 import { useState, useEffect } from 'react';
 
-export function useLocalStorage(
-  key: string,
-  initialValue: string
-): [string, (value: string) => void] {
-  const [storedValue, setStoredValue] = useState<string>(() => {
-    try {
-      const item = localStorage.getItem(key);
-      return item ?? initialValue;
-    } catch (err) {
-      console.error(`Error accessing localStorage key "${key}":`, err);
-      return initialValue;
-    }
-  });
-
-  const setValue = (value: string) => {
-    try {
-      localStorage.setItem(key, value);
-      setStoredValue(value);
-    } catch (err) {
-      console.error(`Error writing to localStorage key "${key}":`, err);
-    }
-  };
+export function useLocalStorage<T>(key: string, initialValue: T) {
+  const [storedValue, setStoredValue] = useState<T>(initialValue);
 
   useEffect(() => {
+    // Only run on the client
+    if (typeof window === 'undefined') return;
+
     try {
-      const handleStorage = (event: StorageEvent) => {
-        if (event.key === key && event.newValue !== null) {
-          setStoredValue(event.newValue);
-        }
-      };
-      window.addEventListener('storage', handleStorage);
-      return () => window.removeEventListener('storage', handleStorage);
-    } catch {
-      // Do nothing if storage events aren't supported
+      const item = window.localStorage.getItem(key);
+      if (item) {
+        setStoredValue(JSON.parse(item));
+      }
+    } catch (error) {
+      console.error('Error reading localStorage key “' + key + '”: ', error);
     }
   }, [key]);
 
-  return [storedValue, setValue];
+  const setValue = (value: T | ((val: T) => T)) => {
+    try {
+      setStoredValue((prev) => {
+        const valueToStore = value instanceof Function ? value(prev) : value;
+        if (typeof window !== 'undefined') {
+          window.localStorage.setItem(key, JSON.stringify(valueToStore));
+        }
+        return valueToStore;
+      });
+    } catch (error) {
+      console.error('Error setting localStorage key “' + key + '”: ', error);
+    }
+  };
+
+  return [storedValue, setValue] as const;
 }

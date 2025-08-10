@@ -1,0 +1,21 @@
+# Build output
+.next
+out
+dist
+build
+
+# Dependencies
+node_modules
+
+# Static assets
+public
+
+# Environment files
+.env
+.env.*  
+
+# Coverage
+coverage
+
+# Any custom generated folders
+generated

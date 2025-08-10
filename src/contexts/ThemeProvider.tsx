@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, ReactNode } from 'react';
 import { ThemeContext } from './ThemeContext';
 
@@ -8,23 +10,30 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
-    const savedTheme = localStorage.getItem('theme') as Theme;
+  const [theme, setTheme] = useState<Theme>('light'); // safe default for SSR
+
+  // Run only on client
+  useEffect(() => {
+    // Try to load saved theme
+    const savedTheme = localStorage.getItem('theme') as Theme | null;
     if (savedTheme) {
-      return savedTheme;
+      setTheme(savedTheme);
+      return;
     }
 
+    // Fallback: system preference
     if (
       window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches
     ) {
-      return 'dark';
+      setTheme('dark');
     }
+  }, []);
 
-    return 'light';
-  });
-
+  // Apply theme + persist
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     localStorage.setItem('theme', theme);
 
     if (theme === 'dark') {
@@ -44,11 +53,3 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
-
-// export const useTheme = () => {
-//   const context = useContext(ThemeContext);
-//   if (context === undefined) {
-//     throw new Error('useTheme must be used within a ThemeProvider');
-//   }
-//   return context;
-// };
