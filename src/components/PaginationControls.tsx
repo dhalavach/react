@@ -4,20 +4,24 @@ import {
   useCurrentPage,
   usePaginationData,
 } from '../stores/currentPageStore';
+import type { FC } from 'react';
 
-export const PaginationControls = () => {
-  const currentPage = useCurrentPage();
-  const { setCurrentPage } = usePaginationActions();
-  const { totalPages } = usePaginationData();
+type PageItem = number | '...';
+
+export const PaginationControls: FC = () => {
+  const currentPage: number = useCurrentPage();
+  const { setCurrentPage }: { setCurrentPage: (page: number) => void } =
+    usePaginationActions();
+  const { totalPages }: { totalPages: number } = usePaginationData();
 
   if (totalPages <= 1) {
     return null;
   }
 
-  const getVisiblePages = () => {
+  const getVisiblePages = (): PageItem[] => {
     const delta = 2;
-    const range = [];
-    const rangeWithDots = [];
+    const range: number[] = [];
+    const rangeWithDots: PageItem[] = [];
 
     for (
       let i = Math.max(2, currentPage - delta);
