@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { AppContent } from '../App';
+import { AppContent } from '../app/App';
 import { describe, expect, it } from 'vitest';
 import { ThemeProvider } from '../contexts/ThemeProvider';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
