@@ -2,10 +2,10 @@ import { renderHook, act } from '@testing-library/react';
 import { useLocalStorage } from '../useLocalStorage';
 import { describe, it, expect, beforeEach } from 'vitest';
 
-describe('useLocalStorage', () => {
-  const key = 'test-key';
-  const initialValue = 'initial';
+const key = 'starwars-search-term';
+const initialValue = '';
 
+describe('useLocalStorage', () => {
   beforeEach(() => {
     localStorage.clear();
   });
@@ -14,21 +14,6 @@ describe('useLocalStorage', () => {
     const { result } = renderHook(() => useLocalStorage(key, initialValue));
     expect(result.current[0]).toBe(initialValue);
   });
-
-  // it('should return value from localStorage if present', () => {
-  //   localStorage.setItem(key, 'stored-value');
-  //   const { result } = renderHook(() => useLocalStorage(key, initialValue));
-  //   expect(result.current[0]).toBe('stored-value');
-  // });
-
-  // it('should update localStorage and state when setValue is called', () => {
-  //   const { result } = renderHook(() => useLocalStorage(key, initialValue));
-  //   act(() => {
-  //     result.current[1]('new-value');
-  //   });
-  //   expect(localStorage.getItem(key)).toBe('new-value');
-  //   expect(result.current[0]).toBe('new-value');
-  // });
 
   it('should update state when storage event fires', () => {
     const { result } = renderHook(() => useLocalStorage(key, initialValue));
