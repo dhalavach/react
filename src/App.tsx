@@ -4,6 +4,7 @@ import { ResultsSection } from './components/ResultsSection';
 import { SelectedItemsFlyout } from './components/SelectedItemsFlyout';
 import { About } from './components/About';
 import { NotFound } from './components/NotFound';
+import { reportWebVitals } from './webVitals';
 
 export const AppContent = () => (
   <Routes>
@@ -32,5 +33,6 @@ const App = () => (
     <AppContent />
   </Router>
 );
+reportWebVitals();
 
 export default App;
