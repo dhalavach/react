@@ -1,10 +1,10 @@
 'use client';
 
-import { SearchSection } from '../components/SearchSection';
-import { ResultsSection } from '../components/ResultsSection';
-import { SelectedItemsFlyout } from '../components/SelectedItemsFlyout';
+import { SearchSection } from '../../components/SearchSection';
+import { ResultsSection } from '../../components/ResultsSection';
+import { SelectedItemsFlyout } from '../../components/SelectedItemsFlyout';
 import Link from 'next/link';
-import { reportWebVitals } from '../webVitals';
+import { reportWebVitals } from '../../webVitals';
 import { useEffect } from 'react';
 
 export default function HomePage() {

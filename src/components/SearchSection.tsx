@@ -5,6 +5,9 @@ import { ThemeToggle } from './ThemeToggle';
 import { useSearchActions, useSearchTerm } from '../stores/searchStore';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useEffect, useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import '../i18n/i18n';
+
 
 export const SearchSection = () => {
   const searchTerm = useSearchTerm();
@@ -15,6 +18,7 @@ export const SearchSection = () => {
   );
 
   const [hydrated, setHydrated] = useState(false);
+  const { t } = useTranslation('home');
 
   useEffect(() => {
     setHydrated(true);
@@ -88,7 +92,7 @@ export const SearchSection = () => {
               value={searchTerm}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
-              placeholder="Search for Star Wars characters..."
+              placeholder={t('instructions')}
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all disabled:bg-gray-100 disabled:cursor-not-allowed dark:bg-gray-300"
             />
           </div>

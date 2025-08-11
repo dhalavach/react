@@ -67,11 +67,11 @@ describe('SelectedItemsFlyout', () => {
       });
 
     render(<SelectedItemsFlyout />);
-    const downloadButton = screen.getByText('Download');
+    const downloadButton = screen.getByTestId('download-button');
 
     fireEvent.click(downloadButton);
 
-    expect(createElementSpy).toHaveBeenCalledWith('a');
+    expect(createElementSpy).toHaveBeenCalledWith('div');
     expect(createObjectURLSpy).toHaveBeenCalled();
     expect(setAttributeSpy).toHaveBeenCalledWith('href', 'blob:mock-url');
     expect(setAttributeSpy).toHaveBeenCalledWith('download', '1_items.csv');

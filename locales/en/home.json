@@ -1,0 +1,8 @@
+{
+  "welcomeMessage": "Welcome to the Star Wars Character Search!",
+  "instructions": "Type a character name and hit enter to start your search.",
+  "searchResultsTitle": "Search Results",
+  "characterDetails": "Character Details",
+  "noCharacterSelected": "No character selected yet.",
+  "poweredBy": "Powered by the Star Wars API"
+}
