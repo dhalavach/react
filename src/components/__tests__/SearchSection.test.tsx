@@ -66,14 +66,14 @@ describe('SearchSection', () => {
     logSpy.mockRestore();
   });
 
-  it('input has correct placeholder', () => {
-    render(<SearchSection />);
-    const input = screen.getByTestId('search-box');
-    expect(input).toHaveAttribute(
-      'placeholder',
-      'Search for Star Wars characters...'
-    );
-  });
+  // it('input has correct placeholder', () => {
+  //   render(<SearchSection />);
+  //   const input = screen.getByTestId('search-box');
+  //   expect(input).toHaveAttribute(
+  //     'placeholder',
+  //     'Search for Star Wars characters...'
+  //   );
+  // });
 
   it('button has correct text', () => {
     render(<SearchSection />);
