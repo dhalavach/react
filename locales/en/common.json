@@ -1,0 +1,17 @@
+{
+  "appTitle": "Star Wars Character Search Application",
+  "searchPlaceholder": "Search characters...",
+  "loading": "Loading...",
+  "error": "An error occurred. Please try again.",
+  "noResults": "No characters found.",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "button": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "refresh": "Refresh"
+  }
+}

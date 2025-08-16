@@ -1,0 +1,92 @@
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+  usePaginationActions,
+  useCurrentPage,
+  usePaginationData,
+} from '../stores/currentPageStore';
+import type { FC } from 'react';
+
+type PageItem = number | '...';
+
+export const PaginationControls: FC = () => {
+  const currentPage: number = useCurrentPage();
+  const { setCurrentPage }: { setCurrentPage: (page: number) => void } =
+    usePaginationActions();
+  const { totalPages }: { totalPages: number } = usePaginationData();
+
+  if (totalPages <= 1) {
+    return null;
+  }
+
+  const getVisiblePages = (): PageItem[] => {
+    const delta = 2;
+    const range: number[] = [];
+    const rangeWithDots: PageItem[] = [];
+
+    for (
+      let i = Math.max(2, currentPage - delta);
+      i <= Math.min(totalPages - 1, currentPage + delta);
+      i++
+    ) {
+      range.push(i);
+    }
+
+    if (currentPage - delta > 2) {
+      rangeWithDots.push(1, '...');
+    } else {
+      rangeWithDots.push(1);
+    }
+
+    rangeWithDots.push(...range);
+
+    if (currentPage + delta < totalPages - 1) {
+      rangeWithDots.push('...', totalPages);
+    } else {
+      rangeWithDots.push(totalPages);
+    }
+
+    return rangeWithDots;
+  };
+
+  return (
+    <div className="flex justify-center items-center mt-8 gap-2">
+      <button
+        onClick={() => setCurrentPage(currentPage - 1)}
+        disabled={currentPage === 1}
+        className="inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+      >
+        <ChevronLeft className="w-4 h-4" />
+        Previous
+      </button>
+
+      <div className="flex items-center gap-1">
+        {getVisiblePages().map((page, index) => (
+          <button
+            key={index}
+            onClick={() => typeof page === 'number' && setCurrentPage(page)}
+            disabled={page === '...'}
+            className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+              page === currentPage
+                ? 'bg-blue-600 text-white'
+                : page === '...'
+                  ? 'text-gray-400 cursor-default'
+                  : 'text-gray-500 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-700'
+            } disabled:cursor-not-allowed`}
+          >
+            {page}
+          </button>
+        ))}
+      </div>
+
+      <button
+        data-testid="next"
+        onClick={() => setCurrentPage(currentPage + 1)}
+        disabled={currentPage === totalPages}
+        className="inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+      >
+        Next
+        <ChevronRight className="w-4 h-4" />
+      </button>
+    </div>
+  );
+};

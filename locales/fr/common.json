@@ -1,0 +1,17 @@
+{
+  "appTitle": "Application de Recherche de Personnages Star Wars",
+  "searchPlaceholder": "Rechercher des personnages...",
+  "loading": "Chargement...",
+  "error": "Une erreur s'est produite. Veuillez réessayer.",
+  "noResults": "Aucun personnage trouvé.",
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "button": {
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "refresh": "Actualiser"
+  }
+}

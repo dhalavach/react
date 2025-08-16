@@ -1,0 +1,8 @@
+{
+  "welcomeMessage": "Bienvenue dans l'application de recherche de personnages Star Wars !",
+  "instructions": "Tapez un nom de personnage et appuyez sur Entrée pour commencer la recherche.",
+  "searchResultsTitle": "Résultats de la recherche",
+  "characterDetails": "Détails du personnage",
+  "noCharacterSelected": "Aucun personnage sélectionné pour le moment.",
+  "poweredBy": "Propulsé par l'API Star Wars"
+}
